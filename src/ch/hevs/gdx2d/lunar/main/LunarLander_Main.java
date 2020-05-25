@@ -13,8 +13,6 @@ import ch.hevs.gdx2d.desktop.PortableApplication;
 
 public class LunarLander_Main extends PortableApplication{
 	
-	private BitmapImage imgBitmap;
-	
 	PhysicsSimulator physics = new PhysicsSimulator(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
 	
 	public LunarLander_Main() {
@@ -23,11 +21,7 @@ public class LunarLander_Main extends PortableApplication{
 	
 	@Override
 	public void onInit() {
-		setTitle("LunarLandry (Team PLS)");
-
-		// Load a custom image (or from the lib "res/lib/icon64.png")
-		imgBitmap = new BitmapImage("data/images/hei-pi.png");
-		
+		setTitle("LunarLandry (Team PLS)");		
 		//physics.addSimulatableObject(b1);
 	}
 

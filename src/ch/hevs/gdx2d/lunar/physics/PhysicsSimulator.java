@@ -6,7 +6,7 @@ import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 
 /**
- * A simple p simulator for the inf1 project.
+ * A simple physics simulator for the inf1 project.
  */
 public class PhysicsSimulator {
 
@@ -19,7 +19,7 @@ public class PhysicsSimulator {
 	private final boolean VERBOSE_PHYSICS = false;
 
 	/**
-	 * The objects that require p simulation (objects that move)
+	 * The objects that require physics simulation (objects that move)
 	 */
 	private ArrayList<Simulatable> sim_objects;
 
@@ -66,11 +66,6 @@ public class PhysicsSimulator {
 
 			if (s instanceof PhysicalObject) {
 				PhysicalObject p = (PhysicalObject) s;
-				
-				Vector2 oldAcc = p.acceleration;
-				Vector2 oldSpeed = p.speed;
-				//Vector2 oldPos = p.position;
-
 				/**
 				 * General Physics equations
 				 */
@@ -91,10 +86,7 @@ public class PhysicsSimulator {
 				// acceleration = GRAVITY + (forceFrix/mass)
 				p.acceleration = accGravity.mulAdd(forceFrix, 1.0f/(p.mass));
 				// speed = oldSpeed + acceleration*DELA_TIME
-				p.speed = p.speed.mulAdd(p.acceleration, Constants.DELTA_TIME);
-				// position = oldPos + oldSpeed*DELTA_TIME
-				p.position = p.position.mulAdd(oldSpeed, Constants.DELTA_TIME);
-			
+				p.speed = p.speed.mulAdd(p.acceleration, Constants.DELTA_TIME);			
 
 				if (VERBOSE_PHYSICS) {
 					System.out.println("Position :" + p.position);
@@ -105,10 +97,20 @@ public class PhysicsSimulator {
 				/**
 				 * Elastic collisions with borders
 				 */
-				if (p.position.y <= Constants.GROUND_ALTITUDE) {
-					p.speed.y = - p.speed.y * Constants.DAMPING_FACTOR;
-					p.acceleration.y = - p.acceleration.y * Constants.DAMPING_FACTOR;
+				// Ground collision
+				if (p.position.y <= Constants.GROUND_ALTITUDE && p.speed.y < 0.0f) {
+					p.speed.y = -p.speed.y * Constants.DAMPING_FACTOR;
+					p.acceleration.y = -p.acceleration.y * Constants.DAMPING_FACTOR;
 				}
+				// Wall collisions
+				if ((p.position.x >= Constants.WIN_WIDTH && p.speed.x >= 0)
+						|| (p.position.x <= 0 && p.speed.x <= 0)) {
+					p.speed.x = -p.speed.x * Constants.DAMPING_FACTOR;
+					p.acceleration.x = -p.acceleration.x * Constants.DAMPING_FACTOR;
+				}
+				
+				// position = oldPos + oldSpeed*DELTA_TIME
+				p.position = p.position.mulAdd(p.speed, Constants.DELTA_TIME);
 			}
 		}
 

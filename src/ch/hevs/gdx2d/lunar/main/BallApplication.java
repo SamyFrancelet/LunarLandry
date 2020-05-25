@@ -14,7 +14,7 @@ import ch.hevs.gdx2d.desktop.PortableApplication;
 public class BallApplication extends PortableApplication{
 	
 	PhysicsSimulator physics = new PhysicsSimulator(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
-	Ball b1 = new Ball(new Vector2(400, 400),new Vector2(10,40), 10);
+	Ball b1 = new Ball(new Vector2(400, 400),new Vector2(200,40), 100);
 	
 	public BallApplication() {
 		super(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
@@ -22,8 +22,7 @@ public class BallApplication extends PortableApplication{
 	
 	@Override
 	public void onInit() {
-		setTitle("Ball physic test");
-		
+		setTitle("Ball physic test");		
 		physics.addSimulatableObject(b1);
 	}
 

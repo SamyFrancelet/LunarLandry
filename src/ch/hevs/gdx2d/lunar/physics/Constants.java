@@ -26,7 +26,7 @@ public final class Constants {
 	// Maximal impact energy triggering a object destruction
 	public static final int DESTRUCTION_ENERGY = 15000;	
 	public static final int CLOUD_DENSITY = 5;
-	public static final int GROUND_ALTITUDE = 50;
+	public static final int GROUND_ALTITUDE = 100;
 	public static final boolean DRAW_BOUNDINGBOXES = false;
 	
 	/**
