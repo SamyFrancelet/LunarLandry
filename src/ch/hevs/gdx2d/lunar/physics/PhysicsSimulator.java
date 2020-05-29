@@ -83,8 +83,9 @@ public class PhysicsSimulator {
 				 * -> position(t + DELTA_TIME) = position(t) + speed(t)*DELTA_TIME
 				 */
 				
-				// acceleration = GRAVITY + (forceFrix/mass)
-				p.acceleration = accGravity.mulAdd(forceFrix, 1.0f/(p.mass));
+				// acceleration = GRAVITY + ((forceFrix + forceObj)/mass)
+				p.acceleration = accGravity.mulAdd(forceFrix.add(p.force), 1.0f/(p.mass));
+				//p.acceleration = accGravity.mulAdd(forceFrix, 1.0f/(p.mass));
 				// speed = oldSpeed + acceleration*DELA_TIME
 				p.speed = p.speed.mulAdd(p.acceleration, Constants.DELTA_TIME);			
 
@@ -99,12 +100,20 @@ public class PhysicsSimulator {
 				 */
 				// Ground collision
 				if (p.position.y <= Constants.GROUND_ALTITUDE && p.speed.y < 0.0f) {
+					// Calculate collision energy Ecin = 1/2 * mv²
+					p.notifyCollision((int)(p.mass*p.speed.len()*p.speed.len())/2);
+					
+					// Bounce the object
 					p.speed.y = -p.speed.y * Constants.DAMPING_FACTOR;
 					p.acceleration.y = -p.acceleration.y * Constants.DAMPING_FACTOR;
 				}
 				// Wall collisions
 				if ((p.position.x >= Constants.WIN_WIDTH && p.speed.x >= 0)
 						|| (p.position.x <= 0 && p.speed.x <= 0)) {
+					// Calculate collision energy Ecin = 1/2 * mv²
+					p.notifyCollision((int)(p.mass*p.speed.len()*p.speed.len())/2);
+					
+					// Bounce the object
 					p.speed.x = -p.speed.x * Constants.DAMPING_FACTOR;
 					p.acceleration.x = -p.acceleration.x * Constants.DAMPING_FACTOR;
 				}
