@@ -1,8 +1,11 @@
 package ch.hevs.gdx2d.lunar.main;
 
+import javax.swing.ImageIcon;
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.Vector2;
 
@@ -38,6 +41,28 @@ public class LunarLander_Main extends PortableApplication{
 		g.drawSchoolLogo();
 		g.drawLine(0, Constants.GROUND_ALTITUDE, Constants.WIN_WIDTH, Constants.GROUND_ALTITUDE, Color.WHITE);
 		ssLandry.draw(g);
+		
+
+		if(ssLandry.thrustUp && !(ssLandry.thrustLeft || ssLandry.thrustRight))
+			g.drawAlphaPicture(ssLandry.position.x + 25,
+			ssLandry.position.y - 20, 90, 0.3f, 0.3f, new BitmapImage("data/images/flame.png"));
+		
+		if(!ssLandry.thrustUp && ssLandry.thrustLeft && !ssLandry.thrustRight)
+			g.drawAlphaPicture(ssLandry.position.x + 50,
+			ssLandry.position.y + 10, 180, 0.2f, 0.2f, new BitmapImage("data/images/flame.png"));
+		
+		if(!ssLandry.thrustUp && !ssLandry.thrustLeft && ssLandry.thrustRight)
+			g.drawAlphaPicture(ssLandry.position.x + 0,
+			ssLandry.position.y + 10, 0, 0.2f, 0.2f, new BitmapImage("data/images/flame.png"));
+
+		if(ssLandry.thrustUp && ssLandry.thrustLeft)
+			g.drawAlphaPicture(ssLandry.position.x + 40,
+			ssLandry.position.y - 20, 120, 0.3f, 0.3f, new BitmapImage("data/images/flame.png"));
+
+		if(ssLandry.thrustUp && ssLandry.thrustRight)
+			g.drawAlphaPicture(ssLandry.position.x + 10,
+			ssLandry.position.y - 20, 60, 0.3f, 0.3f, new BitmapImage("data/images/flame.png"));
+
 	}
 	
 	@Override
