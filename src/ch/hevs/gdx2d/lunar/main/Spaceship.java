@@ -1,6 +1,7 @@
 package ch.hevs.gdx2d.lunar.main;
 
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 
@@ -26,8 +27,8 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 
 	@Override
 	public void draw(GdxGraphics arg0) {
-		arg0.drawFilledRectangle(position.x, position.y+8, 10, 16, 0, Color.BLUE);
-		//arg0.draw(new Texture(), position.x, position.y);
+		//arg0.drawFilledRectangle(position.x, position.y+8, 10, 16, 0, Color.BLUE);
+		arg0.draw(new Texture("data/images/SpaceShip_2.png"), position.x, position.y,50,50);
 	}
 	
 	@Override
