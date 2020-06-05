@@ -5,6 +5,7 @@ import ch.hevs.gdx2d.components.physics.primitives.PhysicsBox;
 import ch.hevs.gdx2d.lib.GdxGraphics;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Filter;
 
@@ -17,7 +18,7 @@ import com.badlogic.gdx.physics.box2d.Filter;
 public class Particle extends PhysicsBox {
 	protected final int maxAge;
 	// Resources MUST not be static
-	protected BitmapImage img = new BitmapImage("data/images/flame.png");
+	protected BitmapImage img = new BitmapImage("data/images/fireball.png");
 	protected int age = 0;
 	private boolean init = false;
 
@@ -59,6 +60,8 @@ public class Particle extends PhysicsBox {
 
 		// Draw the particle
 		g.draw(img.getRegion(), pos.x - img.getImage().getWidth() / 2, pos.y - img.getImage().getHeight() / 2);
+//		g.draw(new Texture("data/images/SpaceShip_2.png"), pos.x, pos.y, 10, 10);
+
 		g.sbSetColor(col);
 	}
 }
