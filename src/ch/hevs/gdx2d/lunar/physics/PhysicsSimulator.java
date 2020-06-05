@@ -60,8 +60,8 @@ public class PhysicsSimulator {
 			return;
 		
 		for (int i = 0; i < sim_objects.size(); i++) {
+			boolean destroyed = false;
 			Simulatable s = sim_objects.get(i);
-
 			s.step();
 
 			if (s instanceof PhysicalObject) {
@@ -101,7 +101,7 @@ public class PhysicsSimulator {
 				// Ground collision
 				if (p.position.y <= Constants.GROUND_ALTITUDE && p.speed.y < 0.0f) {
 					// Calculate collision energy Ecin = 1/2 * mv²
-					p.notifyCollision((int)(p.mass*p.speed.len()*p.speed.len())/2);
+					destroyed = p.notifyCollision((int)(p.mass*p.speed.len()*p.speed.len())/2);
 					
 					// Bounce the object
 					p.speed.y = -p.speed.y * Constants.DAMPING_FACTOR;
@@ -111,7 +111,7 @@ public class PhysicsSimulator {
 				if ((p.position.x >= Constants.WIN_WIDTH && p.speed.x >= 0)
 						|| (p.position.x <= 0 && p.speed.x <= 0)) {
 					// Calculate collision energy Ecin = 1/2 * mv²
-					p.notifyCollision((int)(p.mass*p.speed.len()*p.speed.len())/2);
+					destroyed = p.notifyCollision((int)(p.mass*p.speed.len()*p.speed.len())/2);
 					
 					// Bounce the object
 					p.speed.x = -p.speed.x * Constants.DAMPING_FACTOR;
@@ -120,6 +120,9 @@ public class PhysicsSimulator {
 				
 				// position = oldPos + oldSpeed*DELTA_TIME
 				p.position = p.position.mulAdd(p.speed, Constants.DELTA_TIME);
+				if (destroyed) {
+					removeObjectFromSim(p);
+				}
 			}
 		}
 
