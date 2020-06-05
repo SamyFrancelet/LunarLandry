@@ -30,7 +30,7 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	@Override
 	public void draw(GdxGraphics arg0) {
 		//arg0.drawFilledRectangle(position.x, position.y+8, 10, 16, 0, Color.BLUE);
-		arg0.draw(new Texture("data/images/SpaceShip_2.png"), position.x - 25, position.y,50,50);
+		arg0.draw(new Texture("data/images/SpaceShip_2.png"), position.x - 30, position.y,60,60);
 	}
 	
 	

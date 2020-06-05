@@ -30,7 +30,7 @@ public class LunarLander_Main extends PortableApplication{
 	// Particle related
 	World world = PhysicsWorld.getInstance();
 	static final Random rand = new Random();
-	public final int MAX_AGE = 35;
+	public final int MAX_AGE = 20;
 	public int CREATION_RATE = 3;
 	// Shooting related
 	boolean mouseActive = false;
@@ -55,7 +55,7 @@ public class LunarLander_Main extends PortableApplication{
 		g.drawFPS();
 		g.drawSchoolLogo();
 		g.drawLine(0, Constants.GROUND_ALTITUDE, Constants.WIN_WIDTH, Constants.GROUND_ALTITUDE, Color.WHITE);
-		ssLandry.draw(g);
+		
 		
 		Array<Body> bodies = new Array<Body>();
 		world.getBodies(bodies);
@@ -105,6 +105,8 @@ public class LunarLander_Main extends PortableApplication{
 
 		if (ssLandry.thrustUp || ssLandry.thrustLeft || ssLandry.thrustRight)
 			createParticles();
+		
+		ssLandry.draw(g);
 	
 	
 	}

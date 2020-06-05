@@ -59,7 +59,7 @@ public class Particle extends PhysicsBox {
 		g.sbSetColor(.5f, 0.7f, 0.9f, 1.0f - age / (float) (maxAge + 5));
 
 		// Draw the particle
-		g.draw(img.getRegion(), pos.x - img.getImage().getWidth() / 2, pos.y - 15 - img.getImage().getHeight() / 2);
+		g.draw(img.getRegion(), pos.x - img.getImage().getWidth() / 2, pos.y - 0 - img.getImage().getHeight() / 2);
 //		g.draw(new Texture("data/images/SpaceShip_2.png"), pos.x, pos.y, 10, 10);
 
 		g.sbSetColor(col);
