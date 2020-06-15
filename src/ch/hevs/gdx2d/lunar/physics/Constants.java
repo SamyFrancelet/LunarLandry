@@ -39,4 +39,9 @@ public final class Constants {
 	 */
 	public static float lateralPower = 0.05f;
 	public static float verticalPower = 0.2f;
+	
+	/**
+	 * fuel reserve
+	 */
+	public static final float maxFuel = 10.0f;
 }
