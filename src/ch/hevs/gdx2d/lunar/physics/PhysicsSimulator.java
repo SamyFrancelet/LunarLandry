@@ -105,7 +105,7 @@ public class PhysicsSimulator {
 					
 					// Bounce the object
 					p.speed.y = -p.speed.y * Constants.DAMPING_FACTOR;
-					p.acceleration.y = -p.acceleration.y * Constants.DAMPING_FACTOR;
+					//p.acceleration.y = -p.acceleration.y * Constants.DAMPING_FACTOR;
 				}
 				// Wall collisions
 				if ((p.position.x >= Constants.WIN_WIDTH && p.speed.x >= 0)
@@ -115,7 +115,7 @@ public class PhysicsSimulator {
 					
 					// Bounce the object
 					p.speed.x = -p.speed.x * Constants.DAMPING_FACTOR;
-					p.acceleration.x = -p.acceleration.x * Constants.DAMPING_FACTOR;
+					//p.acceleration.x = -p.acceleration.x * Constants.DAMPING_FACTOR;
 				}
 				
 				// position = oldPos + oldSpeed*DELTA_TIME

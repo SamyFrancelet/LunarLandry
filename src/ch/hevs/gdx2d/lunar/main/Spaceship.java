@@ -17,6 +17,7 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	public boolean thrustUp;
 	public boolean thrustLeft;
 	public boolean thrustRight;
+	private int fuel;
 	private boolean kaputt;
 	private static final int MAX_THRUST = 1500;
 	private static final int BASE_MASS = 100;
@@ -28,6 +29,7 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 		thrustLeft = false;
 		thrustRight = false;
 		kaputt = false;
+		fuel = 300;
 	}
 
 	@Override
@@ -39,33 +41,54 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 		} else {
 			arg0.draw(new Texture("data/images/SpaceShip_2.png"), position.x, position.y,50,50);
 			
+			arg0.drawString(700, 700, "" + fuel); // Print fuel on screen
 
-			if(thrustUp && !(thrustLeft || thrustRight))
-				arg0.drawAlphaPicture(position.x + 25,
-				position.y - 20, 90, 0.3f, 0.3f, new BitmapImage("data/images/flame.png"));
-			
-			if(!thrustUp && thrustLeft && !thrustRight)
-				arg0.drawAlphaPicture(position.x + 50,
-				position.y + 10, 180, 0.2f, 0.2f, new BitmapImage("data/images/flame.png"));
-			
-			if(!thrustUp && !thrustLeft && thrustRight)
-				arg0.drawAlphaPicture(position.x + 0,
-				position.y + 10, 0, 0.2f, 0.2f, new BitmapImage("data/images/flame.png"));
-
-			if(thrustUp && thrustLeft)
-				arg0.drawAlphaPicture(position.x + 40,
-				position.y - 20, 120, 0.3f, 0.3f, new BitmapImage("data/images/flame.png"));
-
-			if(thrustUp && thrustRight)
-				arg0.drawAlphaPicture(position.x + 10,
-				position.y - 20, 60, 0.3f, 0.3f, new BitmapImage("data/images/flame.png"));
+			if(fuel > 0) {
+				if(thrustUp && !(thrustLeft || thrustRight))
+					arg0.drawAlphaPicture(position.x + 25,
+					position.y - 20, 90, 0.3f, 0.3f, new BitmapImage("data/images/flame.png"));
+				
+				if(!thrustUp && thrustLeft && !thrustRight)
+					arg0.drawAlphaPicture(position.x + 50,
+					position.y + 10, 180, 0.2f, 0.2f, new BitmapImage("data/images/flame.png"));
+				
+				if(!thrustUp && !thrustLeft && thrustRight)
+					arg0.drawAlphaPicture(position.x + 0,
+					position.y + 10, 0, 0.2f, 0.2f, new BitmapImage("data/images/flame.png"));
+	
+				if(thrustUp && thrustLeft)
+					arg0.drawAlphaPicture(position.x + 40,
+					position.y - 20, 120, 0.3f, 0.3f, new BitmapImage("data/images/flame.png"));
+	
+				if(thrustUp && thrustRight)
+					arg0.drawAlphaPicture(position.x + 10,
+					position.y - 20, 60, 0.3f, 0.3f, new BitmapImage("data/images/flame.png"));
+			}
 		}
 	}
 	
 	@Override
 	public void step() {
-		this.force.y = thrustUp ? MAX_THRUST : 0;
-		this.force.x = thrustLeft ? -MAX_THRUST : (thrustRight ? MAX_THRUST : 0);
+		//this.force.y = thrustUp ? MAX_THRUST : 0;
+		//this.force.x = thrustLeft ? -MAX_THRUST : (thrustRight ? MAX_THRUST : 0);
+		
+		if (thrustUp && fuel > 0) {
+			force.y = MAX_THRUST;
+			fuel--;
+		}
+		else {
+			force.y = 0;
+		}
+		
+		if (thrustLeft && !thrustRight && fuel > 0) {
+			force.x = -MAX_THRUST;
+			fuel--;
+		} else if (!thrustLeft && thrustRight && fuel > 0) {
+			force.x = MAX_THRUST;
+			fuel--;
+		} else {
+			force.x = 0;
+		}
 	}
 
 	@Override
@@ -76,7 +99,8 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	@Override
 	public boolean notifyCollision(int energy) {
 		System.out.println("Hit with energy : " + energy);
-		return (energy >= Constants.DESTRUCTION_ENERGY);
+		//return (energy >= Constants.DESTRUCTION_ENERGY);
+		return false;
 	}
 
 	@Override
