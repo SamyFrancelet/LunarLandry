@@ -1,6 +1,6 @@
 package ch.hevs.gdx2d.lunar.physics;
 
-/** 
+/**
  * Interface for objects that can be simulated via the {@link PhysicsSimulator}.
  * 
  * @author P.-A. Mudry
