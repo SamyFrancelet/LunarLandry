@@ -1,7 +1,6 @@
 package ch.hevs.gdx2d.lunar.physics;
 
 import com.badlogic.gdx.math.Rectangle;
-import com.badlogic.gdx.math.Vector2;
 
 /**
  * Interface for objects that represent obstacles for the {@link PhysicsSimulator}

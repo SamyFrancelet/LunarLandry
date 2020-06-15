@@ -7,6 +7,7 @@ import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Interpolation;
+import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 
 import ch.hevs.gdx2d.components.bitmaps.BitmapImage;
@@ -20,6 +21,7 @@ public class LunarLander_Main extends PortableApplication {
 
 	PhysicsSimulator physics = new PhysicsSimulator(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
 	Spaceship ssLandry = new Spaceship(new Vector2(400, 400));
+	private final boolean drawBoxes = true;
 
 	public LunarLander_Main() {
 		super(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
@@ -41,6 +43,10 @@ public class LunarLander_Main extends PortableApplication {
 		g.drawSchoolLogo();
 		g.drawLine(0, Constants.GROUND_ALTITUDE, Constants.WIN_WIDTH, Constants.GROUND_ALTITUDE, Color.WHITE);
 		ssLandry.draw(g);
+		if (drawBoxes) {
+			Rectangle box = ssLandry.getBoundingBox();
+			g.drawRectangle(box.getX(), box.getY(), box.getWidth(), box.getHeight(), 0);
+		}
 	}
 
 	@Override

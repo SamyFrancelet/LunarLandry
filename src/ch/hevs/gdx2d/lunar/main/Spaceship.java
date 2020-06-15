@@ -16,8 +16,6 @@ import ch.hevs.gdx2d.components.bitmaps.BitmapImage;
 import ch.hevs.gdx2d.lib.GdxGraphics;
 import ch.hevs.gdx2d.lib.interfaces.DrawableObject;
 import ch.hevs.gdx2d.lib.physics.PhysicsWorld;
-import ch.hevs.gdx2d.lunar.physics.Collisionnable;
-import ch.hevs.gdx2d.lunar.physics.Constants;
 import ch.hevs.gdx2d.lunar.physics.PhysicalObject;
 
 public class Spaceship extends PhysicalObject implements DrawableObject {
@@ -29,7 +27,6 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	private boolean kaputt;
 	private static final int MAX_THRUST = 1500;
 	private static final int BASE_MASS = 100;
-	private Rectangle box;
 //	private final Texture shipSkin = new Texture("data/images/SpaceShip_2.png");
 
 	// Particle related
@@ -39,13 +36,12 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	public int CREATION_RATE = 3;
 
 	public Spaceship(Vector2 p) {
-		super(p, new Vector2(0, 0), BASE_MASS);
+		super(p, new Vector2(0, 0), BASE_MASS, 50, 50);
 		thrustUp = false;
 		thrustLeft = false;
 		thrustRight = false;
 		kaputt = false;
 		fuel = 300;
-		box = new Rectangle(position.x,position.y,50,50);
 	}
 
 	@Override
@@ -55,8 +51,6 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 			arg0.drawAlphaPicture(position.x, position.y + 30, -90, 0.3f, 0.3f,
 					new BitmapImage("data/images/flame.png"));
 		} else {
-			box.setPosition(position);
-			arg0.drawFilledRectangle(box.getX(), box.getY(), box.getWidth(), box.getHeight(), 0f);
 			arg0.draw(new Texture("data/images/SpaceShip_2.png"), position.x-25, position.y-25, 50, 50);
 
 			arg0.drawString(700, 700, "" + fuel); // Print fuel on screen
@@ -102,8 +96,7 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	@Override
 	public void step() {
 		// this.force.y = thrustUp ? MAX_THRUST : 0;
-		// this.force.x = thrustLeft ? -MAX_THRUST : (thrustRight ? MAX_THRUST : 0);
-
+		// this.force.x = thrustLeft ? -MAX_THRUST : (thrustRight ? MAX_THRUST : 0);		
 		if (thrustUp && fuel > 0) {
 			force.y = MAX_THRUST;
 			fuel--;
@@ -132,12 +125,6 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 		System.out.println("Hit with energy : " + energy);
 		// return (energy >= Constants.DESTRUCTION_ENERGY);
 		return false;
-	}
-
-	@Override
-	public Rectangle getBoundingBox() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 }

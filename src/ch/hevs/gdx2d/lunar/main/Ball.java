@@ -11,19 +11,17 @@ import ch.hevs.gdx2d.lunar.physics.PhysicalObject;
 public class Ball extends PhysicalObject implements DrawableObject {
 	
 	public Ball(Vector2 p, Vector2 s, int m) {
-		super(p,s,m);
+		super(p,s,m, 10, 10);
 	}
 
 	@Override
 	public void draw(GdxGraphics arg0) {
-		
 		arg0.drawCircle(position.x, position.y, 10);
 	}
 
 	@Override
 	public void removedFromSim() {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
