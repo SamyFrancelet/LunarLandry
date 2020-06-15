@@ -1,13 +1,16 @@
 \babel@toc {french}{}
-\contentsline {chapter}{\numberline {1}Introduction et problématique}{2}%
+\contentsline {chapter}{\numberline {1}Introduction}{2}%
 \contentsline {section}{\numberline {1.1}Contexte}{2}%
-\contentsline {section}{\numberline {1.2}Abstract}{2}%
-\contentsline {section}{\numberline {1.3}Objectifs}{2}%
-\contentsline {section}{\numberline {1.4}Cahier des charges}{2}%
-\contentsline {chapter}{\numberline {2}Documentation des choix d'implémentation}{3}%
-\contentsline {section}{\numberline {2.1}Test Math}{3}%
-\contentsline {chapter}{\numberline {3}Problèmes rencontrés et solutions apportées}{4}%
-\contentsline {section}{\numberline {3.1}Test Prog}{4}%
-\contentsline {chapter}{\numberline {4}Descripton des fonctionnalités}{6}%
-\contentsline {chapter}{\numberline {5}Proposition d'amélioration et auto-critique}{7}%
-\contentsline {chapter}{\numberline {6}Conclusion}{8}%
+\contentsline {section}{\numberline {1.2}Objectif du document}{2}%
+\contentsline {section}{\numberline {1.3}Spécifications}{2}%
+\contentsline {section}{\numberline {1.4}Problématique}{2}%
+\contentsline {chapter}{\numberline {2}Méthodes}{3}%
+\contentsline {chapter}{\numberline {3}Résultats}{4}%
+\contentsline {section}{\numberline {3.1}Choix d'implémentation et variations effectuées}{4}%
+\contentsline {chapter}{\numberline {4}Bilan}{5}%
+\contentsline {section}{\numberline {4.1}Problèmes rencontrés et solutions apportées}{5}%
+\contentsline {section}{\numberline {4.2}Description des fonctionnalités}{5}%
+\contentsline {section}{\numberline {4.3}Améliorations possbibles}{5}%
+\contentsline {section}{\numberline {4.4}Conclusion}{5}%
+\contentsline {chapter}{\numberline {5}Annexe}{6}%
+\contentsline {section}{\numberline {5.1}Test Prog}{6}%
