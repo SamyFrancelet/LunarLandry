@@ -6,7 +6,6 @@ import java.util.Random;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.World;
@@ -41,7 +40,7 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 		thrustLeft = false;
 		thrustRight = false;
 		kaputt = false;
-		fuel = 300;
+		fuel = 300000;
 	}
 
 	@Override

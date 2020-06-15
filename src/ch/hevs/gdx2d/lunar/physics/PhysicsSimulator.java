@@ -2,7 +2,10 @@ package ch.hevs.gdx2d.lunar.physics;
 
 import java.util.ArrayList;
 
+import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
+
+import ch.hevs.gdx2d.lib.GdxGraphics;
 
 /**
  * A simple physics simulator for the inf1 project.
@@ -14,6 +17,7 @@ public class PhysicsSimulator {
 	 */
 	double width;
 	double height;
+	Moon moon;
 
 	private final boolean VERBOSE_PHYSICS = false;
 
@@ -30,6 +34,7 @@ public class PhysicsSimulator {
 		sim_objects = new ArrayList<Simulatable>();
 		this.width = width;
 		this.height = height;
+		moon = new Moon();
 	}
 
 	/**
@@ -100,7 +105,13 @@ public class PhysicsSimulator {
 				 */
 //				// Calculate collision energy Ecin = 1/2 * mv²
 //				destroyed = p.notifyCollision((int) (p.mass * p.speed.len() * p.speed.len()) / 2);
+				Rectangle box = p.getBoundingBox();
+				Vector2 bottomLeft = new Vector2(box.getX(), box.getY());
+				Vector2 bottomRight = new Vector2(box.getX() + box.getWidth(), box.getY());
+				Vector2 topLeft = new Vector2(box.getX(), box.getY() + box.getHeight());
+				Vector2 topRight = new Vector2(box.getX() + box.getWidth(), box.getY() + box.getHeight());
 				
+				destroyed = (moon.ground.contains(bottomLeft) || moon.ground.contains(bottomRight) || moon.ground.contains(topLeft) || moon.ground.contains(topRight));	
 
 				// position = oldPos + oldSpeed*DELTA_TIME
 				p.position = p.position.mulAdd(p.speed, Constants.DELTA_TIME);

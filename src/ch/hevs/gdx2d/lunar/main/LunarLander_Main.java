@@ -13,6 +13,7 @@ import com.badlogic.gdx.math.Vector2;
 import ch.hevs.gdx2d.components.bitmaps.BitmapImage;
 import ch.hevs.gdx2d.lib.GdxGraphics;
 import ch.hevs.gdx2d.lunar.physics.Constants;
+import ch.hevs.gdx2d.lunar.physics.Moon;
 import ch.hevs.gdx2d.lunar.physics.PhysicsSimulator;
 import ch.hevs.gdx2d.lunar.physics.Simulatable;
 import ch.hevs.gdx2d.desktop.PortableApplication;
@@ -20,11 +21,13 @@ import ch.hevs.gdx2d.desktop.PortableApplication;
 public class LunarLander_Main extends PortableApplication {
 
 	PhysicsSimulator physics = new PhysicsSimulator(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
-	Spaceship ssLandry = new Spaceship(new Vector2(400, 400));
+	Spaceship ssLandry = new Spaceship(new Vector2(400, 700));
 	private final boolean drawBoxes = true;
+	Moon moon;
 
 	public LunarLander_Main() {
 		super(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
+		moon = new Moon();
 	}
 
 	@Override
@@ -41,7 +44,8 @@ public class LunarLander_Main extends PortableApplication {
 		physics.simulate_step();
 		g.drawFPS();
 		g.drawSchoolLogo();
-		g.drawLine(0, Constants.GROUND_ALTITUDE, Constants.WIN_WIDTH, Constants.GROUND_ALTITUDE, Color.WHITE);
+		g.drawPolygon(moon.ground);
+		//g.drawLine(0, Constants.GROUND_ALTITUDE, Constants.WIN_WIDTH, Constants.GROUND_ALTITUDE, Color.WHITE);
 		ssLandry.draw(g);
 		if (drawBoxes) {
 			Rectangle box = ssLandry.getBoundingBox();
