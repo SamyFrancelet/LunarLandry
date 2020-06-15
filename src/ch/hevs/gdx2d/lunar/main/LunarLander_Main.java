@@ -76,31 +76,6 @@ public class LunarLander_Main extends PortableApplication{
 				}
 			}
 		}
-		
-
-		if(ssLandry.thrustUp && !(ssLandry.thrustLeft || ssLandry.thrustRight))
-			g.drawAlphaPicture(ssLandry.position.x + 25,
-			ssLandry.position.y - 20, 90, 0.3f, 0.3f, new BitmapImage("data/images/flame.png"));
-		
-		if(!ssLandry.thrustUp && ssLandry.thrustLeft && !ssLandry.thrustRight)
-			g.drawAlphaPicture(ssLandry.position.x + 50,
-			ssLandry.position.y + 10, 180, 0.2f, 0.2f, new BitmapImage("data/images/flame.png"));
-		
-		if(!ssLandry.thrustUp && !ssLandry.thrustLeft && ssLandry.thrustRight)
-			g.drawAlphaPicture(ssLandry.position.x + 0,
-			ssLandry.position.y + 10, 0, 0.2f, 0.2f, new BitmapImage("data/images/flame.png"));
-
-		if(ssLandry.thrustUp && ssLandry.thrustLeft)
-			g.drawAlphaPicture(ssLandry.position.x + 40,
-			ssLandry.position.y - 20, 120, 0.3f, 0.3f, new BitmapImage("data/images/flame.png"));
-
-		if(ssLandry.thrustUp && ssLandry.thrustRight)
-			g.drawAlphaPicture(ssLandry.position.x + 10,
-			ssLandry.position.y - 20, 60, 0.3f, 0.3f, new BitmapImage("data/images/flame.png"));
-		
-		if(mouseActive) {
-			ssLandry.shoot(g, ssLandry.position, positionClick);
-		}
 		PhysicsWorld.updatePhysics(Gdx.graphics.getDeltaTime());
 
 		if (ssLandry.thrustUp || ssLandry.thrustLeft || ssLandry.thrustRight)

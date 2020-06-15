@@ -18,7 +18,7 @@ import com.badlogic.gdx.physics.box2d.Filter;
 public class Particle extends PhysicsBox {
 	protected final int maxAge;
 	// Resources MUST not be static
-	protected BitmapImage img = new BitmapImage("data/images/fireball_5.png");
+	protected BitmapImage img = new BitmapImage("data/images/fireBall_5.png");
 	protected int age = 0;
 	private boolean init = false;
 
