@@ -1,13 +1,21 @@
 package ch.hevs.gdx2d.lunar.main;
 
+import java.util.Iterator;
+import java.util.Random;
+
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.physics.box2d.Body;
+import com.badlogic.gdx.physics.box2d.World;
+import com.badlogic.gdx.utils.Array;
 
 import ch.hevs.gdx2d.components.bitmaps.BitmapImage;
 import ch.hevs.gdx2d.lib.GdxGraphics;
 import ch.hevs.gdx2d.lib.interfaces.DrawableObject;
+import ch.hevs.gdx2d.lib.physics.PhysicsWorld;
 import ch.hevs.gdx2d.lunar.physics.Collisionnable;
 import ch.hevs.gdx2d.lunar.physics.Constants;
 import ch.hevs.gdx2d.lunar.physics.PhysicalObject;
@@ -22,6 +30,12 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	private static final int MAX_THRUST = 1500;
 	private static final int BASE_MASS = 100;
 	//private final Texture shipSkin = new Texture("data/images/SpaceShip_2.png");
+	
+	// Particle related
+	World world = PhysicsWorld.getInstance();
+	static final Random rand = new Random();
+	public final int MAX_AGE = 20;
+	public int CREATION_RATE = 3;
 	
 	public Spaceship(Vector2 p) {
 		super(p, new Vector2(0, 0), BASE_MASS);
@@ -44,26 +58,41 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 			arg0.drawString(700, 700, "" + fuel); // Print fuel on screen
 
 			if(fuel > 0) {
-				if(thrustUp && !(thrustLeft || thrustRight))
-					arg0.drawAlphaPicture(position.x + 25,
-					position.y - 20, 90, 0.3f, 0.3f, new BitmapImage("data/images/flame.png"));
-				
-				if(!thrustUp && thrustLeft && !thrustRight)
-					arg0.drawAlphaPicture(position.x + 50,
-					position.y + 10, 180, 0.2f, 0.2f, new BitmapImage("data/images/flame.png"));
-				
-				if(!thrustUp && !thrustLeft && thrustRight)
-					arg0.drawAlphaPicture(position.x + 0,
-					position.y + 10, 0, 0.2f, 0.2f, new BitmapImage("data/images/flame.png"));
-	
-				if(thrustUp && thrustLeft)
-					arg0.drawAlphaPicture(position.x + 40,
-					position.y - 20, 120, 0.3f, 0.3f, new BitmapImage("data/images/flame.png"));
-	
-				if(thrustUp && thrustRight)
-					arg0.drawAlphaPicture(position.x + 10,
-					position.y - 20, 60, 0.3f, 0.3f, new BitmapImage("data/images/flame.png"));
+				Array<Body> bodies = new Array<Body>();
+				world.getBodies(bodies);
+
+				Iterator<Body> it = bodies.iterator();
+
+
+				while (it.hasNext()) {
+					Body p = it.next();
+
+					if (p.getUserData() instanceof Particle) {
+						Particle particle = (Particle) p.getUserData();
+						particle.step();
+						particle.render(arg0);
+
+						if (particle.shouldbeDestroyed()) {
+							particle.destroy();
+						}
+					}
+				}
+				PhysicsWorld.updatePhysics(Gdx.graphics.getDeltaTime());
+
+				if (thrustUp || thrustLeft || thrustRight)
+					createParticles();
 			}
+		}
+	}
+	
+	void createParticles() {
+		for (int i = 0; i < CREATION_RATE; i++) {
+			Particle c = new Particle(position, 10, MAX_AGE + rand.nextInt(MAX_AGE / 2));
+
+			// Apply a vertical force with some random horizontal component
+			force.x = rand.nextFloat() * 0.00095f * (rand.nextBoolean() == true ? -1 : 1);
+			force.y = rand.nextFloat() * 0.00095f * (rand.nextBoolean() == true ? -1 : 1);
+			c.applyBodyLinearImpulse(force, position, true);
 		}
 	}
 	
