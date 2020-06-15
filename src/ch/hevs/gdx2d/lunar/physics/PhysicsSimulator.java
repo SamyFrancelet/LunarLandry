@@ -98,24 +98,8 @@ public class PhysicsSimulator {
 				/**
 				 * Elastic collisions with borders
 				 */
-//				// Ground collision
-//				if (p.position.y <= Constants.GROUND_ALTITUDE && p.speed.y < 0.0f) {
-//					// Calculate collision energy Ecin = 1/2 * mv²
-//					destroyed = p.notifyCollision((int) (p.mass * p.speed.len() * p.speed.len()) / 2);
-//
-//					// Bounce the object
-//					p.speed.y = -p.speed.y * Constants.DAMPING_FACTOR;
-//					// p.acceleration.y = -p.acceleration.y * Constants.DAMPING_FACTOR;
-//				}
-//				// Wall collisions
-//				if ((p.position.x >= Constants.WIN_WIDTH && p.speed.x >= 0) || (p.position.x <= 0 && p.speed.x <= 0)) {
-//					// Calculate collision energy Ecin = 1/2 * mv²
-//					destroyed = p.notifyCollision((int) (p.mass * p.speed.len() * p.speed.len()) / 2);
-//
-//					// Bounce the object
-//					p.speed.x = -p.speed.x * Constants.DAMPING_FACTOR;
-//					// p.acceleration.x = -p.acceleration.x * Constants.DAMPING_FACTOR;
-//				}
+//				// Calculate collision energy Ecin = 1/2 * mv²
+//				destroyed = p.notifyCollision((int) (p.mass * p.speed.len() * p.speed.len()) / 2);
 				
 
 				// position = oldPos + oldSpeed*DELTA_TIME
