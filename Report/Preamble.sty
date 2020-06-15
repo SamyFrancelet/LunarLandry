@@ -1,0 +1,141 @@
+%%%%%%%%%%%%%%%%%%%%%%%%% Document + Text Formatting %%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[a4paper,top=3cm, bottom=3cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[utf8]{inputenc} %char encoding
+\usepackage[T1]{fontenc} %font encoding
+\usepackage[french]{babel} %Language
+\usepackage{times} %font type
+\usepackage{multicol}
+
+\usepackage{wrapfig}
+
+\usepackage{lipsum} %lorem ipsum
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Figures %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\graphicspath{{Images/}}
+\usepackage{caption}
+\usepackage{float}
+
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclareMathSizes{12}{20}{14}{10} % Add +1 to all for up the size von 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Tabel %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{colortbl}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% En-tête et Pied de  page %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\fancyfoot[C]{\thepage}
+%\fancyfoot[R]{Landry Reynard}
+\fancyhead[L]{\textbf{\leftmark}}
+\fancyhead[R]{\textbf{ \Autor\ }}
+
+\usepackage{lastpage}
+%\cfoot{\thepage\ sur \pageref{LastPage}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER HEADER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usepackage[explicit]{titlesec}
+\newcommand*\chapterlabel{}
+%\renewcommand{\thechapter}{\Roman{chapter}}
+\titleformat{\chapter}[display]  % type (section,chapter,etc...) to vary,  shape (eg display-type)
+	{\normalfont\bfseries\Huge} % format of the chapter
+	{\gdef\chapterlabel{\thechapter\ }}     % the label
+ 	{0pt} % separation between label and chapter-title
+ 	  {\begin{tikzpicture}[remember picture,overlay]
+    \node[yshift=-8cm] at (current page.north west)
+      {\begin{tikzpicture}[remember picture, overlay]
+        \draw[fill=black] (0,0) rectangle(35.5mm,15mm);
+        \node[anchor=north east,yshift=-7.2cm,xshift=34mm,minimum height=30mm,inner sep=0mm] at (current page.north west)
+        {\parbox[top][30mm][t]{15mm}{\raggedleft $\phantom{\textrm{l}}$\color{white}\chapterlabel}};  %the black l is just to get better base-line alingement
+        \node[anchor=north west,yshift=-7.2cm,xshift=37mm,text width=\textwidth,minimum height=30mm,inner sep=0mm] at (current page.north west)
+              {\parbox[top][30mm][t]{\textwidth}{\color{black}#1}};
+       \end{tikzpicture}
+      };
+   \end{tikzpicture}
+   \gdef\chapterlabel{}
+  }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Java Prog %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{color}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\definecolor{DarkGreen}{rgb}{0.00,0.70,0.12}
+\definecolor{DarkOrange}{rgb}{1.00,0.55,0.00}
+\definecolor{NiceBlue}{rgb}{0.70,1.00,1.00}
+
+\usepackage{listings}
+\lstset{
+  language=Java,							 		% the language of the code
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\ttfamily\small,      % the size of the fonts that are used for the code (\footnotesize,)
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  firstnumber=0,                   % start line enumeration with line 1000
+  frame=line,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue}\bfseries,       % keyword style
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Environement %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Environnement Cadre
+
+\newsavebox{\boiteBlanche}
+\makeatletter
+\newenvironment{Cadre}[1]{%
+	\begin{lrbox}{\boiteBlanche}
+		\begin{minipage}{\linewidth}
+			\par
+			#1}
+		{%
+		\end{minipage}
+	\end{lrbox}
+	\bgroup
+	\setlength{\fboxsep}{5pt}
+	\fcolorbox{black}{white}{\usebox{\boiteBlanche}}
+	\egroup
+}
+\makeatother
+%\begin{Cadre}
+ %Exemple
+%\end{Cadre}
+
+%%%%% Création des environnements LLine
+\usepackage[framemethod=default]{mdframed}
+\newmdenv[
+	linecolor=NiceBlue,
+	linewidth=4pt,
+	topline=false,
+	rightline=false,
+	bottomline=false,
+	skipabove=\topsep,
+	skipbelow=\topsep,
+	innertopmargin=5pt
+]{LLine}
+%\begin{LLine}
+	%Exemple
+%\end{LLine}

@@ -1,0 +1,45 @@
+\documentclass[11pt,titlepage]{report}
+\usepackage{Preamble}
+\def\Autora{Pablo Stoeri}
+\def\Autorb{Landry Reynard}
+\def\Autorc{Samy Francelet}
+
+\begin{document}
+
+\begin{titlepage}
+	\newgeometry{margin=2cm}
+	\centering
+    \includegraphics[width=0.75\linewidth]{hes/hei}\\[1cm] 	% University Logo
+    \textsc{\LARGE Haute école d'ingénieur du Valais}\\ \vspace{\fill}
+    \textbf{\textsc{\fontsize{50}{50}\selectfont Rapport}}\\[0.8cm]
+		\textbf{\textsc{\fontsize{30}{30}\selectfont Projet LunarLandry}}\\ \vspace{\fill}
+	\textsc{\LARGE INF1}\\[0.4cm]
+	\rule{\linewidth}{0.2 mm} \\[0.5 cm]
+		\Autora \\
+		\Autorb \\
+		\Autorc \\[2cm]
+	\today
+\end{titlepage}
+\restoregeometry
+
+\tableofcontents
+
+\chapter{Introduction et problématique}
+\input{1-Introduction}
+
+\chapter{Documentation des choix d'implémentation}
+\input{2-Documentation}
+
+\chapter{Problèmes rencontrés et solutions apportées}
+\input{3-Problems}
+
+\chapter{Descripton des fonctionnalités}
+\input{4-Discussion}
+
+\chapter{Proposition d'amélioration et auto-critique}
+\input{5-Amelioration}
+
+\chapter{Conclusion}
+\input{6-Conclusion}
+
+\end{document}

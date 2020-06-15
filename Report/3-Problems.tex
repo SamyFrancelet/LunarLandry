@@ -1,0 +1,58 @@
+\section{Test Prog}
+\begin{lstlisting}
+public class SortApplication {
+
+	static void displayArray(int[] array) {
+		String value = "";
+		for (int i = 0; i < array.length; i++) {
+			value = value + array[i] + ",";
+		}
+		System.out.println(value);
+	}
+
+	public static void main(String[] args) {
+    //Creation Tableaux
+		int MaxValue = 140000;
+		int a[][] = new int[10][];
+		int b[][] = new int[10][];
+		int c[][] = new int[10][];
+
+
+		for (int i = 0; i < a.length; i++) {
+			a[i] = ArrayFactory.createRandomArray(MaxValue, 50000);
+		}
+		for (int i = 0; i < a.length; i++) {
+			b[i] = ArrayFactory.createInvertedSortedArray(MaxValue);
+		}
+		for (int i = 0; i < a.length; i++) {
+			c[i] = ArrayFactory.createShuffleArray(MaxValue);
+		}
+
+
+		long startTimeRandom = System.nanoTime();
+		for (int i = 0; i < a.length; i++) {
+			SelectionSort.sort(a[i]);
+		}
+		long endTimeRandom = System.nanoTime();
+
+		long startTimeInverted = System.nanoTime();
+		for (int i = 0; i < a.length; i++) {
+			SelectionSort.sort(b[i]);
+		}
+		long endTimeInverted = System.nanoTime();
+
+		long startTimeShuffle = System.nanoTime();
+		for (int i = 0; i < a.length; i++) {
+			SelectionSort.sort(c[i]);
+		}
+		long endTimeSuffle = System.nanoTime();
+
+
+		System.out.println((endTimeRandom - startTimeRandom) + " [ns]");
+		System.out.println((endTimeInverted - startTimeInverted) + " [ns]");
+		System.out.println((endTimeSuffle - startTimeShuffle) + " [ns]");
+
+	}
+
+}
+\end{lstlisting}

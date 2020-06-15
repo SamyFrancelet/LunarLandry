@@ -1,0 +1,1914 @@
+version: 0.12.2
+filePath: Report_LunarLandry_PLS.tex
+options:
+  $BIBINPUTS:
+    - $ROOTDIR
+    - $ROOTDIR/$OUTDIR
+    - ''
+  $TEXINPUTS:
+    - $ROOTDIR
+    - $ROOTDIR/$OUTDIR
+    - ''
+  bibtexEngine: bibtex
+  cleanPatterns:
+    - '**/*.aux'
+    - '**/*.aux.bak'
+    - '**/*.bbl'
+    - '**/*.bcf'
+    - '**/*.blg'
+    - '**/*.dvi'
+    - '**/*.fdb_latexmk'
+    - '**/*.fls'
+    - '**/*.idx'
+    - '**/*.idx.bak'
+    - '**/*.ilg'
+    - '**/*.ind'
+    - '**/*.lof'
+    - '**/*.log'
+    - '**/*.lol'
+    - '**/*.lot'
+    - '**/*.nav'
+    - '**/*.out'
+    - '**/*.pdf'
+    - '**/*.ps'
+    - '**/*.snm'
+    - '**/*.synctex.gz'
+    - '**/*.toc'
+    - '/**/_minted-${JOB}'
+    - '/${OUTDIR}/sage-plots-for-${JOB}.tex'
+    - /missfont.log
+    - /texput.log
+    - /texput.aux
+  dviToPdfEngine: xdvipdfmx
+  engine: pdflatex
+  epstopdfBoundingBox: default
+  epstopdfOutputPath: $DIR_0/$NAME_0.pdf
+  indexAutomaticRanges: true
+  indexEngine: makeindex
+  indexOrdering: word
+  indexSorting: default
+  knitrConcordance: true
+  knitrOutputPath: $JOB.tex
+  lhs2texStyle: poly
+  literateAgdaEngine: agda
+  literateHaskellEngine: lhs2TeX
+  loadCache: true
+  loadUserOptions: true
+  outputFormat: pdf
+  phaseCycles: 20
+  pweaveCacheDirectory: pweave-cache-for-$JOB
+  pweaveFigureDirectory: pweave-figures-for-$JOB
+  pweaveKernel: python3
+  pweaveOutputFormat: tex
+  pweaveOutputPath: $JOB.tex
+  saveCache: true
+  severity: info
+  validateCache: true
+  synctex: false
+  copyTargetsToRoot: true
+  outputDirectory: ''
+  intermediatePostScript: false
+  $PATH: >-
+    %SystemDrive%\texlive\2017\bin\win32;%SystemDrive%\texlive\2016\bin\win32;%SystemDrive%\texlive\2015\bin\win32;%ProgramFiles%\MiKTeX
+    2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
+files:
+  dicy-instance.yaml-ParsedYAML:
+    timeStamp: 2020-06-15T08:02:55.886Z
+    jobNames: []
+    value:
+      severity: info
+    type: ParsedYAML
+  dicy.yaml-ParsedYAML:
+    jobNames: []
+    type: ParsedYAML
+  Report_LunarLandry_PLS.yaml-ParsedYAML:
+    jobNames: []
+    type: ParsedYAML
+  Report_LunarLandry_PLS.tex-ParsedLaTeXMagic:
+    timeStamp: 2020-06-15T08:02:56.021Z
+    jobNames: []
+    value: {}
+    type: ParsedLaTeXMagic
+  'C:\Users\landr\AppData\Roaming\dicy\config.yaml-ParsedYAML':
+    timeStamp: 2020-06-15T08:02:56.015Z
+    jobNames: []
+    value:
+      synctex: false
+      engine: pdflatex
+      severity: warning
+      copyTargetsToRoot: true
+      outputDirectory: ''
+      outputFormat: pdf
+      cleanPatterns:
+        - '**/*.aux'
+        - '**/*.aux.bak'
+        - '**/*.bbl'
+        - '**/*.bcf'
+        - '**/*.blg'
+        - '**/*.dvi'
+        - '**/*.fdb_latexmk'
+        - '**/*.fls'
+        - '**/*.idx'
+        - '**/*.idx.bak'
+        - '**/*.ilg'
+        - '**/*.ind'
+        - '**/*.lof'
+        - '**/*.log'
+        - '**/*.lol'
+        - '**/*.lot'
+        - '**/*.nav'
+        - '**/*.out'
+        - '**/*.pdf'
+        - '**/*.ps'
+        - '**/*.snm'
+        - '**/*.synctex.gz'
+        - '**/*.toc'
+        - '/**/_minted-${JOB}'
+        - '/${OUTDIR}/sage-plots-for-${JOB}.tex'
+        - /missfont.log
+        - /texput.log
+        - /texput.aux
+      intermediatePostScript: false
+      $PATH: >-
+        %SystemDrive%\texlive\2017\bin\win32;%SystemDrive%\texlive\2016\bin\win32;%SystemDrive%\texlive\2015\bin\win32;%ProgramFiles%\MiKTeX
+        2.9\miktex\bin\x64;%ProgramFiles(x86)%\MiKTeX 2.9\miktex\bin;$PATH
+    type: ParsedYAML
+  Report_LunarLandry_PLS.tex:
+    timeStamp: 2020-06-15T08:11:48.060Z
+    jobNames: []
+    hash: Wb450ruZ5zWLztNB6HKSTpWkPvffEHb702MqfUzWf7w=
+    type: LaTeX
+    subType: report
+  'C:\Users\landr\AppData\Roaming\dicy\config.yaml':
+    timeStamp: 2020-06-15T08:02:55.934Z
+    jobNames: []
+    type: YAML
+  x.y-Nil:
+    jobNames: []
+    type: Nil
+  Report_LunarLandry_PLS.fls-ParsedFileListing:
+    jobNames: []
+    type: ParsedFileListing
+  Report_LunarLandry_PLS.log-ParsedLaTeXLog:
+    timeStamp: 2020-06-15T08:12:03.350Z
+    jobNames: []
+    value:
+      messages:
+        - name: pdfTeX
+          severity: info
+          text: keyval 2014/10/28 v1.15 key=value parser (DPC)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 32
+              end: 32
+        - name: pdfTeX
+          severity: info
+          text: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\generic\iftex\ifvtex.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 35
+              end: 35
+        - name: pdfTeX
+          severity: info
+          text: iftex 2020/03/06 v1.0d TeX engine tests
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\generic\iftex\iftex.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 37
+              end: 37
+        - name: pdfTeX
+          severity: info
+          text: inputenc 2018/08/11 v1.3c Input encoding file
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 53
+              end: 53
+        - name: pdfTeX
+          severity: info
+          text: fontenc 2020/02/11 v2.0o Standard LaTeX package
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 57
+              end: 57
+        - name: pdfTeX
+          severity: info
+          text: babel 2020/04/28 3.43 The Babel package
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 59
+              end: 59
+        - severity: info
+          name: pdfTeX
+          category: Package babel
+          text: \l@acadian = using hyphenrules for french (\language22).
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\generic\babel-french\french.ldf'
+            range:
+              start: 91
+              end: 91
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 76
+              end: 77
+        - severity: info
+          name: pdfTeX
+          category: Package babel
+          text: \l@canadien = using hyphenrules for french (\language22).
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\generic\babel-french\french.ldf'
+            range:
+              start: 92
+              end: 92
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 78
+              end: 79
+        - severity: info
+          name: pdfTeX
+          category: Package babel
+          text: 'Making : an active character'
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\generic\babel-french\french.ldf'
+            range:
+              start: 419
+              end: 419
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 81
+              end: 81
+        - severity: info
+          name: pdfTeX
+          category: Package babel
+          text: Making ; an active character
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\generic\babel-french\french.ldf'
+            range:
+              start: 420
+              end: 420
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 82
+              end: 82
+        - severity: info
+          name: pdfTeX
+          category: Package babel
+          text: Making ! an active character
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\generic\babel-french\french.ldf'
+            range:
+              start: 421
+              end: 421
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 83
+              end: 83
+        - severity: info
+          name: pdfTeX
+          category: Package babel
+          text: Making ? an active character
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\generic\babel-french\french.ldf'
+            range:
+              start: 422
+              end: 422
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 84
+              end: 84
+        - name: pdfTeX
+          severity: info
+          text: times 2020/03/25 PSNFSS-v9.3 (SPQR)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\times.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 103
+              end: 103
+        - name: pdfTeX
+          severity: info
+          text: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\tools\multicol.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 105
+              end: 105
+        - name: pdfTeX
+          severity: info
+          text: wrapfig 2003/01/31 v 3.6
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 179
+              end: 179
+        - name: pdfTeX
+          severity: info
+          text: expl3 2020-05-11 L3 programming layer (loader)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\expl3.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 182
+              end: 182
+        - name: pdfTeX
+          severity: info
+          text: xparse 2020-03-06 L3 Experimental document command parser
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\l3packages\xparse\xparse.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 188
+              end: 188
+        - name: pdfTeX
+          severity: info
+          text: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\lipsum\lipsum.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 194
+              end: 194
+        - name: pdfTeX
+          severity: info
+          text: 'graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)'
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 198
+              end: 198
+        - name: pdfTeX
+          severity: info
+          text: 'graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)'
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 200
+              end: 200
+        - name: pdfTeX
+          severity: info
+          text: trig 2016/01/03 v1.10 sin cos tan (DPC)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 202
+              end: 202
+        - severity: info
+          name: pdfTeX
+          category: Package graphics
+          text: 'Driver file: pdftex.def'
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty'
+            range:
+              start: 105
+              end: 105
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 206
+              end: 206
+        - name: pdfTeX
+          severity: info
+          text: caption 2020/05/10 v3.4j Customizing captions (AR)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 213
+              end: 213
+        - name: pdfTeX
+          severity: info
+          text: caption3 2020/05/10 v1.11 caption3 kernel (AR)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 215
+              end: 215
+        - severity: info
+          name: pdfTeX
+          category: Package caption3
+          text: 'TeX engine: e-TeX'
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty'
+            range:
+              start: 61
+              end: 61
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 216
+              end: 216
+        - severity: info
+          name: pdfTeX
+          category: Package caption
+          text: Standard document class detected.
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 224
+              end: 224
+        - severity: info
+          name: pdfTeX
+          category: Package caption
+          text: wrapfig package is loaded.
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 228
+              end: 228
+        - name: pdfTeX
+          severity: info
+          text: float 2001/11/08 v1.3d Float enhancements (AL)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 230
+              end: 230
+        - name: pdfTeX
+          severity: info
+          text: amsmath 2020/01/20 v2.17e AMS math features
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 237
+              end: 237
+        - name: pdfTeX
+          severity: info
+          text: amstext 2000/06/29 v2.01 AMS text
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 241
+              end: 241
+        - name: pdfTeX
+          severity: info
+          text: amsbsy 1999/11/29 v1.2d Bold Symbols
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 247
+              end: 247
+        - name: pdfTeX
+          severity: info
+          text: amsopn 2016/03/08 v2.02 operator names
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 250
+              end: 250
+        - severity: info
+          name: pdfTeX
+          category: LaTeX
+          text: Redefining \frac
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 227
+              end: 227
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 253
+              end: 253
+        - severity: info
+          name: pdfTeX
+          category: LaTeX
+          text: Redefining \overline
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 389
+              end: 389
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 256
+              end: 256
+        - severity: info
+          name: pdfTeX
+          category: LaTeX
+          text: Redefining \ldots
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 486
+              end: 486
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 259
+              end: 259
+        - severity: info
+          name: pdfTeX
+          category: LaTeX
+          text: Redefining \dots
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 489
+              end: 489
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 260
+              end: 260
+        - severity: info
+          name: pdfTeX
+          category: LaTeX
+          text: Redefining \cdots
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 610
+              end: 610
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 261
+              end: 261
+        - severity: info
+          name: pdfTeX
+          category: LaTeX Font
+          text: Redeclaring font encoding OML
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 733
+              end: 733
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 265
+              end: 265
+        - severity: info
+          name: pdfTeX
+          category: LaTeX Font
+          text: Redeclaring font encoding OMS
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 734
+              end: 734
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 266
+              end: 266
+        - severity: info
+          name: pdfTeX
+          category: LaTeX
+          text: 'Redefining \['
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 2859
+              end: 2859
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 287
+              end: 287
+        - severity: info
+          name: pdfTeX
+          category: LaTeX
+          text: 'Redefining \]'
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty'
+            range:
+              start: 2860
+              end: 2860
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 288
+              end: 288
+        - name: pdfTeX
+          severity: info
+          text: mathtools 2020/03/24 v1.24 mathematical typesetting tools
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\mathtools\mathtools.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 290
+              end: 290
+        - name: pdfTeX
+          severity: info
+          text: 'calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)'
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 292
+              end: 292
+        - severity: info
+          name: pdfTeX
+          category: LaTeX
+          text: Redefining \setlength
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty'
+            range:
+              start: 80
+              end: 80
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 299
+              end: 299
+        - severity: info
+          name: pdfTeX
+          category: LaTeX
+          text: Redefining \addtolength
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty'
+            range:
+              start: 81
+              end: 81
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 300
+              end: 300
+        - name: pdfTeX
+          severity: info
+          text: mhsetup 2017/03/31 v1.3 programming setup (MH)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\mathtools\mhsetup.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 304
+              end: 304
+        - severity: info
+          name: pdfTeX
+          category: LaTeX
+          text: Thecontrolsequence`\('isalreadyrobust
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\mathtools\mathtools.sty'
+            range:
+              start: 130
+              end: 130
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 306
+              end: 306
+        - severity: info
+          name: pdfTeX
+          category: LaTeX
+          text: Thecontrolsequence`\)'isalreadyrobust
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\mathtools\mathtools.sty'
+            range:
+              start: 130
+              end: 130
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 307
+              end: 307
+        - severity: info
+          name: pdfTeX
+          category: LaTeX
+          text: 'Thecontrolsequence`\[''isalreadyrobust'
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\mathtools\mathtools.sty'
+            range:
+              start: 130
+              end: 130
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 308
+              end: 308
+        - severity: info
+          name: pdfTeX
+          category: LaTeX
+          text: 'Thecontrolsequence`\]''isalreadyrobust'
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\mathtools\mathtools.sty'
+            range:
+              start: 130
+              end: 130
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 309
+              end: 309
+        - name: pdfTeX
+          severity: info
+          text: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 322
+              end: 322
+        - name: pdfTeX
+          severity: info
+          text: array 2019/08/31 v2.4l Tabular extension package (FMi)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 324
+              end: 324
+        - name: pdfTeX
+          severity: info
+          text: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 333
+              end: 333
+        - severity: info
+          name: pdfTeX
+          category: Package color
+          text: 'Driver file: pdftex.def'
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty'
+            range:
+              start: 147
+              end: 147
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 337
+              end: 337
+        - name: pdfTeX
+          severity: info
+          text: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\graphics\rotating.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 342
+              end: 342
+        - name: pdfTeX
+          severity: info
+          text: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 344
+              end: 344
+        - name: pdfTeX
+          severity: info
+          text: multirow 2019/05/31 v2.5 Span multiple rows of a table
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 352
+              end: 352
+        - name: pdfTeX
+          severity: info
+          text: booktabs 2020/01/12 v1.61803398 Publication quality tables
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 358
+              end: 358
+        - name: pdfTeX
+          severity: info
+          text: >-
+            fancyhdr 2019/01/31 v3.10 Extensive control of page headers and
+            footers
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 377
+              end: 378
+        - name: pdfTeX
+          severity: info
+          text: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\lastpage\lastpage.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 389
+              end: 389
+        - name: pdfTeX
+          severity: info
+          text: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\ms\everyshi.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 402
+              end: 402
+        - name: pdfTeX
+          severity: info
+          text: pgfrcs 2020/01/08 v3.1.5b (3.1.5b)
+          source:
+            file: >-
+              C:\Program Files\MiKTeX
+              2.9\tex\generic\pgf\utilities\pgfrcs.code.tex
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 405
+              end: 405
+        - name: pdfTeX
+          severity: info
+          text: pgf 2020/01/08 v3.1.5b (3.1.5b)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 407
+              end: 407
+        - name: pdfTeX
+          severity: info
+          text: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
+          source:
+            file: >-
+              C:\Program Files\MiKTeX
+              2.9\tex\generic\pgf\systemlayer\pgfsys.code.tex
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 411
+              end: 411
+        - name: pdfTeX
+          severity: info
+          text: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 460
+              end: 460
+        - severity: info
+          name: pdfTeX
+          category: Package xcolor
+          text: 'Driver file: pdftex.def'
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty'
+            range:
+              start: 225
+              end: 225
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 464
+              end: 464
+        - severity: info
+          name: pdfTeX
+          category: LaTeX
+          text: Redefining \color
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty'
+            range:
+              start: 709
+              end: 709
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 465
+              end: 465
+        - severity: info
+          name: pdfTeX
+          category: Package xcolor
+          text: Model `cmy' substituted by `cmy0'
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty'
+            range:
+              start: 1348
+              end: 1348
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 466
+              end: 466
+        - severity: info
+          name: pdfTeX
+          category: Package xcolor
+          text: Model `hsb' substituted by `rgb'
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty'
+            range:
+              start: 1352
+              end: 1352
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 467
+              end: 467
+        - severity: info
+          name: pdfTeX
+          category: Package xcolor
+          text: Model `RGB' extended
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty'
+            range:
+              start: 1364
+              end: 1364
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 468
+              end: 468
+        - severity: info
+          name: pdfTeX
+          category: Package xcolor
+          text: Model `HTML' substituted by `rgb'
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty'
+            range:
+              start: 1366
+              end: 1366
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 469
+              end: 469
+        - severity: info
+          name: pdfTeX
+          category: Package xcolor
+          text: Model `Hsb' substituted by `hsb'
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty'
+            range:
+              start: 1367
+              end: 1367
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 470
+              end: 470
+        - severity: info
+          name: pdfTeX
+          category: Package xcolor
+          text: Model `tHsb' substituted by `hsb'
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty'
+            range:
+              start: 1368
+              end: 1368
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 471
+              end: 471
+        - severity: info
+          name: pdfTeX
+          category: Package xcolor
+          text: Model `HSB' substituted by `hsb'
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty'
+            range:
+              start: 1369
+              end: 1369
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 472
+              end: 472
+        - severity: info
+          name: pdfTeX
+          category: Package xcolor
+          text: Model `Gray' substituted by `gray'
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty'
+            range:
+              start: 1370
+              end: 1370
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 473
+              end: 473
+        - severity: info
+          name: pdfTeX
+          category: Package xcolor
+          text: Model `wave' substituted by `hsb'
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty'
+            range:
+              start: 1371
+              end: 1371
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 474
+              end: 474
+        - name: pdfTeX
+          severity: info
+          text: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
+          source:
+            file: >-
+              C:\Program Files\MiKTeX
+              2.9\tex\generic\pgf\basiclayer\pgfcore.code.tex
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 476
+              end: 476
+        - name: pdfTeX
+          severity: info
+          text: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
+          source:
+            file: >-
+              C:\Program Files\MiKTeX
+              2.9\tex\latex\pgf\compatibility\pgfcomp-version-0-65.
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 606
+              end: 606
+        - name: pdfTeX
+          severity: info
+          text: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
+          source:
+            file: >-
+              C:\Program Files\MiKTeX
+              2.9\tex\latex\pgf\compatibility\pgfcomp-version-1-18.
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 612
+              end: 612
+        - name: pdfTeX
+          severity: info
+          text: pgffor 2020/01/08 v3.1.5b (3.1.5b)
+          source:
+            file: >-
+              C:\Program Files\MiKTeX
+              2.9\tex\generic\pgf\utilities\pgffor.code.tex
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 619
+              end: 619
+        - name: pdfTeX
+          severity: info
+          text: tikz 2020/01/08 v3.1.5b (3.1.5b)
+          source:
+            file: >-
+              C:\Program Files\MiKTeX
+              2.9\tex\generic\pgf\frontendlayer\tikz\tikz.code.t
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 627
+              end: 627
+        - name: pdfTeX
+          severity: info
+          text: titlesec 2019/10/16 v2.13 Sectioning titles
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 663
+              end: 663
+        - name: pdfTeX
+          severity: info
+          text: listings 2020/03/24 1.8d (Carsten Heinz)
+          source:
+            file: Preamble.sty
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 694
+              end: 694
+        - name: pdfTeX
+          severity: info
+          text: 'mdframed 2013/07/01 1.9b: mdframed'
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\mdframed\mdframed.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 700
+              end: 700
+        - name: pdfTeX
+          severity: info
+          text: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\kvoptions\kvoptions.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 702
+              end: 702
+        - name: pdfTeX
+          severity: info
+          text: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\generic\ltxcmds\ltxcmds.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 704
+              end: 704
+        - name: pdfTeX
+          severity: info
+          text: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\generic\kvsetkeys\kvsetkeys.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 706
+              end: 706
+        - name: pdfTeX
+          severity: info
+          text: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 708
+              end: 708
+        - name: pdfTeX
+          severity: info
+          text: zref-abspage 2019/11/29 v2.28 Module abspage for zref (HO)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\zref\zref-abspage.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 711
+              end: 711
+        - name: pdfTeX
+          severity: info
+          text: zref-base 2019/11/29 v2.28 Module base for zref (HO)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\zref\zref-base.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 713
+              end: 713
+        - name: pdfTeX
+          severity: info
+          text: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\generic\infwarerr\infwarerr.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 715
+              end: 715
+        - name: pdfTeX
+          severity: info
+          text: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+          source:
+            file: >-
+              C:\Program Files\MiKTeX
+              2.9\tex\generic\kvdefinekeys\kvdefinekeys.sty
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 717
+              end: 717
+        - name: pdfTeX
+          severity: info
+          text: >-
+            pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX
+            (HO)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\pdftexcmds\pdftexcmds.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 719
+              end: 720
+        - severity: info
+          name: pdfTeX
+          category: Package pdftexcmds
+          text: \pdf@primitive is available.
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\pdftexcmds\pdftexcmds.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 721
+              end: 721
+        - severity: info
+          name: pdfTeX
+          category: Package pdftexcmds
+          text: \pdf@ifprimitive is available.
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\pdftexcmds\pdftexcmds.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 722
+              end: 722
+        - severity: info
+          name: pdfTeX
+          category: Package pdftexcmds
+          text: \pdfdraftmode found.
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\pdftexcmds\pdftexcmds.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 723
+              end: 723
+        - name: pdfTeX
+          severity: info
+          text: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\generic\etexcmds\etexcmds.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 725
+              end: 725
+        - name: pdfTeX
+          severity: info
+          text: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\auxhook\auxhook.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 727
+              end: 727
+        - severity: info
+          name: pdfTeX
+          category: Package zref
+          text: 'New property list: main'
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\zref\zref-base.sty'
+            range:
+              start: 763
+              end: 763
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 729
+              end: 729
+        - severity: info
+          name: pdfTeX
+          category: Package zref
+          text: 'New property: default'
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\zref\zref-base.sty'
+            range:
+              start: 764
+              end: 764
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 730
+              end: 730
+        - severity: info
+          name: pdfTeX
+          category: Package zref
+          text: 'New property: page'
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\zref\zref-base.sty'
+            range:
+              start: 765
+              end: 765
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 731
+              end: 731
+        - name: pdfTeX
+          severity: info
+          text: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\generic\atbegshi\atbegshi.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 733
+              end: 733
+        - severity: info
+          name: pdfTeX
+          category: Package zref
+          text: 'New property: abspage'
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\zref\zref-abspage.sty'
+            range:
+              start: 66
+              end: 66
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 736
+              end: 736
+        - name: pdfTeX
+          severity: info
+          text: needspace 2010/09/12 v1.3d reserve vertical space
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\needspace\needspace.sty'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 738
+              end: 738
+        - severity: info
+          name: pdfTeX
+          category: Package zref
+          text: 'New property: mdf@pagevalue'
+          source:
+            file: 'C:\Program Files\MiKTeX 2.9\tex\latex\mdframed\mdframed.sty'
+            range:
+              start: 895
+              end: 895
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 826
+              end: 826
+        - severity: info
+          name: pdfTeX
+          category: LaTeX Font
+          text: Checking defaults for OML/cmm/m/it ... okay
+          source:
+            file: Report_LunarLandry_PLS.tex
+            range:
+              start: 7
+              end: 7
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 832
+              end: 833
+        - severity: info
+          name: pdfTeX
+          category: LaTeX Font
+          text: Checking defaults for OMS/cmsy/m/n ... okay
+          source:
+            file: Report_LunarLandry_PLS.tex
+            range:
+              start: 7
+              end: 7
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 834
+              end: 835
+        - severity: info
+          name: pdfTeX
+          category: LaTeX Font
+          text: Checking defaults for OT1/cmr/m/n ... okay
+          source:
+            file: Report_LunarLandry_PLS.tex
+            range:
+              start: 7
+              end: 7
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 836
+              end: 837
+        - severity: info
+          name: pdfTeX
+          category: LaTeX Font
+          text: Checking defaults for T1/cmr/m/n ... okay
+          source:
+            file: Report_LunarLandry_PLS.tex
+            range:
+              start: 7
+              end: 7
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 838
+              end: 839
+        - severity: info
+          name: pdfTeX
+          category: LaTeX Font
+          text: Checking defaults for TS1/cmr/m/n ... okay
+          source:
+            file: Report_LunarLandry_PLS.tex
+            range:
+              start: 7
+              end: 7
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 840
+              end: 841
+        - severity: info
+          name: pdfTeX
+          category: LaTeX Font
+          text: Checking defaults for OMX/cmex/m/n ... okay
+          source:
+            file: Report_LunarLandry_PLS.tex
+            range:
+              start: 7
+              end: 7
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 842
+              end: 843
+        - severity: info
+          name: pdfTeX
+          category: LaTeX Font
+          text: Checking defaults for U/cmr/m/n ... okay
+          source:
+            file: Report_LunarLandry_PLS.tex
+            range:
+              start: 7
+              end: 7
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 844
+              end: 845
+        - severity: info
+          name: pdfTeX
+          category: LaTeX Font
+          text: Trying to load font information for T1+ptm
+          source:
+            file: Report_LunarLandry_PLS.tex
+            range:
+              start: 7
+              end: 7
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 846
+              end: 846
+        - severity: info
+          name: pdfTeX
+          category: LaTeX
+          text: Redefining \degres
+          source:
+            file: Report_LunarLandry_PLS.tex
+            range:
+              start: 7
+              end: 7
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 885
+              end: 885
+        - severity: info
+          name: pdfTeX
+          category: LaTeX
+          text: Redefining \dots
+          source:
+            file: Report_LunarLandry_PLS.tex
+            range:
+              start: 7
+              end: 7
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 886
+              end: 886
+        - severity: info
+          name: pdfTeX
+          category: LaTeX
+          text: Redefining \up
+          source:
+            file: Report_LunarLandry_PLS.tex
+            range:
+              start: 7
+              end: 7
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 887
+              end: 887
+        - name: pdfTeX
+          severity: info
+          text: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+          source:
+            file: >-
+              C:\Program Files\MiKTeX
+              2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 902
+              end: 902
+        - severity: info
+          name: pdfTeX
+          category: Package epstopdf-base
+          text: Redefining graphics rule for `.eps'
+          source:
+            file: >-
+              C:\Program Files\MiKTeX
+              2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
+            range:
+              start: 485
+              end: 485
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 903
+              end: 904
+        - severity: info
+          name: pdfTeX
+          category: Package caption
+          text: Begin \AtBeginDocument code.
+          source:
+            file: Report_LunarLandry_PLS.tex
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 906
+              end: 906
+        - severity: info
+          name: pdfTeX
+          category: Package caption
+          text: float package is loaded.
+          source:
+            file: Report_LunarLandry_PLS.tex
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 907
+              end: 907
+        - severity: info
+          name: pdfTeX
+          category: Package caption
+          text: listings package is loaded.
+          source:
+            file: Report_LunarLandry_PLS.tex
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 908
+              end: 908
+        - severity: info
+          name: pdfTeX
+          category: Package caption
+          text: rotating package is loaded.
+          source:
+            file: Report_LunarLandry_PLS.tex
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 909
+              end: 909
+        - severity: info
+          name: pdfTeX
+          category: Package caption
+          text: End \AtBeginDocument code.
+          source:
+            file: Report_LunarLandry_PLS.tex
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 910
+              end: 910
+        - severity: info
+          name: pdfTeX
+          category: Package lastpage
+          text: >-
+            Please have a look at the pageslts package at
+            https://www.ctan.org/pkg/pageslts !.
+          source:
+            file: Report_LunarLandry_PLS.tex
+            range:
+              start: 7
+              end: 7
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 911
+              end: 913
+        - severity: info
+          name: pdfTeX
+          category: Package pdftex.def
+          text: 'Images/hes/hei.png used Requested size: 362.77264pt x 104.49657pt.'
+          source:
+            file: Report_LunarLandry_PLS.tex
+            range:
+              start: 12
+              end: 12
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 952
+              end: 953
+        - severity: error
+          name: pdfTeX
+          text: Environment summary undefined
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 974
+              end: 975
+          source:
+            file: 1-Introduction.tex
+            range:
+              start: 2
+              end: 2
+          category: LaTeX
+        - severity: error
+          name: pdfTeX
+          text: '\begin{document} ended by \end{summary}'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 989
+              end: 990
+          source:
+            file: 1-Introduction.tex
+            range:
+              start: 8
+              end: 8
+          category: LaTeX
+        - severity: error
+          name: pdfTeX
+          text: Environment invsummary undefined
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 1004
+              end: 1005
+          source:
+            file: 1-Introduction.tex
+            range:
+              start: 12
+              end: 12
+          category: LaTeX
+        - severity: error
+          name: pdfTeX
+          text: '\begin{document} ended by \end{invsummary}'
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 1019
+              end: 1021
+          source:
+            file: 1-Introduction.tex
+            range:
+              start: 16
+              end: 16
+          category: LaTeX
+        - severity: info
+          name: pdfTeX
+          category: LaTeX Font
+          text: Trying to load font information for T1+pcr
+          source:
+            file: 3-Problems.tex
+            range:
+              start: 2
+              end: 2
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 1056
+              end: 1056
+        - severity: error
+          name: pdfTeX
+          text: Undefined control sequence
+          log:
+            file: Report_LunarLandry_PLS.log
+            range:
+              start: 1064
+              end: 1065
+          source:
+            file: Report_LunarLandry_PLS.tex
+            range:
+              start: 36
+              end: 36
+      inputs: []
+      outputs:
+        - Report_LunarLandry_PLS.pdf
+      calls: []
+    type: ParsedLaTeXLog
+  Report_LunarLandry_PLS.log:
+    timeStamp: 2020-06-15T08:11:53.607Z
+    jobNames: []
+    hash: bqmn2k/8JmcykqXTuPyvrcgxwNmpxe8FmvAYIUa3phg=
+    type: LaTeXLog
+    subType: pdfTeX
+  Report_LunarLandry_PLS.pdf:
+    timeStamp: 2020-06-15T08:11:53.598Z
+    jobNames: []
+    hash: 8MRGpvfNHFNseKAYOXYD1qSTQOzFggiVI3tXC77sLjk=
+    type: PortableDocumentFormat
+rules:
+  - name: ApplyOptions
+    command: load
+    phase: initialize
+    parameters: []
+    inputs:
+      - file: dicy.yaml-ParsedYAML
+        type: default
+      - file: Report_LunarLandry_PLS.yaml-ParsedYAML
+        type: default
+      - file: Report_LunarLandry_PLS.tex-ParsedLaTeXMagic
+        type: default
+      - file: dicy-instance.yaml-ParsedYAML
+        type: default
+      - file: 'C:\Users\landr\AppData\Roaming\dicy\config.yaml-ParsedYAML'
+        type: default
+    outputs: []
+  - name: LoadAndValidateCache
+    command: load
+    phase: initialize
+    parameters: []
+    inputs: []
+    outputs: []
+  - name: Migrate
+    command: load
+    phase: initialize
+    parameters: []
+    inputs: []
+    outputs: []
+  - name: ApplyOptions
+    command: load
+    phase: execute
+    parameters: []
+    inputs:
+      - file: dicy.yaml-ParsedYAML
+        type: default
+      - file: Report_LunarLandry_PLS.yaml-ParsedYAML
+        type: default
+      - file: Report_LunarLandry_PLS.tex-ParsedLaTeXMagic
+        type: default
+      - file: dicy-instance.yaml-ParsedYAML
+        type: default
+      - file: 'C:\Users\landr\AppData\Roaming\dicy\config.yaml-ParsedYAML'
+        type: default
+    outputs: []
+  - name: ParseOptionsFile
+    command: load
+    phase: execute
+    parameters: []
+    inputs:
+      - file: 'C:\Users\landr\AppData\Roaming\dicy\config.yaml'
+        type: default
+    outputs:
+      - file: 'C:\Users\landr\AppData\Roaming\dicy\config.yaml-ParsedYAML'
+        type: default
+  - name: ParseLaTeXMagic
+    command: load
+    phase: execute
+    parameters:
+      - Report_LunarLandry_PLS.tex
+    inputs:
+      - file: Report_LunarLandry_PLS.tex
+        type: default
+    outputs:
+      - file: Report_LunarLandry_PLS.tex-ParsedLaTeXMagic
+        type: default
+  - name: AssignJobNames
+    command: load
+    phase: finalize
+    parameters: []
+    inputs: []
+    outputs: []
+  - name: FindLogFiles
+    command: build
+    phase: initialize
+    parameters: []
+    inputs: []
+    outputs: []
+  - name: LaTeX
+    command: build
+    phase: execute
+    parameters:
+      - Report_LunarLandry_PLS.tex
+    inputs:
+      - file: Report_LunarLandry_PLS.tex
+        type: default
+      - file: Report_LunarLandry_PLS.fls-ParsedFileListing
+        type: default
+      - file: Report_LunarLandry_PLS.log-ParsedLaTeXLog
+        type: default
+    outputs:
+      - file: Report_LunarLandry_PLS.pdf
+        type: default
+  - name: LogProducedTargets
+    command: build
+    phase: finalize
+    parameters: []
+    inputs: []
+    outputs: []
+  - name: CheckForMissingBuildRule
+    command: build
+    phase: finalize
+    parameters:
+      - Report_LunarLandry_PLS.tex
+    inputs:
+      - file: Report_LunarLandry_PLS.tex
+        type: default
+    outputs: []
+  - name: FindLogFiles
+    command: log
+    phase: initialize
+    parameters: []
+    inputs: []
+    outputs: []
+  - name: ReportLogMessages
+    command: log
+    phase: execute
+    parameters:
+      - Report_LunarLandry_PLS.log-ParsedLaTeXLog
+    inputs:
+      - file: Report_LunarLandry_PLS.log-ParsedLaTeXLog
+        type: default
+    outputs: []
+  - name: ParseLaTeXLog
+    command: log
+    phase: execute
+    parameters:
+      - Report_LunarLandry_PLS.log
+    inputs:
+      - file: Report_LunarLandry_PLS.log
+        type: default
+    outputs:
+      - file: Report_LunarLandry_PLS.log-ParsedLaTeXLog
+        type: default
+  - name: SaveCache
+    command: save
+    phase: execute
+    parameters: []
+    inputs: []
+    outputs: []
+  - name: ParseLaTeXLog
+    command: build
+    phase: execute
+    parameters:
+      - Report_LunarLandry_PLS.log
+    inputs:
+      - file: Report_LunarLandry_PLS.log
+        type: default
+    outputs:
+      - file: Report_LunarLandry_PLS.log-ParsedLaTeXLog
+        type: default
+  - name: Clean
+    command: clean
+    phase: execute
+    parameters: []
+    inputs: []
+    outputs: []
