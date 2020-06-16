@@ -15,8 +15,8 @@ import java.util.Iterator;
 import java.util.Random;
 
 /**
- * Demo for particle physics. There are no collisions in the physics and
- * no boundaries.
+ * Demo for particle physics. There are no collisions in the physics and no
+ * boundaries.
  *
  * @author Pierre-Andre Mudry (mui)
  * @version 1.2
@@ -60,7 +60,6 @@ public class DemoParticlePhysics extends PortableApplication {
 		world.getBodies(bodies);
 
 		Iterator<Body> it = bodies.iterator();
-
 
 		while (it.hasNext()) {
 			Body p = it.next();
