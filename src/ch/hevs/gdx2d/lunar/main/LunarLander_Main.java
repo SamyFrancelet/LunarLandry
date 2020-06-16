@@ -32,6 +32,8 @@ public class LunarLander_Main extends PortableApplication{
 	static final Random rand = new Random();
 	public final int MAX_AGE = 20;
 	public int CREATION_RATE = 3;
+	public final int MAX_STAR_AGE = 100;
+	public int CREATION_STAR_RATE = 1;
 	// Shooting related
 	boolean mouseActive = false;
 	Vector2 positionClick;
@@ -75,8 +77,21 @@ public class LunarLander_Main extends PortableApplication{
 					particle.destroy();
 				}
 			}
+			if (p.getUserData() instanceof BackGround) {
+				BackGround backGround = (BackGround) p.getUserData();
+				backGround.step();
+				backGround.render(g);
+
+				if (backGround.shouldbeDestroyed()) {
+					backGround.destroy();
+				}
+			}
 		}
 		PhysicsWorld.updatePhysics(Gdx.graphics.getDeltaTime());
+		
+
+		createBackGRound();
+
 
 		if (ssLandry.thrustUp || ssLandry.thrustLeft || ssLandry.thrustRight)
 			createParticles();
@@ -87,13 +102,30 @@ public class LunarLander_Main extends PortableApplication{
 	}
 	
 	void createParticles() {
-		for (int i = 0; i < CREATION_RATE; i++) {
+		for (int i = 0; i < CREATION_RATE; i++ ) {
 			Particle c = new Particle(ssLandry.position, 10, MAX_AGE + rand.nextInt(MAX_AGE / 2));
 
 			// Apply a vertical force with some random horizontal component
 			ssLandry.force.x = rand.nextFloat() * 0.00095f * (rand.nextBoolean() == true ? -1 : 1);
 			ssLandry.force.y = rand.nextFloat() * 0.00095f * (rand.nextBoolean() == true ? -1 : 1);
 			c.applyBodyLinearImpulse(ssLandry.force, ssLandry.position, true);
+		}
+	}
+	
+	void createBackGRound() {
+		for (int i = 0; i < CREATION_STAR_RATE; i++) {
+			Vector2 random = new Vector2(rand.nextFloat() * Constants.WIN_WIDTH,
+					(rand.nextFloat() * (Constants.WIN_HEIGHT- Constants.GROUND_ALTITUDE))+ Constants.GROUND_ALTITUDE);
+			BackGround b = new BackGround(random, 10, MAX_STAR_AGE + rand.nextInt(MAX_STAR_AGE ));
+			// Apply a vertical force with some random horizontal component
+			ssLandry.force.x = rand.nextFloat() * 0.00095f * (rand.nextBoolean() == true ? -1 : 1);
+			ssLandry.force.y = rand.nextFloat() * 0.00095f * (rand.nextBoolean() == true ? -1 : 1);
+			b.setBodyActive(false);
+			// TRY DE FAIRE BOUGER LES ETOILES VERS LA GAUCHE EN MODE LE FOND BOUGE MAIS PAS REUSSI A CONTRER LA GRAVITE !
+			//b.applyBodyForceToCenter(100, 0, true);
+			//b.applyBodyLinearImpulse(new Vector2(100f, 100f), random, true);
+			
+			
 		}
 	}
 	
