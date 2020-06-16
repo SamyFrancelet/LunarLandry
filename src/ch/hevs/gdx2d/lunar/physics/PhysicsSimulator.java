@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 
-import ch.hevs.gdx2d.lib.GdxGraphics;
+import ch.hevs.gdx2d.lunar.main.PolygonWorking;
 
 /**
  * A simple physics simulator for the inf1 project.
@@ -17,7 +17,8 @@ public class PhysicsSimulator {
 	 */
 	double width;
 	double height;
-	Moon moon;
+	
+	PolygonWorking ground;
 
 	private final boolean VERBOSE_PHYSICS = false;
 
@@ -34,7 +35,6 @@ public class PhysicsSimulator {
 		sim_objects = new ArrayList<Simulatable>();
 		this.width = width;
 		this.height = height;
-		moon = new Moon();
 	}
 
 	/**
@@ -113,9 +113,8 @@ public class PhysicsSimulator {
 				boxPoints[3] = new Vector2(box.getX() + box.getWidth(), box.getY() + box.getHeight());
 				
 				// Ground corner into object
-				for (int j = 0; j < moon.polyPoints.length; j++) {
-					System.out.println(boxPoints[j]);
-					if (box.contains(moon.polyPoints[j]) || destroyed) {
+				for (int j = 0; j < Constants.scale; j++) {
+					if (box.contains(ground.getVertex(j)) || destroyed) {
 						destroyed = true;
 						break;
 					}
@@ -123,7 +122,7 @@ public class PhysicsSimulator {
 				
 				// Object corner into ground
 				for (int j = 0; j < 4; j++) {
-					if (moon.ground.contains(boxPoints[j]) || destroyed) {
+					if (ground.contains(boxPoints[j]) || destroyed) {
 						destroyed = true;
 						break;
 					}
@@ -141,5 +140,9 @@ public class PhysicsSimulator {
 
 	public void removeAllObjectsfromSim() {
 		sim_objects.clear();
+	}
+	
+	public void changeGround(PolygonWorking ground) {
+		this.ground = ground;
 	}
 }
