@@ -17,7 +17,7 @@ import com.badlogic.gdx.physics.box2d.Filter;
 public class Particle extends PhysicsBox {
 	protected final int maxAge;
 	// Resources MUST not be static
-	protected BitmapImage img = new BitmapImage("data/images/star.png");
+	protected BitmapImage img = new BitmapImage("data/images/fireBall_5.png");
 	protected int age = 0;
 	private boolean init = false;
 
@@ -58,7 +58,7 @@ public class Particle extends PhysicsBox {
 		g.sbSetColor(.5f, 0.7f, 0.9f, 1.0f - age / (float) (maxAge + 5));
 
 		// Draw the particle
-		g.draw(img.getRegion(), pos.x - img.getImage().getWidth() / 2, pos.y - img.getImage().getHeight() / 2);
+		g.draw(img.getRegion(), pos.x - img.getImage().getWidth() / 2, (pos.y - img.getImage().getHeight() / 2)-30);
 		g.sbSetColor(col);
 	}
 }
