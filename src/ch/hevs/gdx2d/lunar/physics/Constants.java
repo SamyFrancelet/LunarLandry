@@ -50,5 +50,5 @@ public final class Constants {
 	 */
 	public static float maxIncline = 100.0f;
 	public static int minGround = 200;
-	public static int scale = 10;
+	public static int scale = 20;
 }

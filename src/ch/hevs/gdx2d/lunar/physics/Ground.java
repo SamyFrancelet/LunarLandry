@@ -2,13 +2,14 @@ package ch.hevs.gdx2d.lunar.physics;
 
 import com.badlogic.gdx.math.Vector2;
 
+import ch.hevs.gdx2d.lunar.main.PolygonWorking;
+
 public class Ground {
 
 	private Vector2[] polyPoints = new Vector2[Constants.scale];
-
+	private PolygonWorking groundPoly;
 
 	public Ground() {
-		
 		for (int i = 0; i < polyPoints.length; i++) {
 			if (i == 0) {
 				polyPoints[i] = new Vector2(0, 100);
@@ -21,9 +22,11 @@ public class Ground {
 						-Constants.maxIncline));
 			}
 		}
+		
+		groundPoly = new PolygonWorking(polyPoints);
 	}
-	public Vector2[] getPolygon () {
-		return polyPoints;
+	
+	public PolygonWorking getPolygon () {
+		return groundPoly;
 	}
-
 }
