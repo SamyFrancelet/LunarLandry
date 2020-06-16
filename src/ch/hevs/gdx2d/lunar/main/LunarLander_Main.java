@@ -7,6 +7,7 @@ import javax.swing.ImageIcon;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Interpolation;
@@ -15,6 +16,8 @@ import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
 
+import ch.hevs.gdx2d.components.audio.MusicPlayer;
+import ch.hevs.gdx2d.components.audio.SoundSample;
 import ch.hevs.gdx2d.components.bitmaps.BitmapImage;
 import ch.hevs.gdx2d.lib.GdxGraphics;
 import ch.hevs.gdx2d.lib.physics.PhysicsWorld;
@@ -27,6 +30,7 @@ public class LunarLander_Main extends PortableApplication{
 	
 	PhysicsSimulator physics = new PhysicsSimulator(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
 	Spaceship ssLandry = new Spaceship(new Vector2(400, 400));
+	
 	// Particle related
 	World world = PhysicsWorld.getInstance();
 	static final Random rand = new Random();
@@ -38,6 +42,7 @@ public class LunarLander_Main extends PortableApplication{
 	boolean mouseActive = false;
 	Vector2 positionClick;
 	
+	
 	public LunarLander_Main() {
 		super(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
 	}
@@ -46,13 +51,14 @@ public class LunarLander_Main extends PortableApplication{
 	public void onInit() {
 		setTitle("LunarLandry (Team PLS)");
 		physics.addSimulatableObject(ssLandry);
+		MusicPlayer music = new MusicPlayer("data\\sons\\sound1.mp3");
+		music.loop();
 	}
 
 	@Override
 	public void onGraphicRender(GdxGraphics g) {
 		// Clears the screen
 		g.clear();
-
 		physics.simulate_step();
 		g.drawFPS();
 		g.drawSchoolLogo();
@@ -97,6 +103,7 @@ public class LunarLander_Main extends PortableApplication{
 			createParticles();
 		
 		ssLandry.draw(g);
+
 	
 	
 	}
@@ -186,6 +193,7 @@ public class LunarLander_Main extends PortableApplication{
 	}
 
 	public static void main(String[] args) {
+
 		new LunarLander_Main();
 	}
 }
