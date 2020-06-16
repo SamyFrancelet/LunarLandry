@@ -21,6 +21,8 @@ public class BackGround extends PhysicsBox {
 	protected BitmapImage img = new BitmapImage("data/images/star.png");
 	protected BitmapImage img2 = new BitmapImage("data/images/star2.png");
 	protected BitmapImage img3 = new BitmapImage("data/images/star3.png");
+	protected BitmapImage img4 = new BitmapImage("data/images/star2big.png");
+	protected BitmapImage img5 = new BitmapImage("data/images/star4mega.png");
 	protected int age = 0;
 	private boolean init = false;
 
@@ -62,15 +64,27 @@ public class BackGround extends PhysicsBox {
 
 		// Draw the star
 		int value = (int) (Math.random() * 100);
-	        switch (value) {
-	            case 30:  g.draw(img2.getRegion(), pos.x - img2.getImage().getWidth() / 2, pos.y - 0 - img2.getImage().getHeight() / 2);
-	                     break;
-	            case 60:  g.draw(img3.getRegion(), pos.x - img3.getImage().getWidth() / 2, pos.y - 0 - img3.getImage().getHeight() / 2);
-	                     break;
-	            default: g.draw(img.getRegion(), pos.x - img.getImage().getWidth() / 2, pos.y - 0 - img.getImage().getHeight() / 2);
-	                     break;
-	        }
-
+		switch (value) {
+		case 30:
+			g.draw(img2.getRegion(), pos.x - img2.getImage().getWidth() / 2,
+					pos.y - 0 - img2.getImage().getHeight() / 2);
+			break;
+		case 60:
+			g.draw(img3.getRegion(), pos.x - img3.getImage().getWidth() / 2,
+					pos.y - 0 - img3.getImage().getHeight() / 2);
+			break;
+		case 40:
+			g.draw(img4.getRegion(), pos.x - img4.getImage().getWidth() / 2,
+					pos.y - 0 - img4.getImage().getHeight() / 2);
+			break;
+		//case 70:
+			//g.draw(img5.getRegion(), pos.x - img5.getImage().getWidth() / 2,
+			//		pos.y - 0 - img5.getImage().getHeight() / 2);
+			//break;
+		default:
+			g.draw(img.getRegion(), pos.x - img.getImage().getWidth() / 2, pos.y - 0 - img.getImage().getHeight() / 2);
+			break;
+		}
 
 		g.sbSetColor(col);
 	}

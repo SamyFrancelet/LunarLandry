@@ -51,8 +51,10 @@ public class LunarLander_Main extends PortableApplication{
 	public void onInit() {
 		setTitle("LunarLandry (Team PLS)");
 		physics.addSimulatableObject(ssLandry);
-		MusicPlayer music = new MusicPlayer("data\\sons\\sound1.mp3");
+		SoundSample music = new SoundSample("data\\sons\\sound1.mp3");
+		//MusicPlayer music = new MusicPlayer("data\\sons\\sound1.mp3");
 		music.loop();
+
 	}
 
 	@Override
