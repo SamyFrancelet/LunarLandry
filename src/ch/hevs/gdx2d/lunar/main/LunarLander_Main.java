@@ -53,7 +53,7 @@ public class LunarLander_Main extends PortableApplication {
 		physics.simulate_step();
 		g.drawFPS();
 		g.drawSchoolLogo();
-		g.drawPolygon(solPolygon);
+		g.drawFilledPolygon(solPolygon, Color.BROWN);
 		g.drawLine(0, Constants.GROUND_ALTITUDE, Constants.WIN_WIDTH, Constants.GROUND_ALTITUDE, Color.WHITE);
 		ssLandry.draw(g);
 		

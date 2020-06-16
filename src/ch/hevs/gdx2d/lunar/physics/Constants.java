@@ -44,4 +44,11 @@ public final class Constants {
 	 * fuel reserve
 	 */
 	public static final float maxFuel = 10.0f;
+	
+	/** 
+	 * Ground parameters
+	 */
+	public static float maxIncline = 100.0f;
+	public static int minGround = 200;
+	public static int scale = 10;
 }
