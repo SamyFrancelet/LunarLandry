@@ -31,7 +31,7 @@ public abstract class PhysicalObject implements Simulatable, Collisionnable{
 	
 	@Override
 	public Rectangle getBoundingBox() {
-		boundingBox.setPosition(position);
+		boundingBox.setCenter(position);
 		return boundingBox;
 	}
 }

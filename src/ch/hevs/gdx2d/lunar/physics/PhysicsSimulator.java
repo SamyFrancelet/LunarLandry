@@ -106,12 +106,28 @@ public class PhysicsSimulator {
 //				// Calculate collision energy Ecin = 1/2 * mv²
 //				destroyed = p.notifyCollision((int) (p.mass * p.speed.len() * p.speed.len()) / 2);
 				Rectangle box = p.getBoundingBox();
-				Vector2 bottomLeft = new Vector2(box.getX(), box.getY());
-				Vector2 bottomRight = new Vector2(box.getX() + box.getWidth(), box.getY());
-				Vector2 topLeft = new Vector2(box.getX(), box.getY() + box.getHeight());
-				Vector2 topRight = new Vector2(box.getX() + box.getWidth(), box.getY() + box.getHeight());
+				Vector2[] boxPoints = new Vector2[4];
+				boxPoints[0] = new Vector2(box.getX(), box.getY());
+				boxPoints[1] = new Vector2(box.getX() + box.getWidth(), box.getY());
+				boxPoints[2] = new Vector2(box.getX(), box.getY() + box.getHeight());
+				boxPoints[3] = new Vector2(box.getX() + box.getWidth(), box.getY() + box.getHeight());
 				
-				destroyed = (moon.ground.contains(bottomLeft) || moon.ground.contains(bottomRight) || moon.ground.contains(topLeft) || moon.ground.contains(topRight));	
+				// Ground corner into object
+				for (int j = 0; j < moon.polyPoints.length; j++) {
+					System.out.println(boxPoints[j]);
+					if (box.contains(moon.polyPoints[j]) || destroyed) {
+						destroyed = true;
+						break;
+					}
+				}
+				
+				// Object corner into ground
+				for (int j = 0; j < 4; j++) {
+					if (moon.ground.contains(boxPoints[j]) || destroyed) {
+						destroyed = true;
+						break;
+					}
+				}
 
 				// position = oldPos + oldSpeed*DELTA_TIME
 				p.position = p.position.mulAdd(p.speed, Constants.DELTA_TIME);

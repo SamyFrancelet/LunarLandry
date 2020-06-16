@@ -6,7 +6,7 @@ import ch.hevs.gdx2d.lunar.main.PolygonWorking;
 
 public class Moon {
 	public PolygonWorking ground;
-	private Vector2[] polyPoints;
+	public Vector2[] polyPoints;
 	
 	public Moon(){
 		polyPoints = new Vector2[3];

@@ -49,7 +49,7 @@ public class LunarLander_Main extends PortableApplication {
 		ssLandry.draw(g);
 		if (drawBoxes) {
 			Rectangle box = ssLandry.getBoundingBox();
-			g.drawRectangle(box.getX(), box.getY(), box.getWidth(), box.getHeight(), 0);
+			g.drawRectangle(box.getX()+box.getWidth()/2, box.getY()+box.getHeight()/2, box.getWidth(), box.getHeight(), 0);
 		}
 	}
 
