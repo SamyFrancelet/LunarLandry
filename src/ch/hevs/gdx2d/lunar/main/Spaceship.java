@@ -26,6 +26,8 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	private boolean kaputt;
 	private static final int MAX_THRUST = 1500;
 	private static final int BASE_MASS = 100;
+	private static final double MAX_FUEL = 300;
+	private static final Vector2 POSITION_BAR_FUEL = new Vector2(650, 750);
 //	private final Texture shipSkin = new Texture("data/images/SpaceShip_2.png");
 
 	// Particle related
@@ -40,7 +42,7 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 		thrustLeft = false;
 		thrustRight = false;
 		kaputt = false;
-		fuel = 300000;
+		fuel = (int) MAX_FUEL;
 	}
 
 	@Override
@@ -50,9 +52,14 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 			arg0.drawAlphaPicture(position.x, position.y + 30, -90, 0.3f, 0.3f,
 					new BitmapImage("data/images/flame.png"));
 		} else {
-			arg0.draw(new Texture("data/images/SpaceShip_2.png"), position.x-25, position.y-25, 50, 50);
+			arg0.draw(new Texture("data/images/SpaceShip_2.png"), position.x - 25, position.y - 25, 50, 50);
 
-			arg0.drawString(700, 700, "" + fuel); // Print fuel on screen
+			// Print fuel on screen
+
+			arg0.drawRectangle(POSITION_BAR_FUEL.x, POSITION_BAR_FUEL.y, 200, 50, 0);
+			arg0.drawFilledRectangle(POSITION_BAR_FUEL.x - (float) (fuel / MAX_FUEL) * 100 + 100, POSITION_BAR_FUEL.y,
+					(float) (fuel / MAX_FUEL) * 200, 50, 0, Color.RED);
+			arg0.drawString(POSITION_BAR_FUEL.x - 90, POSITION_BAR_FUEL.y, "Fuel :" + fuel + "/" + (int)MAX_FUEL);
 
 			if (fuel > 0) {
 				Array<Body> bodies = new Array<Body>();
@@ -95,7 +102,7 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	@Override
 	public void step() {
 		// this.force.y = thrustUp ? MAX_THRUST : 0;
-		// this.force.x = thrustLeft ? -MAX_THRUST : (thrustRight ? MAX_THRUST : 0);		
+		// this.force.x = thrustLeft ? -MAX_THRUST : (thrustRight ? MAX_THRUST : 0);
 		if (thrustUp && fuel > 0) {
 			force.y = MAX_THRUST;
 			fuel--;

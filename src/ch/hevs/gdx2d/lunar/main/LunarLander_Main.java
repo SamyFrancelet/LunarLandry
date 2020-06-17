@@ -83,7 +83,7 @@ public class LunarLander_Main extends PortableApplication {
 			}
 		}
 		for (int i = 0; i < CREATION_STAR_RATE; i++) {
-			Vector2 random = new Vector2(rand.nextFloat() * Constants.WIN_WIDTH,
+			Vector2 random = new Vector2(rand.nextFloat() * Constants.WIN_WIDTH*5,
 					(rand.nextFloat() * (Constants.WIN_HEIGHT - Constants.GROUND_ALTITUDE))
 							+ Constants.GROUND_ALTITUDE);
 			BackGround b = new BackGround(random, 10, MAX_STAR_AGE + rand.nextInt(MAX_STAR_AGE));
@@ -93,7 +93,7 @@ public class LunarLander_Main extends PortableApplication {
 	
 	void playMusic() {
 		// music = new SoundSample("data\\sons\\sound1.mp3");
-		music = new MusicPlayer("data\\sons\\sound1.mp3");
+		music = new MusicPlayer("data/sons/sound1.mp3");
 		music.loop();
 	}
 
