@@ -37,6 +37,10 @@ public class LunarLander_Main extends PortableApplication {
 	// BackGround
 	public final int MAX_STAR_AGE = 80;
 	public int CREATION_STAR_RATE = 1;
+	
+	// Shooting related
+	boolean mouseActive = false;
+	Vector2 positionClick;
 
 	public LunarLander_Main() {
 		super(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
@@ -77,7 +81,8 @@ public class LunarLander_Main extends PortableApplication {
 		g.drawFilledPolygon(sol.getPolygon(), Color.LIGHT_GRAY);
 		g.drawFilledRectangle(lz.landBox.getX() + Constants.Z_WIDTH/2, lz.landBox.getY() + Constants.Z_HEIGHT/2, Constants.Z_WIDTH, Constants.Z_HEIGHT, 0, Color.RED);
 		//g.drawLine(0, Constants.GROUND_ALTITUDE, Constants.WIN_WIDTH, Constants.GROUND_ALTITUDE, Color.WHITE);
-		
+		if (mouseActive)
+			ssLandry.shoot(g, ssLandry.position, positionClick);
 	}
 
 	void drawBackGround(GdxGraphics g) {
@@ -127,6 +132,27 @@ public class LunarLander_Main extends PortableApplication {
 		}
 	}
 
+	@Override
+	public void onClick(int x, int y, int button) {
+		super.onClick(x, y, button);
+		mouseActive = true;
+		positionClick = new Vector2(x, y);
+	}
+	
+	@Override
+	public void onRelease(int x, int y, int button) {
+		super.onRelease(x, y, button);
+		positionClick.x = x;
+		positionClick.y = y;
+		mouseActive = false;
+	}
+	
+	public void onDrag(int x, int y) {
+		super.onDrag(x, y);
+		positionClick.x = x;
+		positionClick.y = y;
+	}
+	
 	@Override
 	public void onKeyUp(int keycode) {
 		switch (keycode) {

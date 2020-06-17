@@ -157,6 +157,12 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 			c.applyBodyLinearImpulse(force, position, true);
 		}
 	}
+	
+	public void shoot(GdxGraphics arg0, Vector2 ss, Vector2 click) {
+			arg0.drawLine(click.x, click.y, ss.x, ss.y, Color.RED);		
+	}
+
+
 
 	@Override
 	public void step() {
