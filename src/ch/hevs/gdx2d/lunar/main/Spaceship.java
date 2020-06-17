@@ -27,8 +27,6 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	public boolean thrustRight;
 	private int fuel;
 	
-	private static final int BASE_MASS = 100;
-	private static final double MAX_FUEL = 300;
 	private static final Vector2 POSITION_BAR_FUEL = new Vector2(650, 750);
 //	private final Texture shipSkin = new Texture("data/images/SpaceShip_2.png");
 
@@ -44,13 +42,13 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	private boolean kaputt;
 	
 	public Spaceship(Vector2 p) {
-		super(p, new Vector2(0, 0), BASE_MASS, 50, 50);
+		super(p, new Vector2(0, 0), Constants.BASE_MASS, 50, 50);
 		thrustUp = false;
 		thrustLeft = false;
 		thrustRight = false;
 		kaputt = false;
 		landed = false;
-		fuel = (int) MAX_FUEL;
+		fuel = (int)Constants.MAX_FUEL;
 	}
 	
 	public void changePosition(Vector2 p) {
@@ -128,9 +126,10 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	void drawFuelBar(GdxGraphics arg0) {
 		// Print fuel on screen
 		arg0.drawRectangle(POSITION_BAR_FUEL.x, POSITION_BAR_FUEL.y, 200, 50, 0);
-		arg0.drawFilledRectangle(POSITION_BAR_FUEL.x - (float) (fuel / MAX_FUEL) * 100 + 100, POSITION_BAR_FUEL.y,
-				(float) (fuel / MAX_FUEL) * 200, 50, 0, Color.RED);
-		arg0.drawString(POSITION_BAR_FUEL.x - 90, POSITION_BAR_FUEL.y, "Fuel :" + fuel + "/" + (int) MAX_FUEL);
+		arg0.drawFilledRectangle(POSITION_BAR_FUEL.x - (float) (fuel / Constants.MAX_FUEL) * 100 + 100,
+				POSITION_BAR_FUEL.y, (float) (fuel / Constants.MAX_FUEL) * 200, 50, 0, Color.RED);
+		arg0.drawString(POSITION_BAR_FUEL.x - 90, POSITION_BAR_FUEL.y,
+				"Fuel :" + fuel + "/" + (int) Constants.MAX_FUEL);
 
 	}
 
@@ -202,12 +201,16 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 		landed = energy < Constants.DESTRUCTION_ENERGY;
 		return (!landed);
 	}
-
-	public boolean getFuel() {
-		return (fuel == 0);
+	
+	public boolean isFinished() {
+		return (kaputt || landed);
 	}
 
-	public boolean getKaputt() {
+	public boolean isDry() {
+		return (fuel <= 0);
+	}
+
+	public boolean isKaputt() {
 		return kaputt;
 	}
 

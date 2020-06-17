@@ -27,7 +27,7 @@ public final class Constants {
 	public static final int DESTRUCTION_ENERGY = 20000;	
 	public static final int CLOUD_DENSITY = 5;
 	public static final int GROUND_ALTITUDE = 100;
-	public static final boolean DRAW_BOUNDINGBOXES = false;
+	public static final boolean DRAW_BOUNDINGBOXES = true;
 	
 	/**
 	 * Maximal impact speed triggering a crash
@@ -37,9 +37,12 @@ public final class Constants {
 	/**
 	 * Spaceship related
 	 */
-	public static float MAX_THRUST = 1500;
-	public static float lateralPower = 0.05f;
-	public static float verticalPower = 0.2f;
+	public static final float MAX_THRUST = 1500f;
+	public static final float lateralPower = 0.05f;
+	public static final float verticalPower = 0.2f;
+	
+	public static final double MAX_FUEL = 300;
+	public static final int BASE_MASS = 100;
 	
 	/**
 	 * fuel reserve

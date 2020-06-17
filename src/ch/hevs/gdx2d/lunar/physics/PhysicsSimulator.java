@@ -19,6 +19,9 @@ public class PhysicsSimulator {
 	double width;
 	double height;
 	
+	/**
+	 * Ground & Landing Zone for the spaceship
+	 */
 	PolygonWorking ground;
 	LandZone lz;
 
@@ -128,6 +131,10 @@ public class PhysicsSimulator {
 						ended = true;
 						break;
 					}
+				}
+				
+				if (p.position.x >= width || p.position.x <= 0) {
+					ended = true;
 				}
 				
 				// LandingZone
