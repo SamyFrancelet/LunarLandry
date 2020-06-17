@@ -39,6 +39,11 @@ public class LunarLander_Main extends PortableApplication {
 	// Shooting related
 	boolean mouseActive = false;
 	Vector2 positionClick;
+	
+	// Stars particles
+	private ArrayList<Particles> stars;
+	static final Random rand = new Random();
+	static int waitStar;
 
 	public LunarLander_Main() {
 		super(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
@@ -53,6 +58,8 @@ public class LunarLander_Main extends PortableApplication {
 		physics = new PhysicsSimulator(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
 		physics.changePlayground(sol.getPolygon(), lz);
 		physics.addSimulatableObject(ssLandry);
+		stars = new ArrayList<Particles>();
+		waitStar = 0;
 		//playMusic();
 	}
 
@@ -69,7 +76,7 @@ public class LunarLander_Main extends PortableApplication {
 		g.drawSchoolLogo();
 		
 		// Draw the stars on the background
-		// drawBackGround(g);
+		drawStars(g);
 		
 		// Spaceship
 		ssLandry.draw(g);
@@ -87,6 +94,31 @@ public class LunarLander_Main extends PortableApplication {
 		//g.drawLine(0, Constants.GROUND_ALTITUDE, Constants.WIN_WIDTH, Constants.GROUND_ALTITUDE, Color.WHITE);
 		if (mouseActive)
 			ssLandry.shoot(g, ssLandry.position, positionClick);
+	}
+	
+	void drawStars(GdxGraphics arg0) {
+		
+		waitStar++;
+		
+		// Adds a star every n frames
+		if (waitStar == 10) {
+			stars.add(new Particles(new Vector2(rand.nextFloat() * Constants.WIN_WIDTH,
+					rand.nextFloat() * Constants.WIN_WIDTH), new Vector2(0,0), 100,
+					"data/images/star.png"));
+			waitStar = 0;
+		}
+				
+		// Draw the stars
+		if (stars.size() != 0) {
+			for (int i = 0; i < stars.size(); i++) {
+				Particles p = stars.get(i);
+				p.update();
+				p.draw(arg0);
+				if (p.shouldBeDestroyed()) {
+					stars.remove(p);
+				}
+			}
+		}
 	}
 
 	void playMusic() {
