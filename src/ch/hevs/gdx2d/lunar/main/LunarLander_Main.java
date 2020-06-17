@@ -28,8 +28,6 @@ public class LunarLander_Main extends PortableApplication {
 	Spaceship ssLandry;
 	Ground sol;
 	LandZone lz;
-	
-	static final Random rand = new Random();
 
 	// music
 	MusicPlayer music;
@@ -38,15 +36,12 @@ public class LunarLander_Main extends PortableApplication {
 	private boolean doSoundFuel = true;
 	private boolean doExplosion = true;
 	
-	private ArrayList<Particles> parts;
-	
 	// Shooting related
 	boolean mouseActive = false;
 	Vector2 positionClick;
 
 	public LunarLander_Main() {
 		super(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
-		parts = new ArrayList<Particles>();
 	}
 
 	@Override
@@ -57,13 +52,7 @@ public class LunarLander_Main extends PortableApplication {
 		lz = new LandZone(sol.getPolyPoint(Constants.FLAT_ZONE));
 		physics = new PhysicsSimulator(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
 		physics.changePlayground(sol.getPolygon(), lz);
-		//physics.addSimulatableObject(ssLandry);
-		for (int i = 0; i < 1000; i++) {
-			parts.add(new Particles(new Vector2(400,400),
-					new Vector2(rand.nextFloat() * (rand.nextBoolean() ? -1 : 1), 
-					rand.nextFloat() * (rand.nextBoolean() ? -1 : 1)),
-					rand.nextInt(200),"data/images/fire_particle.png"));
-		}
+		physics.addSimulatableObject(ssLandry);
 		//playMusic();
 	}
 
@@ -74,17 +63,6 @@ public class LunarLander_Main extends PortableApplication {
 
 		// Simulate every object
 		physics.simulate_step();
-		
-		if (parts.size() != 0) {
-			for (int i = 0; i < parts.size(); i++) {
-				Particles p = parts.get(i);
-				p.update();
-				p.draw(g);
-				if (p.shouldBeDestroyed()) {
-					parts.remove(p);
-				}
-			}
-		}
 		
 		// Draw basic layout
 		g.drawFPS();

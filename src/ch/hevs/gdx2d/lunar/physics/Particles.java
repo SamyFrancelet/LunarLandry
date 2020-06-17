@@ -10,7 +10,6 @@ public class Particles implements DrawableObject{
 	
 	private Vector2 position;
 	private Vector2 speed;
-	private Vector2 acceleration; // Probably useless
 	
 	private float alpha;
 	private BitmapImage img;
@@ -22,13 +21,17 @@ public class Particles implements DrawableObject{
 		this.speed = s;
 		this.lifetime = lifetime;
 		
-		alpha = 1f;
-		img = new BitmapImage(imgPath);
+		this.alpha = 1f;
+		this.img = new BitmapImage(imgPath);
 	}
 	
 	public void update() {
-		position.add(speed);
+		this.position.add(this.speed);
 		alpha -= 1.0f/lifetime;
+	}
+	
+	public void changePosition(float x, float y) {
+		this.position = new Vector2(x,y);
 	}
 	
 	public boolean shouldBeDestroyed() {
@@ -37,6 +40,6 @@ public class Particles implements DrawableObject{
 
 	@Override
 	public void draw(GdxGraphics arg0) {
-		arg0.drawAlphaPicture(position, alpha, img);
+		arg0.drawAlphaPicture(this.position, this.alpha, this.img);
 	}
 }
