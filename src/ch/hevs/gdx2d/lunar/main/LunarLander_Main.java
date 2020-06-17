@@ -64,9 +64,14 @@ public class LunarLander_Main extends PortableApplication {
 		// Clears the screen
 		g.clear();
 
+		// Simulate every object
 		physics.simulate_step();
+		
+		// Draw basic layout
 		g.drawFPS();
 		g.drawSchoolLogo();
+		
+		// Draw the stars une the background
 		drawBackGround(g);
 		ssLandry.draw(g);
 		if (drawBoxes) {
@@ -74,9 +79,9 @@ public class LunarLander_Main extends PortableApplication {
 			g.drawRectangle(box.getX() + box.getWidth() / 2, box.getY() + box.getHeight() / 2, box.getWidth(),
 					box.getHeight(), 0);
 		}
-		if (Constants.won) {
-			g.drawStringCentered(70, "BRAVO MA COUILLE\nAppuie sur 'R' pour recommencer");
-		}
+//		if (Constants.won) {
+//			g.drawStringCentered(70, "BRAVO MA COUILLE\nAppuie sur 'R' pour recommencer");
+//		}
 		playSound();
 		g.drawFilledPolygon(sol.getPolygon(), Color.LIGHT_GRAY);
 		g.drawFilledRectangle(lz.landBox.getX() + Constants.Z_WIDTH/2, lz.landBox.getY() + Constants.Z_HEIGHT/2, Constants.Z_WIDTH, Constants.Z_HEIGHT, 0, Color.RED);
@@ -182,21 +187,21 @@ public class LunarLander_Main extends PortableApplication {
 		case Input.Keys.RIGHT:
 			ssLandry.thrustRight = true;
 			break;
-		/*case Input.Keys.R:
-			if (Constants.won) {
-				ssLandry.changePosition(new Vector2(200,700));;
-				sol.newGround();
-				lz.newLandZone(sol.getPolyPoint(Constants.FLAT_ZONE));
-				physics.changePlayground(sol.getPolygon(), lz);
-				Constants.won = false;
-			}*/
+//		case Input.Keys.R:
+//			if (Constants.won) {
+//				replay();
+//			}
 		default:
 			break;
 		}
 	}
 	
 	public void replay() {
-		
+		ssLandry.changePosition(new Vector2(200,700));;
+		sol.newGround();
+		lz.newLandZone(sol.getPolyPoint(Constants.FLAT_ZONE));
+		physics.changePlayground(sol.getPolygon(), lz);
+//		Constants.won = false;
 	}
 
 	public static void main(String[] args) {

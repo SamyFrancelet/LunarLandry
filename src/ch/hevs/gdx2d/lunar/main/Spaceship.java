@@ -26,8 +26,7 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	public boolean thrustLeft;
 	public boolean thrustRight;
 	private int fuel;
-	private boolean kaputt;
-	private static final int MAX_THRUST = 1500;
+	
 	private static final int BASE_MASS = 100;
 	private static final double MAX_FUEL = 300;
 	private static final Vector2 POSITION_BAR_FUEL = new Vector2(650, 750);
@@ -41,12 +40,16 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	public int ctnExplosion = 0;
 	public int ctnFire = 0;
 
+	private boolean landed;
+	private boolean kaputt;
+	
 	public Spaceship(Vector2 p) {
 		super(p, new Vector2(0, 0), BASE_MASS, 50, 50);
 		thrustUp = false;
 		thrustLeft = false;
 		thrustRight = false;
 		kaputt = false;
+		landed = false;
 		fuel = (int) MAX_FUEL;
 	}
 	
@@ -95,7 +98,7 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 		} else {
 			arg0.draw(new Texture("data/images/SpaceShip_2.png"), position.x - 25, position.y - 30, 50, 50);
 
-			if ( !Constants.won) {
+			if (!landed) {
 				Array<Body> bodies = new Array<Body>();
 				world.getBodies(bodies);
 
@@ -166,21 +169,21 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 
 	@Override
 	public void step() {
-		// this.force.y = thrustUp ? MAX_THRUST : 0;
-		// this.force.x = thrustLeft ? -MAX_THRUST : (thrustRight ? MAX_THRUST : 0);
-		if (!Constants.won) {
+		// this.force.y = thrustUp ? Constants.MAX_THRUST : 0;
+		// this.force.x = thrustLeft ? -Constants.MAX_THRUST : (thrustRight ? Constants.MAX_THRUST : 0);
+		if (!landed) {
 			if (thrustUp && fuel > 0) {
-				force.y = MAX_THRUST;
+				force.y = Constants.MAX_THRUST;
 				fuel--;
 			} else {
 				force.y = 0;
 			}
 
 			if (thrustLeft && !thrustRight && fuel > 0) {
-				force.x = -MAX_THRUST;
+				force.x = -Constants.MAX_THRUST;
 				fuel--;
 			} else if (!thrustLeft && thrustRight && fuel > 0) {
-				force.x = MAX_THRUST;
+				force.x = Constants.MAX_THRUST;
 				fuel--;
 			} else {
 				force.x = 0;
@@ -190,28 +193,22 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 
 	@Override
 	public void removedFromSim() {
-		kaputt = true;
+		kaputt = !landed;
 	}
 
 	@Override
 	public boolean notifyCollision(int energy) {
 		System.out.println("Hit with energy : " + energy);
-		return (energy >= Constants.DESTRUCTION_ENERGY);
-		//return false;
+		landed = energy < Constants.DESTRUCTION_ENERGY;
+		return (!landed);
 	}
 
 	public boolean getFuel() {
-		if (fuel == 0)
-			return true;
-		else
-			return false;
+		return (fuel == 0);
 	}
 
 	public boolean getKaputt() {
-		if (kaputt)
-			return true;
-		else
-			return false;
+		return kaputt;
 	}
 
 }

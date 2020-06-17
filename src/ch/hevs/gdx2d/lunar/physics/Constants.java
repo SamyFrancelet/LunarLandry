@@ -37,6 +37,7 @@ public final class Constants {
 	/**
 	 * Spaceship related
 	 */
+	public static float MAX_THRUST = 1500;
 	public static float lateralPower = 0.05f;
 	public static float verticalPower = 0.2f;
 	
@@ -58,9 +59,4 @@ public final class Constants {
 	 */
 	public static final int Z_WIDTH = 100;
 	public static final int Z_HEIGHT = 30;
-	
-	/** 
-	 * Global variable (oopsiii)
-	 */
-	public static boolean won = false;
 }

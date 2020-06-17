@@ -66,11 +66,11 @@ public class PhysicsSimulator {
 			return;
 
 		for (int i = 0; i < sim_objects.size(); i++) {
-			boolean destroyed = false;
+			boolean ended = false;
 			Simulatable s = sim_objects.get(i);
 			s.step();
 
-			if (s instanceof PhysicalObject && !Constants.won) {
+			if (s instanceof PhysicalObject) {
 				PhysicalObject p = (PhysicalObject) s;
 				/**
 				 * General Physics equations
@@ -106,7 +106,7 @@ public class PhysicsSimulator {
 				 * Elastic collisions with borders
 				 */
 //				// Calculate collision energy Ecin = 1/2 * mv²
-//				destroyed = p.notifyCollision((int) (p.mass * p.speed.len() * p.speed.len()) / 2);
+//				ended = p.notifyCollision((int) (p.mass * p.speed.len() * p.speed.len()) / 2);
 				Rectangle box = p.getBoundingBox();
 				Vector2[] boxPoints = new Vector2[4];
 				boxPoints[0] = new Vector2(box.getX(), box.getY());
@@ -116,16 +116,16 @@ public class PhysicsSimulator {
 				
 				// Ground corner into object
 				for (int j = 0; j < Constants.SCALE; j++) {
-					if (box.contains(ground.getVertex(j)) || destroyed) {
-						destroyed = true;
+					if (box.contains(ground.getVertex(j)) || ended) {
+						ended = true;
 						break;
 					}
 				}
 				
 				// Object corner into ground
 				for (int j = 0; j < 4; j++) {
-					if (ground.contains(boxPoints[j]) || destroyed) {
-						destroyed = true;
+					if (ground.contains(boxPoints[j]) || ended) {
+						ended = true;
 						break;
 					}
 				}
@@ -134,19 +134,19 @@ public class PhysicsSimulator {
 				if (box.overlaps(lz.landBox)) {
 					// Too fast ?
 					if (p.notifyCollision((int) (p.mass * p.speed.len() * p.speed.len()) / 2)) {
-						System.out.println("KABOOM");
-						destroyed = true;
+						// Destroyed
+						ended = true;
 					} else {
 						System.out.println("GG!");
 						p.speed.x = 0;
 						p.speed.y = 0;
-						Constants.won = true;
+						ended = true;
 					}
 				}
 
 				// position = oldPos + oldSpeed*DELTA_TIME
 				p.position = p.position.mulAdd(p.speed, Constants.DELTA_TIME);
-				if (destroyed) {
+				if (ended) {
 					removeObjectFromSim(p);
 				}
 			}

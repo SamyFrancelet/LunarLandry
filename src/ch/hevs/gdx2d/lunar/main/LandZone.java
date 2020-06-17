@@ -15,7 +15,6 @@ public class LandZone {
 	}
 	
 	public void newLandZone(Vector2 position) {
-		landBox = new Rectangle(position.x, position.y, Constants.Z_WIDTH, Constants.Z_HEIGHT);
 		landBox.setCenter(position.x + (800/Constants.SCALE/2), position.y);
 	}
 }
