@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 
+import ch.hevs.gdx2d.lunar.main.LandZone;
 import ch.hevs.gdx2d.lunar.main.PolygonWorking;
 
 /**
@@ -19,6 +20,7 @@ public class PhysicsSimulator {
 	double height;
 	
 	PolygonWorking ground;
+	LandZone lz;
 
 	private final boolean VERBOSE_PHYSICS = false;
 
@@ -68,7 +70,7 @@ public class PhysicsSimulator {
 			Simulatable s = sim_objects.get(i);
 			s.step();
 
-			if (s instanceof PhysicalObject) {
+			if (s instanceof PhysicalObject && !Constants.won) {
 				PhysicalObject p = (PhysicalObject) s;
 				/**
 				 * General Physics equations
@@ -113,7 +115,7 @@ public class PhysicsSimulator {
 				boxPoints[3] = new Vector2(box.getX() + box.getWidth(), box.getY() + box.getHeight());
 				
 				// Ground corner into object
-				for (int j = 0; j < Constants.scale; j++) {
+				for (int j = 0; j < Constants.SCALE; j++) {
 					if (box.contains(ground.getVertex(j)) || destroyed) {
 						destroyed = true;
 						break;
@@ -125,6 +127,20 @@ public class PhysicsSimulator {
 					if (ground.contains(boxPoints[j]) || destroyed) {
 						destroyed = true;
 						break;
+					}
+				}
+				
+				// LandingZone
+				if (box.overlaps(lz.landBox)) {
+					// Too fast ?
+					if (p.notifyCollision((int) (p.mass * p.speed.len() * p.speed.len()) / 2)) {
+						System.out.println("KABOOM");
+						destroyed = true;
+					} else {
+						System.out.println("GG!");
+						p.speed.x = 0;
+						p.speed.y = 0;
+						Constants.won = true;
 					}
 				}
 
@@ -142,7 +158,8 @@ public class PhysicsSimulator {
 		sim_objects.clear();
 	}
 	
-	public void changeGround(PolygonWorking ground) {
+	public void changePlayground(PolygonWorking ground, LandZone lz) {
 		this.ground = ground;
+		this.lz = lz;
 	}
 }

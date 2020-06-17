@@ -19,11 +19,12 @@ import ch.hevs.gdx2d.desktop.PortableApplication;
 
 public class LunarLander_Main extends PortableApplication {
 
-	PhysicsSimulator physics = new PhysicsSimulator(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
-	Spaceship ssLandry = new Spaceship(new Vector2(400, 700));
-	static final Random rand = new Random();
+	PhysicsSimulator physics;
+	Spaceship ssLandry;
+	static Random rand;
 	private final boolean drawBoxes = true;
-	Ground sol = new Ground();
+	Ground sol;
+	LandZone lz;
 	
 	//music
 	MusicPlayer music;
@@ -34,14 +35,19 @@ public class LunarLander_Main extends PortableApplication {
 
 	public LunarLander_Main() {
 		super(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
+		ssLandry = new Spaceship(new Vector2(400, 700));
+		rand = new Random();
+		sol = new Ground();
+		lz = new LandZone(sol.getPolyPoint(Constants.FLAT_ZONE));
+		physics = new PhysicsSimulator(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
 	}
 
 	@Override
 	public void onInit() {
 		setTitle("LunarLandry (Team PLS)");
-		physics.changeGround(sol.getPolygon());
+		physics.changePlayground(sol.getPolygon(), lz);
 		physics.addSimulatableObject(ssLandry);
-		playMusic();
+		//playMusic();
 	}
 
 	@Override
@@ -54,11 +60,15 @@ public class LunarLander_Main extends PortableApplication {
 		g.drawSchoolLogo();
 		drawBackGround(g);
 		g.drawFilledPolygon(sol.getPolygon(), Color.LIGHT_GRAY);
+		g.drawFilledRectangle(lz.landBox.getX() + Constants.Z_WIDTH/2, lz.landBox.getY() + Constants.Z_HEIGHT/2, Constants.Z_WIDTH, Constants.Z_HEIGHT, 0, Color.RED);
 		//g.drawLine(0, Constants.GROUND_ALTITUDE, Constants.WIN_WIDTH, Constants.GROUND_ALTITUDE, Color.WHITE);
 		ssLandry.draw(g);
 		if (drawBoxes) {
 			Rectangle box = ssLandry.getBoundingBox();
 			g.drawRectangle(box.getX()+box.getWidth()/2, box.getY()+box.getHeight()/2, box.getWidth(), box.getHeight(), 0);
+		}
+		if (Constants.won) {
+			g.drawStringCentered(70, "BRAVO MA COUILLE\nAppuie sur 'R' pour recommencer");
 		}
 	}
 	
@@ -126,9 +136,21 @@ public class LunarLander_Main extends PortableApplication {
 		case Input.Keys.RIGHT:
 			ssLandry.thrustRight = true;
 			break;
+		/*case Input.Keys.R:
+			if (Constants.won) {
+				ssLandry.changePosition(new Vector2(200,700));;
+				sol.newGround();
+				lz.newLandZone(sol.getPolyPoint(Constants.FLAT_ZONE));
+				physics.changePlayground(sol.getPolygon(), lz);
+				Constants.won = false;
+			}*/
 		default:
 			break;
 		}
+	}
+	
+	public void replay() {
+		
 	}
 
 	public static void main(String[] args) {

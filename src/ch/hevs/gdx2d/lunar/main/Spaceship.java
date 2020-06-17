@@ -15,6 +15,7 @@ import ch.hevs.gdx2d.components.bitmaps.BitmapImage;
 import ch.hevs.gdx2d.lib.GdxGraphics;
 import ch.hevs.gdx2d.lib.interfaces.DrawableObject;
 import ch.hevs.gdx2d.lib.physics.PhysicsWorld;
+import ch.hevs.gdx2d.lunar.physics.Constants;
 import ch.hevs.gdx2d.lunar.physics.PhysicalObject;
 
 public class Spaceship extends PhysicalObject implements DrawableObject {
@@ -26,7 +27,7 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	private boolean kaputt;
 	private static final int MAX_THRUST = 1500;
 	private static final int BASE_MASS = 100;
-	private static final double MAX_FUEL = 300;
+	private static final double MAX_FUEL = 3000;
 	private static final Vector2 POSITION_BAR_FUEL = new Vector2(650, 750);
 //	private final Texture shipSkin = new Texture("data/images/SpaceShip_2.png");
 
@@ -43,6 +44,10 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 		thrustRight = false;
 		kaputt = false;
 		fuel = (int) MAX_FUEL;
+	}
+	
+	public void changePosition(Vector2 p) {
+		this.position = p;
 	}
 
 	@Override
@@ -61,7 +66,7 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 					(float) (fuel / MAX_FUEL) * 200, 50, 0, Color.RED);
 			arg0.drawString(POSITION_BAR_FUEL.x - 90, POSITION_BAR_FUEL.y, "Fuel :" + fuel + "/" + (int)MAX_FUEL);
 
-			if (fuel > 0) {
+			if (fuel > 0 && !Constants.won) {
 				Array<Body> bodies = new Array<Body>();
 				world.getBodies(bodies);
 
@@ -103,21 +108,23 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	public void step() {
 		// this.force.y = thrustUp ? MAX_THRUST : 0;
 		// this.force.x = thrustLeft ? -MAX_THRUST : (thrustRight ? MAX_THRUST : 0);
-		if (thrustUp && fuel > 0) {
-			force.y = MAX_THRUST;
-			fuel--;
-		} else {
-			force.y = 0;
-		}
+		if (!Constants.won) {
+			if (thrustUp && fuel > 0) {
+				force.y = MAX_THRUST;
+				fuel--;
+			} else {
+				force.y = 0;
+			}
 
-		if (thrustLeft && !thrustRight && fuel > 0) {
-			force.x = -MAX_THRUST;
-			fuel--;
-		} else if (!thrustLeft && thrustRight && fuel > 0) {
-			force.x = MAX_THRUST;
-			fuel--;
-		} else {
-			force.x = 0;
+			if (thrustLeft && !thrustRight && fuel > 0) {
+				force.x = -MAX_THRUST;
+				fuel--;
+			} else if (!thrustLeft && thrustRight && fuel > 0) {
+				force.x = MAX_THRUST;
+				fuel--;
+			} else {
+				force.x = 0;
+			}	
 		}
 	}
 
@@ -129,8 +136,8 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	@Override
 	public boolean notifyCollision(int energy) {
 		System.out.println("Hit with energy : " + energy);
-		// return (energy >= Constants.DESTRUCTION_ENERGY);
-		return false;
+		return (energy >= Constants.DESTRUCTION_ENERGY);
+		//return false;
 	}
 
 }

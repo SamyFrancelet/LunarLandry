@@ -24,7 +24,7 @@ public final class Constants {
 	 * Game related constants
 	 */
 	// Maximal impact energy triggering a object destruction
-	public static final int DESTRUCTION_ENERGY = 15000;	
+	public static final int DESTRUCTION_ENERGY = 20000;	
 	public static final int CLOUD_DENSITY = 5;
 	public static final int GROUND_ALTITUDE = 100;
 	public static final boolean DRAW_BOUNDINGBOXES = false;
@@ -48,7 +48,19 @@ public final class Constants {
 	/** 
 	 * Ground parameters
 	 */
-	public static float maxIncline = 100.0f;
-	public static int minGround = 200;
-	public static int scale = 20;
+	public static final float MAX_INCLINE = 100.0f;
+	public static final int MIN_ALTITUDE = 200;
+	public static final int SCALE = 10;
+	public static final int FLAT_ZONE = 7;
+	
+	/** 
+	 * Landing Zone
+	 */
+	public static final int Z_WIDTH = 100;
+	public static final int Z_HEIGHT = 30;
+	
+	/** 
+	 * Global variable (oopsiii)
+	 */
+	public static boolean won = false;
 }
