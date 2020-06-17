@@ -1,58 +1,53 @@
 package ch.hevs.gdx2d.lunar.main;
 
-import java.util.Iterator;
+import java.util.ArrayList;
 import java.util.Random;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.physics.box2d.Body;
-import com.badlogic.gdx.physics.box2d.World;
-import com.badlogic.gdx.utils.Array;
 
-import ch.hevs.gdx2d.components.audio.MusicPlayer;
-import ch.hevs.gdx2d.components.audio.SoundSample;
 import ch.hevs.gdx2d.components.bitmaps.BitmapImage;
 import ch.hevs.gdx2d.lib.GdxGraphics;
 import ch.hevs.gdx2d.lib.interfaces.DrawableObject;
-import ch.hevs.gdx2d.lib.physics.PhysicsWorld;
 import ch.hevs.gdx2d.lunar.physics.Constants;
+import ch.hevs.gdx2d.lunar.physics.Particles;
 import ch.hevs.gdx2d.lunar.physics.PhysicalObject;
 
 public class Spaceship extends PhysicalObject implements DrawableObject {
 
+	private int fuel;
+	
 	public boolean thrustUp;
 	public boolean thrustLeft;
 	public boolean thrustRight;
-	private int fuel;
-
-	private static final Vector2 POSITION_BAR_FUEL = new Vector2(650, 750);
-//	private final Texture shipSkin = new Texture("data/images/SpaceShip_2.png");
-
-	// Particle related
-	World world = PhysicsWorld.getInstance();
-	static final Random rand = new Random();
-	public final int MAX_AGE = 20;
-	public int CREATION_RATE = 3;
-	public int ctnExplosion = 0;
-	public int ctnFire = 0;
-
+	
 	private boolean landed;
 	private boolean kaputt;
+	private boolean firstExplo;
+	
+	// Particles stuff
+	private ArrayList<Particles> reactor;
+	private ArrayList<Particles> explosion;
+	static final Random rand = new Random();
+
+	private static final Vector2 POSITION_BAR_FUEL = new Vector2(650, 750);
 
 	public Spaceship(Vector2 p) {
 		super(p, new Vector2(0, 0), Constants.BASE_MASS, 50, 50);
+		
+		fuel = (int) Constants.MAX_FUEL;
+		
 		thrustUp = false;
 		thrustLeft = false;
 		thrustRight = false;
+		
 		kaputt = false;
 		landed = false;
-		fuel = (int) Constants.MAX_FUEL;
-	}
-
-	public void changePosition(Vector2 p) {
-		this.position = p;
+		firstExplo = true;
+		
+		reactor = new ArrayList<Particles>();
+		explosion = new ArrayList<Particles>();
 	}
 
 	@Override
@@ -62,64 +57,51 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 		drawFuelBar(arg0);
 
 		if (kaputt) {
+			Vector2 vec;
+			if (firstExplo) {
+				for (int i = 0; i < 500; i++) {
+					vec = new Vector2(1,1).setToRandomDirection();
+					explosion.add(new Particles(new Vector2(position.x, position.y),
+							vec.scl(rand.nextFloat()*2),
+							rand.nextInt(80),
+							rand.nextBoolean() ? "data/images/fire_particle.png" : "data/images/reactor_particle.png"));
+				}
+				firstExplo = false;
+			}
+			// Explosion animation
 			arg0.draw(new Texture("data/images/Rip.png"), position.x - 25, position.y - 25, 50, 50);
-			// BitmapImage("data/images/flame.png"));
-//			Array<Body> bodies = new Array<Body>();
-//			world.getBodies(bodies);
-//
-//			Iterator<Body> it = bodies.iterator();
-//
-//			while (it.hasNext()) {
-//				Body p = it.next();
-//
-//				if (p.getUserData() instanceof Explosion) {
-//					Explosion explosion = (Explosion) p.getUserData();
-//					explosion.step();
-//					explosion.render(arg0);
-//
-//					if (explosion.shouldbeDestroyed()) {
-//						explosion.destroy();
-//					}
-//				}
-//			}
-//			PhysicsWorld.updatePhysics(Gdx.graphics.getDeltaTime());
-//			if (ctnExplosion < 10) {
-//				createExplosion();
-//				ctnExplosion++;
-//			} else if (ctnFire < 50) {
-//				createFire();
-//				ctnFire++;
-//			} else {
-//				arg0.draw(new Texture("data/images/Rip.png"), position.x - 25, position.y - 25, 50, 50);
-//			}
+
+			if (explosion.size() != 0) {
+				for (int i = 0; i < explosion.size(); i++) {
+					Particles p = explosion.get(i);
+					p.update();
+					p.draw(arg0);
+					if (p.shouldBeDestroyed()) {
+						explosion.remove(p);
+					}
+				}
+			}
 
 		} else {
-			arg0.draw(new Texture("data/images/SpaceShip_2.png"), position.x - 25, position.y - 30, 50, 50);
+			arg0.draw(new Texture("data/images/ssLandry.png"), position.x - 25, position.y - 30, 50, 50);
 
-//			if (!landed) {
-//				Array<Body> bodies = new Array<Body>();
-//				world.getBodies(bodies);
-//
-//				Iterator<Body> it = bodies.iterator();
-//
-//				while (it.hasNext()) {
-//					Body p = it.next();
-//
-//					if (p.getUserData() instanceof Particle) {
-//						Particle particle = (Particle) p.getUserData();
-//						particle.step();
-//						particle.render(arg0);
-//
-//						if (particle.shouldbeDestroyed()) {
-//							particle.destroy();
-//						}
-//					}
-//				}
-//				PhysicsWorld.updatePhysics(Gdx.graphics.getDeltaTime());
-//
-//				if ((thrustUp || thrustLeft || thrustRight) && fuel > 0)
-//					createParticles();
-//			}
+			if (!landed && fuel > 0 && (thrustUp || thrustLeft || thrustRight)) {
+				// Thrust animation
+				reactor.add(new Particles(new Vector2(position.x, position.y - 25),
+						new Vector2(rand.nextFloat()/2 * (rand.nextBoolean() ? 1 : -1), -2).mulAdd(speed, 0.1f),
+						rand.nextInt(80),
+						rand.nextBoolean() ? "data/images/fire_particle.png" : "data/images/reactor_particle.png"));
+				}
+			if (reactor.size() != 0) {
+				for (int i = 0; i < reactor.size(); i++) {
+					Particles p = reactor.get(i);
+					p.update();
+					p.draw(arg0);
+					if (p.shouldBeDestroyed()) {
+						reactor.remove(p);
+					}
+				}
+			}
 		}
 	}
 
@@ -133,42 +115,13 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 
 	}
 
-	void createExplosion() {
-		for (int i = 0; i < CREATION_RATE; i++) {
-			Explosion e = new Explosion(position, 1, MAX_AGE * 2 + rand.nextInt(MAX_AGE / 2));
-			// Vector2 randForce = new Vector2(1f * rand.nextFloat(), 1f*rand.nextFloat());
-			// Apply a vertical force with some random horizontal component
-			force.x = rand.nextFloat() * 0.0000705f * (rand.nextBoolean() == true ? -1 : 1);
-			force.y = rand.nextFloat() * 0.000105f;
-			e.applyBodyLinearImpulse(force, position, true);
-		}
-	}
-
-	void createFire() {
-		Explosion f = new Explosion(position, 1, MAX_AGE + rand.nextInt(MAX_AGE / 2));
-		f.setBodyActive(false);
-	}
-
-	void createParticles() {
-		for (int i = 0; i < CREATION_RATE; i++) {
-			Particle c = new Particle(position, 10, MAX_AGE + rand.nextInt(MAX_AGE / 2));
-
-			// Apply a vertical force with some random horizontal component
-			force.x = rand.nextFloat() * 0.00095f * (rand.nextBoolean() == true ? -1 : 1);
-			force.y = rand.nextFloat() * 0.000095f * (rand.nextBoolean() == true ? -1 : 1);
-			c.applyBodyLinearImpulse(force, position, true);
-		}
-	}
-
 	public void shoot(GdxGraphics arg0, Vector2 ss, Vector2 click) {
 		arg0.drawLine(click.x, click.y, ss.x, ss.y, Color.RED);
 	}
 
 	@Override
 	public void step() {
-		// this.force.y = thrustUp ? Constants.MAX_THRUST : 0;
-		// this.force.x = thrustLeft ? -Constants.MAX_THRUST : (thrustRight ?
-		// Constants.MAX_THRUST : 0);
+		// Simulate de thrust from the reactors
 		if (!landed) {
 			if (thrustUp && fuel > 0) {
 				force.y = Constants.MAX_THRUST;

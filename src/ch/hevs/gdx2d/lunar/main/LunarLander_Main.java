@@ -1,5 +1,6 @@
 package ch.hevs.gdx2d.lunar.main;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
 
@@ -13,7 +14,9 @@ import com.badlogic.gdx.utils.Array;
 import ch.hevs.gdx2d.lib.GdxGraphics;
 import ch.hevs.gdx2d.lunar.physics.Constants;
 import ch.hevs.gdx2d.lunar.physics.Ground;
+import ch.hevs.gdx2d.lunar.physics.Particles;
 import ch.hevs.gdx2d.lunar.physics.PhysicsSimulator;
+import ch.hevs.gdx2d.lunar.physics.Simulatable;
 import ch.hevs.gdx2d.components.audio.MusicPlayer;
 import ch.hevs.gdx2d.components.audio.SoundSample;
 import ch.hevs.gdx2d.desktop.PortableApplication;
@@ -32,29 +35,31 @@ public class LunarLander_Main extends PortableApplication {
 	SoundSample bruitExplosion;
 	private boolean doSoundFuel = true;
 	private boolean doExplosion = true;
-
-	// BackGround
-	public final Random rand = new Random();
-	public final int MAX_STAR_AGE = 20;
-	public int CREATION_STAR_RATE = 1;
 	
 	// Shooting related
 	boolean mouseActive = false;
 	Vector2 positionClick;
+	
+	// Stars particles
+	private ArrayList<Particles> stars;
+	static final Random rand = new Random();
+	static int waitStar;
 
 	public LunarLander_Main() {
 		super(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
-		ssLandry = new Spaceship(new Vector2(400, 700));
-		sol = new Ground();
-		lz = new LandZone(sol.getPolyPoint(Constants.FLAT_ZONE));
-		physics = new PhysicsSimulator(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
 	}
 
 	@Override
 	public void onInit() {
 		setTitle("LunarLandry (Team PLS)");
+		ssLandry = new Spaceship(new Vector2(400, 700));
+		sol = new Ground();
+		lz = new LandZone(sol.getPolyPoint(Constants.FLAT_ZONE));
+		physics = new PhysicsSimulator(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
 		physics.changePlayground(sol.getPolygon(), lz);
 		physics.addSimulatableObject(ssLandry);
+		stars = new ArrayList<Particles>();
+		waitStar = 0;
 		//playMusic();
 	}
 
@@ -70,8 +75,9 @@ public class LunarLander_Main extends PortableApplication {
 		g.drawFPS();
 		g.drawSchoolLogo();
 		
-		// Draw the stars une the background
-		drawBackGround(g);
+		// Draw the stars on the background
+		drawStars(g);
+		
 		// Spaceship
 		ssLandry.draw(g);
 		if (Constants.DRAW_BOUNDINGBOXES) { // Hitboxes
@@ -89,32 +95,29 @@ public class LunarLander_Main extends PortableApplication {
 		if (mouseActive)
 			ssLandry.shoot(g, ssLandry.position, positionClick);
 	}
-
-	void drawBackGround(GdxGraphics g) {
-		Array<Body> bodies = new Array<Body>();
-		ssLandry.world.getBodies(bodies);
-
-		Iterator<Body> it = bodies.iterator();
-
-		while (it.hasNext()) {
-			Body p = it.next();
-
-			if (p.getUserData() instanceof BackGround) {
-				BackGround backGround = (BackGround) p.getUserData();
-				backGround.step();
-				backGround.render(g);
-
-				if (backGround.shouldbeDestroyed()) {
-					backGround.destroy();
+	
+	void drawStars(GdxGraphics arg0) {
+		
+		waitStar++;
+		
+		// Adds a star every n frames
+		if (waitStar == 10) {
+			stars.add(new Particles(new Vector2(rand.nextFloat() * Constants.WIN_WIDTH,
+					rand.nextFloat() * Constants.WIN_WIDTH), new Vector2(0,0), 100,
+					"data/images/star.png"));
+			waitStar = 0;
+		}
+				
+		// Draw the stars
+		if (stars.size() != 0) {
+			for (int i = 0; i < stars.size(); i++) {
+				Particles p = stars.get(i);
+				p.update();
+				p.draw(arg0);
+				if (p.shouldBeDestroyed()) {
+					stars.remove(p);
 				}
 			}
-		}
-		for (int i = 0; i < CREATION_STAR_RATE; i++) {
-			Vector2 random = new Vector2(rand.nextFloat() * Constants.WIN_WIDTH * 5,
-					(rand.nextFloat() * (Constants.WIN_HEIGHT - Constants.GROUND_ALTITUDE))
-							+ Constants.GROUND_ALTITUDE);
-			BackGround b = new BackGround(random, 10, MAX_STAR_AGE + rand.nextInt(MAX_STAR_AGE));
-			b.setBodyActive(false);
 		}
 	}
 

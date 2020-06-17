@@ -65,10 +65,8 @@ public class PhysicsSimulator {
 	 * @return
 	 */
 	public void simulate_step() {
-		if (sim_objects.size() == 0) {
-			System.out.println("VIDE");
+		if (sim_objects.size() == 0)
 			return;
-		}
 
 		for (int i = 0; i < sim_objects.size(); i++) {
 			boolean ended = false;
@@ -147,7 +145,6 @@ public class PhysicsSimulator {
 						// Destroyed
 						ended = true;
 					} else {
-						System.out.println("GG!");
 						ended = true;
 					}
 				}
