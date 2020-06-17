@@ -13,6 +13,7 @@ import com.badlogic.gdx.utils.Array;
 import ch.hevs.gdx2d.lib.GdxGraphics;
 import ch.hevs.gdx2d.lunar.physics.Constants;
 import ch.hevs.gdx2d.lunar.physics.Ground;
+import ch.hevs.gdx2d.lunar.physics.Particles;
 import ch.hevs.gdx2d.lunar.physics.PhysicsSimulator;
 import ch.hevs.gdx2d.components.audio.MusicPlayer;
 import ch.hevs.gdx2d.components.audio.SoundSample;
@@ -32,11 +33,8 @@ public class LunarLander_Main extends PortableApplication {
 	SoundSample bruitExplosion;
 	private boolean doSoundFuel = true;
 	private boolean doExplosion = true;
-
-	// BackGround
-	public final Random rand = new Random();
-	public final int MAX_STAR_AGE = 20;
-	public int CREATION_STAR_RATE = 1;
+	
+	Particles p;
 	
 	// Shooting related
 	boolean mouseActive = false;
@@ -44,17 +42,18 @@ public class LunarLander_Main extends PortableApplication {
 
 	public LunarLander_Main() {
 		super(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
-		ssLandry = new Spaceship(new Vector2(400, 700));
-		sol = new Ground();
-		lz = new LandZone(sol.getPolyPoint(Constants.FLAT_ZONE));
-		physics = new PhysicsSimulator(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
 	}
 
 	@Override
 	public void onInit() {
 		setTitle("LunarLandry (Team PLS)");
+		ssLandry = new Spaceship(new Vector2(400, 700));
+		sol = new Ground();
+		lz = new LandZone(sol.getPolyPoint(Constants.FLAT_ZONE));
+		physics = new PhysicsSimulator(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
 		physics.changePlayground(sol.getPolygon(), lz);
-		physics.addSimulatableObject(ssLandry);
+		//physics.addSimulatableObject(ssLandry);
+		p = new Particles(new Vector2(400,400), new Vector2(1,1), "data/images/fire_particle.png");
 		//playMusic();
 	}
 
@@ -66,12 +65,16 @@ public class LunarLander_Main extends PortableApplication {
 		// Simulate every object
 		physics.simulate_step();
 		
+		p.update();
+		p.draw(g);
+		
 		// Draw basic layout
 		g.drawFPS();
 		g.drawSchoolLogo();
 		
-		// Draw the stars une the background
+		// Draw the stars on the background
 		// drawBackGround(g);
+		
 		// Spaceship
 		ssLandry.draw(g);
 		if (Constants.DRAW_BOUNDINGBOXES) { // Hitboxes
