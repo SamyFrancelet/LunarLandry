@@ -65,8 +65,10 @@ public class PhysicsSimulator {
 	 * @return
 	 */
 	public void simulate_step() {
-		if (sim_objects.size() == 0)
+		if (sim_objects.size() == 0) {
+			System.out.println("VIDE");
 			return;
+		}
 
 		for (int i = 0; i < sim_objects.size(); i++) {
 			boolean ended = false;
@@ -75,6 +77,7 @@ public class PhysicsSimulator {
 
 			if (s instanceof PhysicalObject) {
 				PhysicalObject p = (PhysicalObject) s;
+				
 				/**
 				 * General Physics equations
 				 */
@@ -145,8 +148,6 @@ public class PhysicsSimulator {
 						ended = true;
 					} else {
 						System.out.println("GG!");
-						p.speed.x = 0;
-						p.speed.y = 0;
 						ended = true;
 					}
 				}

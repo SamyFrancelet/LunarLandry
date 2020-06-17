@@ -72,7 +72,6 @@ public class LunarLander_Main extends PortableApplication {
 		
 		// Draw the stars une the background
 		drawBackGround(g);
-		
 		// Spaceship
 		ssLandry.draw(g);
 		if (Constants.DRAW_BOUNDINGBOXES) { // Hitboxes
