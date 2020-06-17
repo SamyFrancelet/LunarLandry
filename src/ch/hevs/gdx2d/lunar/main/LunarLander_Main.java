@@ -15,6 +15,7 @@ import ch.hevs.gdx2d.lunar.physics.Constants;
 import ch.hevs.gdx2d.lunar.physics.Ground;
 import ch.hevs.gdx2d.lunar.physics.PhysicsSimulator;
 import ch.hevs.gdx2d.components.audio.MusicPlayer;
+import ch.hevs.gdx2d.components.audio.SoundSample;
 import ch.hevs.gdx2d.desktop.PortableApplication;
 
 public class LunarLander_Main extends PortableApplication {
@@ -27,9 +28,16 @@ public class LunarLander_Main extends PortableApplication {
 	LandZone lz;
 	
 	//music
+	Ground sol = new Ground();
+
+	// music
 	MusicPlayer music;
-	
-	//BackGround
+	SoundSample noFuel;
+	private boolean doSoundFuel = true;
+	SoundSample bruitExplosion;
+	private boolean doExplosion = true;
+
+	// BackGround
 	public final int MAX_STAR_AGE = 80;
 	public int CREATION_STAR_RATE = 1;
 
@@ -65,13 +73,15 @@ public class LunarLander_Main extends PortableApplication {
 		ssLandry.draw(g);
 		if (drawBoxes) {
 			Rectangle box = ssLandry.getBoundingBox();
-			g.drawRectangle(box.getX()+box.getWidth()/2, box.getY()+box.getHeight()/2, box.getWidth(), box.getHeight(), 0);
+			g.drawRectangle(box.getX() + box.getWidth() / 2, box.getY() + box.getHeight() / 2, box.getWidth(),
+					box.getHeight(), 0);
 		}
 		if (Constants.won) {
 			g.drawStringCentered(70, "BRAVO MA COUILLE\nAppuie sur 'R' pour recommencer");
 		}
+		playSound();
 	}
-	
+
 	void drawBackGround(GdxGraphics g) {
 		Array<Body> bodies = new Array<Body>();
 		ssLandry.world.getBodies(bodies);
@@ -81,7 +91,6 @@ public class LunarLander_Main extends PortableApplication {
 		while (it.hasNext()) {
 			Body p = it.next();
 
-		
 			if (p.getUserData() instanceof BackGround) {
 				BackGround backGround = (BackGround) p.getUserData();
 				backGround.step();
@@ -93,18 +102,31 @@ public class LunarLander_Main extends PortableApplication {
 			}
 		}
 		for (int i = 0; i < CREATION_STAR_RATE; i++) {
-			Vector2 random = new Vector2(rand.nextFloat() * Constants.WIN_WIDTH*5,
+			Vector2 random = new Vector2(rand.nextFloat() * Constants.WIN_WIDTH * 5,
 					(rand.nextFloat() * (Constants.WIN_HEIGHT - Constants.GROUND_ALTITUDE))
 							+ Constants.GROUND_ALTITUDE);
 			BackGround b = new BackGround(random, 10, MAX_STAR_AGE + rand.nextInt(MAX_STAR_AGE));
 			b.setBodyActive(false);
-			}
+		}
 	}
-	
+
 	void playMusic() {
 		// music = new SoundSample("data\\sons\\sound1.mp3");
 		music = new MusicPlayer("data/sons/sound1.mp3");
 		music.loop();
+	}
+
+	void playSound() {
+		if (ssLandry.getFuel() && doSoundFuel) {
+			noFuel = new SoundSample("data/sons/NoFuel.mp3");
+			noFuel.play();
+			doSoundFuel = false;
+		}
+		if (ssLandry.getKaputt() && doExplosion) {
+			bruitExplosion = new SoundSample("data/sons/bruitExplo.mp3");
+			bruitExplosion.play();
+			doExplosion = false;
+		}
 	}
 
 	@Override

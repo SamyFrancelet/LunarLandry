@@ -11,6 +11,8 @@ import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
 
+import ch.hevs.gdx2d.components.audio.MusicPlayer;
+import ch.hevs.gdx2d.components.audio.SoundSample;
 import ch.hevs.gdx2d.components.bitmaps.BitmapImage;
 import ch.hevs.gdx2d.lib.GdxGraphics;
 import ch.hevs.gdx2d.lib.interfaces.DrawableObject;
@@ -36,6 +38,8 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	static final Random rand = new Random();
 	public final int MAX_AGE = 20;
 	public int CREATION_RATE = 3;
+	public int ctnExplosion = 0;
+	public int ctnFire = 0;
 
 	public Spaceship(Vector2 p) {
 		super(p, new Vector2(0, 0), BASE_MASS, 50, 50);
@@ -53,18 +57,44 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	@Override
 	public void draw(GdxGraphics arg0) {
 		// arg0.drawFilledRectangle(position.x, position.y+8, 10, 16, 0, Color.BLUE);
+
+		drawFuelBar(arg0);
+
 		if (kaputt) {
-			arg0.drawAlphaPicture(position.x, position.y + 30, -90, 0.3f, 0.3f,
-					new BitmapImage("data/images/flame.png"));
+			// arg0.drawAlphaPicture(position.x, position.y, -90, 0.3f, 0.3f, new
+			// BitmapImage("data/images/flame.png"));
+			Array<Body> bodies = new Array<Body>();
+			world.getBodies(bodies);
+
+			Iterator<Body> it = bodies.iterator();
+
+			while (it.hasNext()) {
+				Body p = it.next();
+
+				if (p.getUserData() instanceof Explosion) {
+					Explosion explosion = (Explosion) p.getUserData();
+					explosion.step();
+					explosion.render(arg0);
+
+					if (explosion.shouldbeDestroyed()) {
+						explosion.destroy();
+					}
+				}
+			}
+			PhysicsWorld.updatePhysics(Gdx.graphics.getDeltaTime());
+
+			if (ctnExplosion < 10) {
+				createExplosion();
+				ctnExplosion++;
+			} else if (ctnFire < 20) {
+				createFire();
+				ctnFire++;
+			} else {
+				arg0.draw(new Texture("data/images/Rip.png"), position.x - 25, position.y - 25, 50, 50);
+			}
+
 		} else {
-			arg0.draw(new Texture("data/images/SpaceShip_2.png"), position.x - 25, position.y - 25, 50, 50);
-
-			// Print fuel on screen
-
-			arg0.drawRectangle(POSITION_BAR_FUEL.x, POSITION_BAR_FUEL.y, 200, 50, 0);
-			arg0.drawFilledRectangle(POSITION_BAR_FUEL.x - (float) (fuel / MAX_FUEL) * 100 + 100, POSITION_BAR_FUEL.y,
-					(float) (fuel / MAX_FUEL) * 200, 50, 0, Color.RED);
-			arg0.drawString(POSITION_BAR_FUEL.x - 90, POSITION_BAR_FUEL.y, "Fuel :" + fuel + "/" + (int)MAX_FUEL);
+			arg0.draw(new Texture("data/images/SpaceShip_2.png"), position.x - 25, position.y - 30, 50, 50);
 
 			if (fuel > 0 && !Constants.won) {
 				Array<Body> bodies = new Array<Body>();
@@ -93,13 +123,38 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 		}
 	}
 
+	void drawFuelBar(GdxGraphics arg0) {
+		// Print fuel on screen
+		arg0.drawRectangle(POSITION_BAR_FUEL.x, POSITION_BAR_FUEL.y, 200, 50, 0);
+		arg0.drawFilledRectangle(POSITION_BAR_FUEL.x - (float) (fuel / MAX_FUEL) * 100 + 100, POSITION_BAR_FUEL.y,
+				(float) (fuel / MAX_FUEL) * 200, 50, 0, Color.RED);
+		arg0.drawString(POSITION_BAR_FUEL.x - 90, POSITION_BAR_FUEL.y, "Fuel :" + fuel + "/" + (int) MAX_FUEL);
+
+	}
+
+	void createExplosion() {
+		for (int i = 0; i < CREATION_RATE; i++) {
+			Explosion e = new Explosion(position, 1, MAX_AGE * 2 + rand.nextInt(MAX_AGE / 2));
+			// Vector2 randForce = new Vector2(1f * rand.nextFloat(), 1f*rand.nextFloat());
+			// Apply a vertical force with some random horizontal component
+			force.x = rand.nextFloat() * 0.000095f * (rand.nextBoolean() == true ? -1 : 1);
+			force.y = rand.nextFloat() * 0.000195f;
+			e.applyBodyLinearImpulse(force, position, true);
+		}
+	}
+
+	void createFire() {
+		Explosion f = new Explosion(position, 1, MAX_AGE + rand.nextInt(MAX_AGE / 2));
+		f.setBodyActive(false);
+	}
+
 	void createParticles() {
 		for (int i = 0; i < CREATION_RATE; i++) {
 			Particle c = new Particle(position, 10, MAX_AGE + rand.nextInt(MAX_AGE / 2));
 
 			// Apply a vertical force with some random horizontal component
 			force.x = rand.nextFloat() * 0.00095f * (rand.nextBoolean() == true ? -1 : 1);
-			force.y = rand.nextFloat() * 0.00095f * (rand.nextBoolean() == true ? -1 : 1);
+			force.y = rand.nextFloat() * 0.000095f * (rand.nextBoolean() == true ? -1 : 1);
 			c.applyBodyLinearImpulse(force, position, true);
 		}
 	}
@@ -138,6 +193,20 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 		System.out.println("Hit with energy : " + energy);
 		return (energy >= Constants.DESTRUCTION_ENERGY);
 		//return false;
+	}
+
+	public boolean getFuel() {
+		if (fuel == 0)
+			return true;
+		else
+			return false;
+	}
+
+	public boolean getKaputt() {
+		if (kaputt)
+			return true;
+		else
+			return false;
 	}
 
 }
