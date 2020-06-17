@@ -22,37 +22,28 @@ import ch.hevs.gdx2d.lunar.physics.PhysicalObject;
 
 public class Spaceship extends PhysicalObject implements DrawableObject {
 
+	private int fuel;
+	
 	public boolean thrustUp;
 	public boolean thrustLeft;
 	public boolean thrustRight;
-	private int fuel;
-
-	private static final Vector2 POSITION_BAR_FUEL = new Vector2(650, 750);
-//	private final Texture shipSkin = new Texture("data/images/SpaceShip_2.png");
-
-	// Particle related
-	World world = PhysicsWorld.getInstance();
-	static final Random rand = new Random();
-	public final int MAX_AGE = 20;
-	public int CREATION_RATE = 3;
-	public int ctnExplosion = 0;
-	public int ctnFire = 0;
-
+	
 	private boolean landed;
 	private boolean kaputt;
 
+	private static final Vector2 POSITION_BAR_FUEL = new Vector2(650, 750);
+
 	public Spaceship(Vector2 p) {
 		super(p, new Vector2(0, 0), Constants.BASE_MASS, 50, 50);
+		
+		fuel = (int) Constants.MAX_FUEL;
+		
 		thrustUp = false;
 		thrustLeft = false;
 		thrustRight = false;
+		
 		kaputt = false;
 		landed = false;
-		fuel = (int) Constants.MAX_FUEL;
-	}
-
-	public void changePosition(Vector2 p) {
-		this.position = p;
 	}
 
 	@Override
@@ -62,63 +53,14 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 		drawFuelBar(arg0);
 
 		if (kaputt) {
+			// Explosion animation
 			arg0.draw(new Texture("data/images/Rip.png"), position.x - 25, position.y - 25, 50, 50);
-			// BitmapImage("data/images/flame.png"));
-//			Array<Body> bodies = new Array<Body>();
-//			world.getBodies(bodies);
-//
-//			Iterator<Body> it = bodies.iterator();
-//
-//			while (it.hasNext()) {
-//				Body p = it.next();
-//
-//				if (p.getUserData() instanceof Explosion) {
-//					Explosion explosion = (Explosion) p.getUserData();
-//					explosion.step();
-//					explosion.render(arg0);
-//
-//					if (explosion.shouldbeDestroyed()) {
-//						explosion.destroy();
-//					}
-//				}
-//			}
-//			PhysicsWorld.updatePhysics(Gdx.graphics.getDeltaTime());
-//			if (ctnExplosion < 10) {
-//				createExplosion();
-//				ctnExplosion++;
-//			} else if (ctnFire < 50) {
-//				createFire();
-//				ctnFire++;
-//			} else {
-//				arg0.draw(new Texture("data/images/Rip.png"), position.x - 25, position.y - 25, 50, 50);
-//			}
 
 		} else {
 			arg0.draw(new Texture("data/images/SpaceShip_2.png"), position.x - 25, position.y - 30, 50, 50);
 
 //			if (!landed) {
-//				Array<Body> bodies = new Array<Body>();
-//				world.getBodies(bodies);
-//
-//				Iterator<Body> it = bodies.iterator();
-//
-//				while (it.hasNext()) {
-//					Body p = it.next();
-//
-//					if (p.getUserData() instanceof Particle) {
-//						Particle particle = (Particle) p.getUserData();
-//						particle.step();
-//						particle.render(arg0);
-//
-//						if (particle.shouldbeDestroyed()) {
-//							particle.destroy();
-//						}
-//					}
-//				}
-//				PhysicsWorld.updatePhysics(Gdx.graphics.getDeltaTime());
-//
-//				if ((thrustUp || thrustLeft || thrustRight) && fuel > 0)
-//					createParticles();
+				// Thrust animation
 //			}
 		}
 	}
@@ -133,42 +75,13 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 
 	}
 
-	void createExplosion() {
-		for (int i = 0; i < CREATION_RATE; i++) {
-			Explosion e = new Explosion(position, 1, MAX_AGE * 2 + rand.nextInt(MAX_AGE / 2));
-			// Vector2 randForce = new Vector2(1f * rand.nextFloat(), 1f*rand.nextFloat());
-			// Apply a vertical force with some random horizontal component
-			force.x = rand.nextFloat() * 0.0000705f * (rand.nextBoolean() == true ? -1 : 1);
-			force.y = rand.nextFloat() * 0.000105f;
-			e.applyBodyLinearImpulse(force, position, true);
-		}
-	}
-
-	void createFire() {
-		Explosion f = new Explosion(position, 1, MAX_AGE + rand.nextInt(MAX_AGE / 2));
-		f.setBodyActive(false);
-	}
-
-	void createParticles() {
-		for (int i = 0; i < CREATION_RATE; i++) {
-			Particle c = new Particle(position, 10, MAX_AGE + rand.nextInt(MAX_AGE / 2));
-
-			// Apply a vertical force with some random horizontal component
-			force.x = rand.nextFloat() * 0.00095f * (rand.nextBoolean() == true ? -1 : 1);
-			force.y = rand.nextFloat() * 0.000095f * (rand.nextBoolean() == true ? -1 : 1);
-			c.applyBodyLinearImpulse(force, position, true);
-		}
-	}
-
 	public void shoot(GdxGraphics arg0, Vector2 ss, Vector2 click) {
 		arg0.drawLine(click.x, click.y, ss.x, ss.y, Color.RED);
 	}
 
 	@Override
 	public void step() {
-		// this.force.y = thrustUp ? Constants.MAX_THRUST : 0;
-		// this.force.x = thrustLeft ? -Constants.MAX_THRUST : (thrustRight ?
-		// Constants.MAX_THRUST : 0);
+		// Simulate de thrust from the reactors
 		if (!landed) {
 			if (thrustUp && fuel > 0) {
 				force.y = Constants.MAX_THRUST;

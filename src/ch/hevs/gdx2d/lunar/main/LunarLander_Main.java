@@ -71,7 +71,7 @@ public class LunarLander_Main extends PortableApplication {
 		g.drawSchoolLogo();
 		
 		// Draw the stars une the background
-		drawBackGround(g);
+		// drawBackGround(g);
 		// Spaceship
 		ssLandry.draw(g);
 		if (Constants.DRAW_BOUNDINGBOXES) { // Hitboxes
@@ -88,34 +88,6 @@ public class LunarLander_Main extends PortableApplication {
 		//g.drawLine(0, Constants.GROUND_ALTITUDE, Constants.WIN_WIDTH, Constants.GROUND_ALTITUDE, Color.WHITE);
 		if (mouseActive)
 			ssLandry.shoot(g, ssLandry.position, positionClick);
-	}
-
-	void drawBackGround(GdxGraphics g) {
-		Array<Body> bodies = new Array<Body>();
-		ssLandry.world.getBodies(bodies);
-
-		Iterator<Body> it = bodies.iterator();
-
-		while (it.hasNext()) {
-			Body p = it.next();
-
-			if (p.getUserData() instanceof BackGround) {
-				BackGround backGround = (BackGround) p.getUserData();
-				backGround.step();
-				backGround.render(g);
-
-				if (backGround.shouldbeDestroyed()) {
-					backGround.destroy();
-				}
-			}
-		}
-		for (int i = 0; i < CREATION_STAR_RATE; i++) {
-			Vector2 random = new Vector2(rand.nextFloat() * Constants.WIN_WIDTH * 5,
-					(rand.nextFloat() * (Constants.WIN_HEIGHT - Constants.GROUND_ALTITUDE))
-							+ Constants.GROUND_ALTITUDE);
-			BackGround b = new BackGround(random, 10, MAX_STAR_AGE + rand.nextInt(MAX_STAR_AGE));
-			b.setBodyActive(false);
-		}
 	}
 
 	void playMusic() {
