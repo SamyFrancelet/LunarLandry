@@ -64,9 +64,6 @@ public class LunarLander_Main extends PortableApplication {
 		g.drawFPS();
 		g.drawSchoolLogo();
 		drawBackGround(g);
-		g.drawFilledPolygon(sol.getPolygon(), Color.LIGHT_GRAY);
-		g.drawFilledRectangle(lz.landBox.getX() + Constants.Z_WIDTH/2, lz.landBox.getY() + Constants.Z_HEIGHT/2, Constants.Z_WIDTH, Constants.Z_HEIGHT, 0, Color.RED);
-		//g.drawLine(0, Constants.GROUND_ALTITUDE, Constants.WIN_WIDTH, Constants.GROUND_ALTITUDE, Color.WHITE);
 		ssLandry.draw(g);
 		if (drawBoxes) {
 			Rectangle box = ssLandry.getBoundingBox();
@@ -77,6 +74,10 @@ public class LunarLander_Main extends PortableApplication {
 			g.drawStringCentered(70, "BRAVO MA COUILLE\nAppuie sur 'R' pour recommencer");
 		}
 		playSound();
+		g.drawFilledPolygon(sol.getPolygon(), Color.LIGHT_GRAY);
+		g.drawFilledRectangle(lz.landBox.getX() + Constants.Z_WIDTH/2, lz.landBox.getY() + Constants.Z_HEIGHT/2, Constants.Z_WIDTH, Constants.Z_HEIGHT, 0, Color.RED);
+		//g.drawLine(0, Constants.GROUND_ALTITUDE, Constants.WIN_WIDTH, Constants.GROUND_ALTITUDE, Color.WHITE);
+		
 	}
 
 	void drawBackGround(GdxGraphics g) {

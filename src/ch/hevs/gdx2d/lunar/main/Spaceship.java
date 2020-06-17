@@ -82,11 +82,10 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 				}
 			}
 			PhysicsWorld.updatePhysics(Gdx.graphics.getDeltaTime());
-
 			if (ctnExplosion < 10) {
 				createExplosion();
 				ctnExplosion++;
-			} else if (ctnFire < 20) {
+			} else if (ctnFire < 50) {
 				createFire();
 				ctnFire++;
 			} else {
@@ -96,7 +95,7 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 		} else {
 			arg0.draw(new Texture("data/images/SpaceShip_2.png"), position.x - 25, position.y - 30, 50, 50);
 
-			if (fuel > 0 && !Constants.won) {
+			if ( !Constants.won) {
 				Array<Body> bodies = new Array<Body>();
 				world.getBodies(bodies);
 
@@ -117,7 +116,7 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 				}
 				PhysicsWorld.updatePhysics(Gdx.graphics.getDeltaTime());
 
-				if (thrustUp || thrustLeft || thrustRight)
+				if ((thrustUp || thrustLeft || thrustRight) && fuel>0)
 					createParticles();
 			}
 		}
@@ -137,8 +136,8 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 			Explosion e = new Explosion(position, 1, MAX_AGE * 2 + rand.nextInt(MAX_AGE / 2));
 			// Vector2 randForce = new Vector2(1f * rand.nextFloat(), 1f*rand.nextFloat());
 			// Apply a vertical force with some random horizontal component
-			force.x = rand.nextFloat() * 0.000095f * (rand.nextBoolean() == true ? -1 : 1);
-			force.y = rand.nextFloat() * 0.000195f;
+			force.x = rand.nextFloat() * 0.0000705f * (rand.nextBoolean() == true ? -1 : 1);
+			force.y = rand.nextFloat() * 0.000105f;
 			e.applyBodyLinearImpulse(force, position, true);
 		}
 	}
