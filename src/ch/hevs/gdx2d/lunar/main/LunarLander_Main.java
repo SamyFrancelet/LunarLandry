@@ -1,5 +1,6 @@
 package ch.hevs.gdx2d.lunar.main;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
 
@@ -15,6 +16,7 @@ import ch.hevs.gdx2d.lunar.physics.Constants;
 import ch.hevs.gdx2d.lunar.physics.Ground;
 import ch.hevs.gdx2d.lunar.physics.Particles;
 import ch.hevs.gdx2d.lunar.physics.PhysicsSimulator;
+import ch.hevs.gdx2d.lunar.physics.Simulatable;
 import ch.hevs.gdx2d.components.audio.MusicPlayer;
 import ch.hevs.gdx2d.components.audio.SoundSample;
 import ch.hevs.gdx2d.desktop.PortableApplication;
@@ -26,6 +28,8 @@ public class LunarLander_Main extends PortableApplication {
 	Spaceship ssLandry;
 	Ground sol;
 	LandZone lz;
+	
+	static final Random rand = new Random();
 
 	// music
 	MusicPlayer music;
@@ -34,7 +38,7 @@ public class LunarLander_Main extends PortableApplication {
 	private boolean doSoundFuel = true;
 	private boolean doExplosion = true;
 	
-	Particles p;
+	private ArrayList<Particles> parts;
 	
 	// Shooting related
 	boolean mouseActive = false;
@@ -42,6 +46,7 @@ public class LunarLander_Main extends PortableApplication {
 
 	public LunarLander_Main() {
 		super(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
+		parts = new ArrayList<Particles>();
 	}
 
 	@Override
@@ -53,7 +58,12 @@ public class LunarLander_Main extends PortableApplication {
 		physics = new PhysicsSimulator(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
 		physics.changePlayground(sol.getPolygon(), lz);
 		//physics.addSimulatableObject(ssLandry);
-		p = new Particles(new Vector2(400,400), new Vector2(1,1), "data/images/fire_particle.png");
+		for (int i = 0; i < 1000; i++) {
+			parts.add(new Particles(new Vector2(400,400),
+					new Vector2(rand.nextFloat() * (rand.nextBoolean() ? -1 : 1), 
+					rand.nextFloat() * (rand.nextBoolean() ? -1 : 1)),
+					rand.nextInt(200),"data/images/fire_particle.png"));
+		}
 		//playMusic();
 	}
 
@@ -65,8 +75,16 @@ public class LunarLander_Main extends PortableApplication {
 		// Simulate every object
 		physics.simulate_step();
 		
-		p.update();
-		p.draw(g);
+		if (parts.size() != 0) {
+			for (int i = 0; i < parts.size(); i++) {
+				Particles p = parts.get(i);
+				p.update();
+				p.draw(g);
+				if (p.shouldBeDestroyed()) {
+					parts.remove(p);
+				}
+			}
+		}
 		
 		// Draw basic layout
 		g.drawFPS();

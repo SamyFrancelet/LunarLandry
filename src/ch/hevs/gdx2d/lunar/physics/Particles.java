@@ -15,9 +15,12 @@ public class Particles implements DrawableObject{
 	private float alpha;
 	private BitmapImage img;
 	
-	public Particles(Vector2 p, Vector2 s, String imgPath) {
+	private int lifetime;
+	
+	public Particles(Vector2 p, Vector2 s, int lifetime, String imgPath) {
 		this.position = p;
 		this.speed = s;
+		this.lifetime = lifetime;
 		
 		alpha = 1f;
 		img = new BitmapImage(imgPath);
@@ -25,6 +28,11 @@ public class Particles implements DrawableObject{
 	
 	public void update() {
 		position.add(speed);
+		alpha -= 1.0f/lifetime;
+	}
+	
+	public boolean shouldBeDestroyed() {
+		return (alpha <= 0.01f);
 	}
 
 	@Override
