@@ -63,7 +63,8 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 					vec = new Vector2(1,1).setToRandomDirection();
 					explosion.add(new Particles(new Vector2(position.x, position.y),
 							vec.scl(rand.nextFloat()*2),
-							rand.nextInt(80),"data/images/fire_particle.png"));
+							rand.nextInt(80),
+							rand.nextBoolean() ? "data/images/fire_particle.png" : "data/images/reactor_particle.png"));
 				}
 				firstExplo = false;
 			}
@@ -82,11 +83,25 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 			}
 
 		} else {
-			arg0.draw(new Texture("data/images/SpaceShip_2.png"), position.x - 25, position.y - 30, 50, 50);
+			arg0.draw(new Texture("data/images/ssLandry.png"), position.x - 25, position.y - 30, 50, 50);
 
-//			if (!landed) {
+			if (!landed && fuel > 0 && (thrustUp || thrustLeft || thrustRight)) {
 				// Thrust animation
-//			}
+				reactor.add(new Particles(new Vector2(position.x, position.y - 25),
+						new Vector2(rand.nextFloat()/2 * (rand.nextBoolean() ? 1 : -1), -2).mulAdd(speed, 0.1f),
+						rand.nextInt(80),
+						rand.nextBoolean() ? "data/images/fire_particle.png" : "data/images/reactor_particle.png"));
+				}
+			if (reactor.size() != 0) {
+				for (int i = 0; i < reactor.size(); i++) {
+					Particles p = reactor.get(i);
+					p.update();
+					p.draw(arg0);
+					if (p.shouldBeDestroyed()) {
+						reactor.remove(p);
+					}
+				}
+			}
 		}
 	}
 
@@ -129,7 +144,6 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 
 	@Override
 	public void removedFromSim() {
-		System.out.println("OUT OF SIM");
 		kaputt = !landed;
 	}
 

@@ -145,7 +145,6 @@ public class PhysicsSimulator {
 						// Destroyed
 						ended = true;
 					} else {
-						System.out.println("GG!");
 						ended = true;
 					}
 				}

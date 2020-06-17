@@ -27,7 +27,7 @@ public final class Constants {
 	public static final int DESTRUCTION_ENERGY = 20000;	
 	public static final int CLOUD_DENSITY = 5;
 	public static final int GROUND_ALTITUDE = 100;
-	public static final boolean DRAW_BOUNDINGBOXES = true;
+	public static final boolean DRAW_BOUNDINGBOXES = false;
 	
 	/**
 	 * Maximal impact speed triggering a crash
