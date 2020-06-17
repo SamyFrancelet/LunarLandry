@@ -29,7 +29,7 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	private boolean kaputt;
 	private static final int MAX_THRUST = 1500;
 	private static final int BASE_MASS = 100;
-	private static final double MAX_FUEL = 3000;
+	private static final double MAX_FUEL = 300;
 	private static final Vector2 POSITION_BAR_FUEL = new Vector2(650, 750);
 //	private final Texture shipSkin = new Texture("data/images/SpaceShip_2.png");
 

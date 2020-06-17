@@ -26,9 +26,6 @@ public class LunarLander_Main extends PortableApplication {
 	private final boolean drawBoxes = true;
 	Ground sol;
 	LandZone lz;
-	
-	//music
-	Ground sol = new Ground();
 
 	// music
 	MusicPlayer music;
