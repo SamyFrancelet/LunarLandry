@@ -35,11 +35,11 @@ public class LunarLander_Main extends PortableApplication {
 	SoundSample bruitExplosion;
 	private boolean doSoundFuel = true;
 	private boolean doExplosion = true;
-	
+
 	// Shooting related
 	boolean mouseActive = false;
 	Vector2 positionClick;
-	
+
 	// Stars particles
 	private ArrayList<Particles> stars;
 	static final Random rand = new Random();
@@ -60,7 +60,7 @@ public class LunarLander_Main extends PortableApplication {
 		physics.addSimulatableObject(ssLandry);
 		stars = new ArrayList<Particles>();
 		waitStar = 0;
-		//playMusic();
+		// playMusic();
 	}
 
 	@Override
@@ -70,14 +70,14 @@ public class LunarLander_Main extends PortableApplication {
 
 		// Simulate every object
 		physics.simulate_step();
-		
+
 		// Draw basic layout
 		g.drawFPS();
 		g.drawSchoolLogo();
-		
+
 		// Draw the stars on the background
-		drawStars(g);
-		
+		drawStars(g, 200);
+
 		// Spaceship
 		ssLandry.draw(g);
 		if (Constants.DRAW_BOUNDINGBOXES) { // Hitboxes
@@ -90,24 +90,46 @@ public class LunarLander_Main extends PortableApplication {
 		}
 		playSound();
 		g.drawFilledPolygon(sol.getPolygon(), Color.LIGHT_GRAY);
-		g.drawFilledRectangle(lz.landBox.getX() + Constants.Z_WIDTH/2, lz.landBox.getY() + Constants.Z_HEIGHT/2, Constants.Z_WIDTH, Constants.Z_HEIGHT, 0, Color.RED);
-		//g.drawLine(0, Constants.GROUND_ALTITUDE, Constants.WIN_WIDTH, Constants.GROUND_ALTITUDE, Color.WHITE);
+		g.drawFilledRectangle(lz.landBox.getX() + Constants.Z_WIDTH / 2, lz.landBox.getY() + Constants.Z_HEIGHT / 2,
+				Constants.Z_WIDTH, Constants.Z_HEIGHT, 0, Color.RED);
+		// g.drawLine(0, Constants.GROUND_ALTITUDE, Constants.WIN_WIDTH,
+		// Constants.GROUND_ALTITUDE, Color.WHITE);
 		if (mouseActive)
 			ssLandry.shoot(g, ssLandry.position, positionClick);
 	}
-	
-	void drawStars(GdxGraphics arg0) {
-		
+
+	void drawStars(GdxGraphics arg0, int age) {
+
 		waitStar++;
-		
+
 		// Adds a star every n frames
-		if (waitStar == 10) {
+		if (waitStar == 5) {
+			final String img = "data/images/star.png";
+			final String img2 = "data/images/star2.png";
+			final String img3 = "data/images/star4big.png";
+			String imgRand;
+
+			int value = (int) (Math.random() * 20);
+			switch (value) {
+			case 3:
+				imgRand = img2;
+				age = age/3;
+				break;
+			case 6:
+				imgRand = img3;
+				age = age/3;
+				break;
+			default:
+				imgRand = img;
+				break;
+			}
 			stars.add(new Particles(new Vector2(rand.nextFloat() * Constants.WIN_WIDTH,
-					rand.nextFloat() * Constants.WIN_WIDTH), new Vector2(0,0), 100,
-					"data/images/star.png"));
+					(rand.nextFloat() * (Constants.WIN_WIDTH - Constants.GROUND_ALTITUDE)) + Constants.GROUND_ALTITUDE),
+					new Vector2(0.1f, 0), age, imgRand));
+
 			waitStar = 0;
 		}
-				
+
 		// Draw the stars
 		if (stars.size() != 0) {
 			for (int i = 0; i < stars.size(); i++) {
@@ -125,6 +147,7 @@ public class LunarLander_Main extends PortableApplication {
 		// music = new SoundSample("data\\sons\\sound1.mp3");
 		music = new MusicPlayer("data/sons/sound1.mp3");
 		music.loop();
+		music.setVolume(0.1f);
 	}
 
 	void playSound() {
@@ -146,7 +169,7 @@ public class LunarLander_Main extends PortableApplication {
 		mouseActive = true;
 		positionClick = new Vector2(x, y);
 	}
-	
+
 	@Override
 	public void onRelease(int x, int y, int button) {
 		super.onRelease(x, y, button);
@@ -154,13 +177,13 @@ public class LunarLander_Main extends PortableApplication {
 		positionClick.y = y;
 		mouseActive = false;
 	}
-	
+
 	public void onDrag(int x, int y) {
 		super.onDrag(x, y);
 		positionClick.x = x;
 		positionClick.y = y;
 	}
-	
+
 	@Override
 	public void onKeyUp(int keycode) {
 		switch (keycode) {
@@ -198,7 +221,7 @@ public class LunarLander_Main extends PortableApplication {
 			break;
 		}
 	}
-	
+
 	public void replay() {
 		ssLandry = new Spaceship(new Vector2(400, 700));
 		sol = new Ground();
