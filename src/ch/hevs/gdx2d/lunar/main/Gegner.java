@@ -20,7 +20,7 @@ public class Gegner extends PhysicalObject implements DrawableObject{
 	
 	public Gegner(Vector2 p) {
 		super(p, new Vector2(rand.nextFloat() * rand.nextInt(50) * (rand.nextBoolean() ? 1 : -1),
-				rand.nextFloat() * rand.nextInt(30) * (rand.nextBoolean() ? 1 : -1)), Constants.GEGNER_MASS, 40, 40);
+				rand.nextFloat() * rand.nextInt(30) * (-1)), Constants.GEGNER_MASS, 40, 40);
 		meteor = new Texture("data/images/meteor.png");
 		destroyed = false;
 	}

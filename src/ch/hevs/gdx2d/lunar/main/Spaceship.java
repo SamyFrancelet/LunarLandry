@@ -62,8 +62,6 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	public void draw(GdxGraphics arg0) {
 		// arg0.drawFilledRectangle(position.x, position.y+8, 10, 16, 0, Color.BLUE);
 
-		drawHUD(arg0);
-
 		if (kaputt) {
 			Vector2 vec;
 			if (firstExplo) {
@@ -110,6 +108,8 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 				}
 			}
 		}
+		
+		drawHUD(arg0);
 	}
 
 	void drawHUD(GdxGraphics arg0) {

@@ -24,7 +24,7 @@ public final class Constants {
 	 * Game related constants
 	 */
 	// Maximal impact energy triggering a object destruction
-	public static final int DESTRUCTION_ENERGY = 20000;	
+	public static final int DESTRUCTION_ENERGY = 30000;	
 	public static final int CLOUD_DENSITY = 5;
 	public static final int GROUND_ALTITUDE = 100;
 	public static final boolean DRAW_BOUNDINGBOXES = true;
@@ -42,7 +42,7 @@ public final class Constants {
 	public static final float verticalPower = 0.2f;
 	
 	public static final double MAX_FUEL = 300;
-	public static final int BASE_MASS = 100;
+	public static final int BASE_MASS = 400;
 	
 	public static final int GEGNER_MASS = 100;
 	

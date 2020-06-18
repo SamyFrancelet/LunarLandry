@@ -29,6 +29,7 @@ public class LunarLander_Main extends PortableApplication {
 	Ground sol;
 	LandZone lz;
 	ArrayList<Gegner> meteors;
+	int gameNb;
 
 	// music
 	MusicPlayer music;
@@ -67,6 +68,7 @@ public class LunarLander_Main extends PortableApplication {
 		meteors = new ArrayList<Gegner>();
 		meteors.add(new Gegner(new Vector2(400,700)));
 		physics.addSimulatableObject(meteors.get(0));
+		gameNb = 1;
 		waitStar = 0;
 		//playMusic();
 	}
@@ -91,7 +93,9 @@ public class LunarLander_Main extends PortableApplication {
 		
 		// Meteors
 		if (meteors.size() != 0) {
-			meteors.get(0).draw(g);
+			for (int i = 0; i < meteors.size(); i++) {
+				meteors.get(i).draw(g);
+			}
 		}
 		
 		if (Constants.DRAW_BOUNDINGBOXES) { // Hitboxes
@@ -99,9 +103,11 @@ public class LunarLander_Main extends PortableApplication {
 			g.drawRectangle(box.getX() + box.getWidth() / 2, box.getY() + box.getHeight() / 2, box.getWidth(),
 					box.getHeight(), 0);
 			if (meteors.size() != 0) {
-				box = meteors.get(0).getBoundingBox();
-				g.drawRectangle(box.getX() + box.getWidth() / 2, box.getY() + box.getHeight() / 2, box.getWidth(),
-						box.getHeight(), 0);
+				for (int i = 0; i < meteors.size(); i++) {
+					box = meteors.get(i).getBoundingBox();
+					g.drawRectangle(box.getX() + box.getWidth() / 2, box.getY() + box.getHeight() / 2, 
+							box.getWidth(), box.getHeight(), 0);	
+				}
 			}
 		}
 		
@@ -121,11 +127,11 @@ public class LunarLander_Main extends PortableApplication {
 	void drawLaserExplo(GdxGraphics arg0, int age) {
 		// Laser logik
 		if (mouseActive && !ssLandry.isFinished()) {
-
 			if (meteors.size() != 0) {
-				if (meteors.get(0).getBoundingBox().contains(positionClick)) {
-					physics.removeObjectFromSim(meteors.get(0));
-					meteors.remove(0);
+				for (int i = 0; i < meteors.size(); i++) {
+					if (meteors.get(i).getBoundingBox().contains(positionClick)) {
+						physics.removeObjectFromSim(meteors.get(i));
+					}
 				}
 			}
 
@@ -215,6 +221,7 @@ public class LunarLander_Main extends PortableApplication {
 			doExplosion = false;
 		}
 		if (ssLandry.isLanded() && doWinSound) {
+			gameNb++;
 			winSound = new SoundSample("data/sons/OneSmallStep.mp3");
 			winSound.play();
 			doWinSound = false;
@@ -281,11 +288,23 @@ public class LunarLander_Main extends PortableApplication {
 	}
 
 	public void replay() {
+		if (ssLandry.isLanded()) {
+			winSound.stop();	
+		}
+		
+		physics.removeAllObjectsfromSim();
 		ssLandry = new Spaceship(new Vector2(100, 700));
 		sol = new Ground();
 		lz = new LandZone(sol.getPolyPoint(Constants.FLAT_ZONE));
 		physics.changePlayground(sol.getPolygon(), lz);
 		physics.addSimulatableObject(ssLandry);
+		
+		meteors.clear();
+		for (int i = 0; i < gameNb; i++) {
+			meteors.add(new Gegner(new Vector2(rand.nextInt(300) + 400, 700)));
+			physics.addSimulatableObject(meteors.get(i));
+		}
+		
 		doSoundFuel = true;
 		doExplosion = true;
 		doWinSound = true;
