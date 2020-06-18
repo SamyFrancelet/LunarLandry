@@ -32,8 +32,6 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 
 	static final Random rand = new Random();
 
-	private static final Vector2 POSITION_BAR_FUEL = new Vector2(650, 750);
-	
 	// Textures
 	private Texture spaceship;
 	private Texture ded;
@@ -128,7 +126,7 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 		// Print speed
 		BitmapFont bfSpeed = new BitmapFont();
 		bfSpeed.setColor(Color.RED);
-		if (speed.len() < 20) {
+		if (speed.len() < Constants.crashSpeed) {
 			bfSpeed.setColor(Color.GREEN);
 		}
 		arg0.drawString(POTITION_SPEED.x, POTITION_SPEED.y, "Speed :" + (int) speed.len() + " m/s", bfSpeed);
@@ -166,6 +164,7 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	@Override
 	public boolean notifyCollision(int energy) {
 		System.out.println("Hit with energy : " + energy);
+		System.out.println("Max hit energy : " + Constants.DESTRUCTION_ENERGY);
 		landed = energy < Constants.DESTRUCTION_ENERGY;
 		return (!landed);
 	}
