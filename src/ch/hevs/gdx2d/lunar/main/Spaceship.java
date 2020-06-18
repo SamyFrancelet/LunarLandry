@@ -5,9 +5,9 @@ import java.util.Random;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.Vector2;
 
-import ch.hevs.gdx2d.components.bitmaps.BitmapImage;
 import ch.hevs.gdx2d.lib.GdxGraphics;
 import ch.hevs.gdx2d.lib.interfaces.DrawableObject;
 import ch.hevs.gdx2d.lunar.physics.Constants;
@@ -32,8 +32,6 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 
 	static final Random rand = new Random();
 
-	private static final Vector2 POSITION_BAR_FUEL = new Vector2(650, 750);
-
 	public Spaceship(Vector2 p) {
 		super(p, new Vector2(0, 0), Constants.BASE_MASS, 50, 50);
 
@@ -55,7 +53,7 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	public void draw(GdxGraphics arg0) {
 		// arg0.drawFilledRectangle(position.x, position.y+8, 10, 16, 0, Color.BLUE);
 
-		drawFuelBar(arg0);
+		drawHUD(arg0);
 
 		if (kaputt) {
 			Vector2 vec;
@@ -105,13 +103,26 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 		}
 	}
 
-	void drawFuelBar(GdxGraphics arg0) {
-		// Print fuel on screen
+	void drawHUD(GdxGraphics arg0) {
+		// Print fond noir
+		arg0.drawFilledRectangle(400, 50, 800, 100, 0, Color.DARK_GRAY);
+		// Print fuel
+		Vector2 POSITION_BAR_FUEL = new Vector2(650, 50);
+		Vector2 POTITION_SPEED = new Vector2(100, 50);
+
 		arg0.drawRectangle(POSITION_BAR_FUEL.x, POSITION_BAR_FUEL.y, 200, 50, 0);
 		arg0.drawFilledRectangle(POSITION_BAR_FUEL.x - (float) (fuel / Constants.MAX_FUEL) * 100 + 100,
 				POSITION_BAR_FUEL.y, (float) (fuel / Constants.MAX_FUEL) * 200, 50, 0, Color.RED);
 		arg0.drawString(POSITION_BAR_FUEL.x - 90, POSITION_BAR_FUEL.y,
 				"Fuel :" + fuel + "/" + (int) Constants.MAX_FUEL);
+
+		// Print speed
+		BitmapFont bfSpeed = new BitmapFont();
+		bfSpeed.setColor(Color.RED);
+		if (speed.len() < 20) {
+			bfSpeed.setColor(Color.GREEN);
+		}
+		arg0.drawString(POTITION_SPEED.x, POTITION_SPEED.y, "Speed :" + (int) speed.len() + " m/s", bfSpeed);
 
 	}
 
