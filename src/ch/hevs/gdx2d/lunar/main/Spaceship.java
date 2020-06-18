@@ -17,35 +17,36 @@ import ch.hevs.gdx2d.lunar.physics.PhysicalObject;
 public class Spaceship extends PhysicalObject implements DrawableObject {
 
 	private int fuel;
-	
+
 	public boolean thrustUp;
 	public boolean thrustLeft;
 	public boolean thrustRight;
-	
+
 	private boolean landed;
 	private boolean kaputt;
 	private boolean firstExplo;
-	
+
 	// Particles stuff
 	private ArrayList<Particles> reactor;
 	private ArrayList<Particles> explosion;
+
 	static final Random rand = new Random();
 
 	private static final Vector2 POSITION_BAR_FUEL = new Vector2(650, 750);
 
 	public Spaceship(Vector2 p) {
 		super(p, new Vector2(0, 0), Constants.BASE_MASS, 50, 50);
-		
+
 		fuel = (int) Constants.MAX_FUEL;
-		
+
 		thrustUp = false;
 		thrustLeft = false;
 		thrustRight = false;
-		
+
 		kaputt = false;
 		landed = false;
 		firstExplo = true;
-		
+
 		reactor = new ArrayList<Particles>();
 		explosion = new ArrayList<Particles>();
 	}
@@ -60,9 +61,8 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 			Vector2 vec;
 			if (firstExplo) {
 				for (int i = 0; i < 500; i++) {
-					vec = new Vector2(1,1).setToRandomDirection();
-					explosion.add(new Particles(new Vector2(position.x, position.y),
-							vec.scl(rand.nextFloat()*2),
+					vec = new Vector2(1, 1).setToRandomDirection();
+					explosion.add(new Particles(new Vector2(position.x, position.y), vec.scl(rand.nextFloat() * 2),
 							rand.nextInt(80),
 							rand.nextBoolean() ? "data/images/fire_particle.png" : "data/images/reactor_particle.png"));
 				}
@@ -88,10 +88,10 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 			if (!landed && fuel > 0 && (thrustUp || thrustLeft || thrustRight)) {
 				// Thrust animation
 				reactor.add(new Particles(new Vector2(position.x, position.y - 25),
-						new Vector2(rand.nextFloat()/2 * (rand.nextBoolean() ? 1 : -1), -2).mulAdd(speed, 0.1f),
+						new Vector2(rand.nextFloat() / 2 * (rand.nextBoolean() ? 1 : -1), -2).mulAdd(speed, 0.1f),
 						rand.nextInt(80),
 						rand.nextBoolean() ? "data/images/fire_particle.png" : "data/images/reactor_particle.png"));
-				}
+			}
 			if (reactor.size() != 0) {
 				for (int i = 0; i < reactor.size(); i++) {
 					Particles p = reactor.get(i);
@@ -117,6 +117,7 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 
 	public void shoot(GdxGraphics arg0, Vector2 ss, Vector2 click) {
 		arg0.drawLine(click.x, click.y, ss.x, ss.y, Color.RED);
+
 	}
 
 	@Override
@@ -153,6 +154,7 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 		landed = energy < Constants.DESTRUCTION_ENERGY;
 		return (!landed);
 	}
+
 	public boolean isLanded() {
 		return landed;
 	}

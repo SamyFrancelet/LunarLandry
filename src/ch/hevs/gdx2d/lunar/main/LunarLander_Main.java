@@ -39,6 +39,7 @@ public class LunarLander_Main extends PortableApplication {
 	private boolean doWinSound = true;
 
 	// Shooting related
+	private ArrayList<Particles> laserExplo;
 	boolean mouseActive = false;
 	Vector2 positionClick;
 
@@ -61,6 +62,7 @@ public class LunarLander_Main extends PortableApplication {
 		physics.changePlayground(sol.getPolygon(), lz);
 		physics.addSimulatableObject(ssLandry);
 		stars = new ArrayList<Particles>();
+		laserExplo = new ArrayList<Particles>();
 		waitStar = 0;
 		playMusic();
 	}
@@ -96,8 +98,32 @@ public class LunarLander_Main extends PortableApplication {
 				Constants.Z_WIDTH, Constants.Z_HEIGHT, 0, Color.RED);
 		// g.drawLine(0, Constants.GROUND_ALTITUDE, Constants.WIN_WIDTH,
 		// Constants.GROUND_ALTITUDE, Color.WHITE);
-		if (mouseActive)
-			ssLandry.shoot(g, ssLandry.position, positionClick);
+		drawLaserExplo(g, 80);
+
+	}
+
+	void drawLaserExplo(GdxGraphics arg0, int age) {
+		if (mouseActive) {
+			ssLandry.shoot(arg0, ssLandry.position, positionClick);
+			Vector2 vec;
+			for (int i = 0; i < 100; i++) {
+				vec = new Vector2(1, 1).setToRandomDirection();
+				laserExplo.add(new Particles(new Vector2(positionClick.x, positionClick.y), vec.scl(0.2f),
+						rand.nextInt(age),
+						rand.nextBoolean() ? "data/images/fire_particle.png" : "data/images/reactor_particle.png"));
+			}
+		}
+		// Explosion laser animation
+		if (laserExplo.size() != 0) {
+			for (int j = 0; j < laserExplo.size(); j++) {
+				Particles p = laserExplo.get(j);
+				p.update();
+				p.draw(arg0);
+				if (p.shouldBeDestroyed()) {
+					laserExplo.remove(p);
+				}
+			}
+		}
 	}
 
 	void drawStars(GdxGraphics arg0, int age) {
@@ -115,11 +141,11 @@ public class LunarLander_Main extends PortableApplication {
 			switch (value) {
 			case 3:
 				imgRand = img2;
-				age = age/3;
+				age = age / 3;
 				break;
 			case 6:
 				imgRand = img3;
-				age = age/3;
+				age = age / 3;
 				break;
 			default:
 				imgRand = img;
@@ -146,8 +172,7 @@ public class LunarLander_Main extends PortableApplication {
 	}
 
 	void playMusic() {
-		// music = new SoundSample("data\\sons\\sound1.mp3");
-		music = new MusicPlayer("data/sons/sound1.wav");
+		music = new MusicPlayer("data/sons/sound1.mp3");
 		music.loop();
 		music.setVolume(0.1f);
 	}
