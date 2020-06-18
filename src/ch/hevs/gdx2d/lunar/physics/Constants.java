@@ -15,9 +15,9 @@ public final class Constants {
 	/**
 	 * Physics environment
 	 */
-	public static final float GRAVITY = -9.8f;
+	public static final float GRAVITY = -1.62f;
 	public static final float DELTA_TIME = 0.1f;
-	public static final float AIR_FRICTION = 0.3f;
+	public static final float AIR_FRICTION = 0.0f;
 	public static final float DAMPING_FACTOR = 0.9f;
 	
 	/**
@@ -27,7 +27,7 @@ public final class Constants {
 	public static final int DESTRUCTION_ENERGY = 20000;	
 	public static final int CLOUD_DENSITY = 5;
 	public static final int GROUND_ALTITUDE = 100;
-	public static final boolean DRAW_BOUNDINGBOXES = false;
+	public static final boolean DRAW_BOUNDINGBOXES = true;
 	
 	/**
 	 * Maximal impact speed triggering a crash
@@ -43,6 +43,8 @@ public final class Constants {
 	
 	public static final double MAX_FUEL = 300;
 	public static final int BASE_MASS = 100;
+	
+	public static final int GEGNER_MASS = 100;
 	
 	/**
 	 * fuel reserve

@@ -33,6 +33,10 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	static final Random rand = new Random();
 
 	private static final Vector2 POSITION_BAR_FUEL = new Vector2(650, 750);
+	
+	// Textures
+	private Texture spaceship;
+	private Texture ded;
 
 	public Spaceship(Vector2 p) {
 		super(p, new Vector2(0, 0), Constants.BASE_MASS, 50, 50);
@@ -49,6 +53,9 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 
 		reactor = new ArrayList<Particles>();
 		explosion = new ArrayList<Particles>();
+		
+		spaceship = new Texture("data/images/ssLandry.png");
+		ded = new Texture("data/images/Rip.png");
 	}
 
 	@Override
@@ -69,7 +76,7 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 				firstExplo = false;
 			}
 			// Explosion animation
-			arg0.draw(new Texture("data/images/Rip.png"), position.x - 25, position.y - 25, 50, 50);
+			arg0.draw(ded, position.x - 25, position.y - 25, 50, 50);
 
 			if (explosion.size() != 0) {
 				for (int i = 0; i < explosion.size(); i++) {
@@ -83,7 +90,7 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 			}
 
 		} else {
-			arg0.draw(new Texture("data/images/ssLandry.png"), position.x - 25, position.y - 30, 50, 50);
+			arg0.draw(spaceship, position.x - 25, position.y - 30, 50, 50);
 
 			if (!landed && fuel > 0 && (thrustUp || thrustLeft || thrustRight)) {
 				// Thrust animation
@@ -112,11 +119,6 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 				POSITION_BAR_FUEL.y, (float) (fuel / Constants.MAX_FUEL) * 200, 50, 0, Color.RED);
 		arg0.drawString(POSITION_BAR_FUEL.x - 90, POSITION_BAR_FUEL.y,
 				"Fuel :" + fuel + "/" + (int) Constants.MAX_FUEL);
-
-	}
-
-	public void shoot(GdxGraphics arg0, Vector2 ss, Vector2 click) {
-		arg0.drawLine(click.x, click.y, ss.x, ss.y, Color.RED);
 
 	}
 

@@ -5,8 +5,10 @@ import java.util.ArrayList;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 
+import ch.hevs.gdx2d.lunar.main.Gegner;
 import ch.hevs.gdx2d.lunar.main.LandZone;
 import ch.hevs.gdx2d.lunar.main.PolygonWorking;
+import ch.hevs.gdx2d.lunar.main.Spaceship;
 
 /**
  * A simple physics simulator for the inf1 project.
@@ -146,6 +148,14 @@ public class PhysicsSimulator {
 						ended = true;
 					} else {
 						ended = true;
+					}
+				}
+				
+				if(p instanceof Spaceship) {
+					for (int j = 0; j < sim_objects.size(); j++) {
+						if (j != sim_objects.indexOf(p)) {
+							ended |= p.getBoundingBox().overlaps(((PhysicalObject) sim_objects.get(j)).getBoundingBox());
+						}
 					}
 				}
 

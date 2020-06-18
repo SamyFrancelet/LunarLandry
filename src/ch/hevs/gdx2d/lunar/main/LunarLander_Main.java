@@ -28,6 +28,7 @@ public class LunarLander_Main extends PortableApplication {
 	Spaceship ssLandry;
 	Ground sol;
 	LandZone lz;
+	ArrayList<Gegner> meteors;
 
 	// music
 	MusicPlayer music;
@@ -55,7 +56,7 @@ public class LunarLander_Main extends PortableApplication {
 	@Override
 	public void onInit() {
 		setTitle("LunarLandry (Team PLS)");
-		ssLandry = new Spaceship(new Vector2(400, 700));
+		ssLandry = new Spaceship(new Vector2(100, 700));
 		sol = new Ground();
 		lz = new LandZone(sol.getPolyPoint(Constants.FLAT_ZONE));
 		physics = new PhysicsSimulator(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
@@ -63,8 +64,11 @@ public class LunarLander_Main extends PortableApplication {
 		physics.addSimulatableObject(ssLandry);
 		stars = new ArrayList<Particles>();
 		laserExplo = new ArrayList<Particles>();
+		meteors = new ArrayList<Gegner>();
+		meteors.add(new Gegner(new Vector2(400,700)));
+		physics.addSimulatableObject(meteors.get(0));
 		waitStar = 0;
-		playMusic();
+		//playMusic();
 	}
 
 	@Override
@@ -84,11 +88,23 @@ public class LunarLander_Main extends PortableApplication {
 
 		// Spaceship
 		ssLandry.draw(g);
+		
+		// Meteors
+		if (meteors.size() != 0) {
+			meteors.get(0).draw(g);
+		}
+		
 		if (Constants.DRAW_BOUNDINGBOXES) { // Hitboxes
 			Rectangle box = ssLandry.getBoundingBox();
 			g.drawRectangle(box.getX() + box.getWidth() / 2, box.getY() + box.getHeight() / 2, box.getWidth(),
 					box.getHeight(), 0);
+			if (meteors.size() != 0) {
+				box = meteors.get(0).getBoundingBox();
+				g.drawRectangle(box.getX() + box.getWidth() / 2, box.getY() + box.getHeight() / 2, box.getWidth(),
+						box.getHeight(), 0);
+			}
 		}
+		
 		if (ssLandry.isFinished()) {
 			g.drawStringCentered(70, "Appuie sur 'R' pour recommencer");
 		}
@@ -103,8 +119,18 @@ public class LunarLander_Main extends PortableApplication {
 	}
 
 	void drawLaserExplo(GdxGraphics arg0, int age) {
-		if (mouseActive) {
-			ssLandry.shoot(arg0, ssLandry.position, positionClick);
+		// Laser logik
+		if (mouseActive && !ssLandry.isFinished()) {
+
+			if (meteors.size() != 0) {
+				if (meteors.get(0).getBoundingBox().contains(positionClick)) {
+					physics.removeObjectFromSim(meteors.get(0));
+					meteors.remove(0);
+				}
+			}
+
+			arg0.drawLine(positionClick.x, positionClick.y, ssLandry.position.x, ssLandry.position.y, Color.RED);
+			mouseActive = false;
 			Vector2 vec;
 			for (int i = 0; i < 100; i++) {
 				vec = new Vector2(1, 1).setToRandomDirection();
@@ -210,11 +236,11 @@ public class LunarLander_Main extends PortableApplication {
 		mouseActive = false;
 	}
 
-	public void onDrag(int x, int y) {
-		super.onDrag(x, y);
-		positionClick.x = x;
-		positionClick.y = y;
-	}
+//	public void onDrag(int x, int y) {
+//		super.onDrag(x, y);
+//		positionClick.x = x;
+//		positionClick.y = y;
+//	}
 
 	@Override
 	public void onKeyUp(int keycode) {
@@ -255,13 +281,14 @@ public class LunarLander_Main extends PortableApplication {
 	}
 
 	public void replay() {
-		ssLandry = new Spaceship(new Vector2(400, 700));
+		ssLandry = new Spaceship(new Vector2(100, 700));
 		sol = new Ground();
 		lz = new LandZone(sol.getPolyPoint(Constants.FLAT_ZONE));
 		physics.changePlayground(sol.getPolygon(), lz);
 		physics.addSimulatableObject(ssLandry);
 		doSoundFuel = true;
 		doExplosion = true;
+		doWinSound = true;
 	}
 
 	public static void main(String[] args) {
