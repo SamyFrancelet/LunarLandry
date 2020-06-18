@@ -153,6 +153,9 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 		landed = energy < Constants.DESTRUCTION_ENERGY;
 		return (!landed);
 	}
+	public boolean isLanded() {
+		return landed;
+	}
 
 	public boolean isFinished() {
 		return (kaputt || landed);

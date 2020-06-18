@@ -33,8 +33,10 @@ public class LunarLander_Main extends PortableApplication {
 	MusicPlayer music;
 	SoundSample noFuel;
 	SoundSample bruitExplosion;
+	SoundSample winSound;
 	private boolean doSoundFuel = true;
 	private boolean doExplosion = true;
+	private boolean doWinSound = true;
 
 	// Shooting related
 	boolean mouseActive = false;
@@ -60,7 +62,7 @@ public class LunarLander_Main extends PortableApplication {
 		physics.addSimulatableObject(ssLandry);
 		stars = new ArrayList<Particles>();
 		waitStar = 0;
-		// playMusic();
+		playMusic();
 	}
 
 	@Override
@@ -145,7 +147,7 @@ public class LunarLander_Main extends PortableApplication {
 
 	void playMusic() {
 		// music = new SoundSample("data\\sons\\sound1.mp3");
-		music = new MusicPlayer("data/sons/sound1.mp3");
+		music = new MusicPlayer("data/sons/sound1.wav");
 		music.loop();
 		music.setVolume(0.1f);
 	}
@@ -160,6 +162,11 @@ public class LunarLander_Main extends PortableApplication {
 			bruitExplosion = new SoundSample("data/sons/bruitExplo.mp3");
 			bruitExplosion.play();
 			doExplosion = false;
+		}
+		if (ssLandry.isLanded() && doWinSound) {
+			winSound = new SoundSample("data/sons/OneSmallStep.mp3");
+			winSound.play();
+			doWinSound = false;
 		}
 	}
 
