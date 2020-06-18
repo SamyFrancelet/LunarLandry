@@ -225,10 +225,15 @@ public class LunarLander_Main extends PortableApplication {
 			doExplosion = false;
 		}
 		if (ssLandry.isLanded() && doWinSound) {
-			gameNb++;
-			winSound = new SoundSample("data/sons/OneSmallStep.mp3");
+			if (gameNb >= 11) {
+				winSound = new SoundSample("data/sons/OneSmallStep.mp3");	
+			}
+			else {
+				winSound = new SoundSample("data/sons/bof.mp3");
+			}
 			winSound.play();
 			doWinSound = false;
+			gameNb++;
 		}
 	}
 
