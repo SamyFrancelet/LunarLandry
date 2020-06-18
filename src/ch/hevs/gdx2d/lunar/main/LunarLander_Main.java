@@ -36,6 +36,7 @@ public class LunarLander_Main extends PortableApplication {
 	SoundSample noFuel;
 	SoundSample bruitExplosion;
 	SoundSample winSound;
+	SoundSample pew;
 	private boolean doSoundFuel = true;
 	private boolean doExplosion = true;
 	private boolean doWinSound = true;
@@ -127,6 +128,8 @@ public class LunarLander_Main extends PortableApplication {
 	void drawLaserExplo(GdxGraphics arg0, int age) {
 		// Laser logik
 		if (mouseActive && !ssLandry.isFinished()) {
+			pew = new SoundSample("data/sons/BruitLaser.mp3");
+			pew.play();
 			if (meteors.size() != 0) {
 				for (int i = 0; i < meteors.size(); i++) {
 					if (meteors.get(i).getBoundingBox().contains(positionClick)) {
