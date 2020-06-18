@@ -219,6 +219,7 @@ public class LunarLander_Main extends PortableApplication {
 			doSoundFuel = false;
 		}
 		if (ssLandry.isKaputt() && doExplosion) {
+			gameNb = 1;
 			bruitExplosion = new SoundSample("data/sons/bruitExplo.mp3");
 			bruitExplosion.play();
 			doExplosion = false;
