@@ -15,25 +15,24 @@ public class Ground {
 				polyPoints[i] = new Vector2(0, 100);
 			} else if (i == polyPoints.length - 1) {
 				polyPoints[i] = new Vector2(800, 100);
-			} else if (i == Constants.FLAT_ZONE + 1){
-				polyPoints[i] = new Vector2(800 / polyPoints.length*i, polyPoints[i-1].y);
-			} else if (polyPoints[i-1].y <= Constants.MIN_ALTITUDE){
-				polyPoints[i] = new Vector2(800 / polyPoints.length*i,
-						(float) (polyPoints[i-1].y + Math.random() * Constants.MAX_INCLINE * 2));
+			} else if (i == Constants.FLAT_ZONE + 1) {
+				polyPoints[i] = new Vector2(800 / polyPoints.length * i, polyPoints[i - 1].y);
+			} else if (polyPoints[i - 1].y <= Constants.MIN_ALTITUDE) {
+				polyPoints[i] = new Vector2(800 / polyPoints.length * i,
+						(float) (polyPoints[i - 1].y + Math.random() * Constants.MAX_INCLINE * 2));
 			} else {
-				polyPoints[i] = new Vector2(800 / polyPoints.length*i, 
-						(float) (polyPoints[i-1].y + Math.random() * Constants.MAX_INCLINE * 2 
-						-Constants.MAX_INCLINE));
+				polyPoints[i] = new Vector2(800 / polyPoints.length * i, (float) (polyPoints[i - 1].y
+						+ Math.random() * Constants.MAX_INCLINE * 2 - Constants.MAX_INCLINE));
 			}
 		}
-		
+
 		groundPoly = new PolygonWorking(polyPoints);
 	}
-	
-	public PolygonWorking getPolygon () {
+
+	public PolygonWorking getPolygon() {
 		return groundPoly;
 	}
-	
+
 	public Vector2 getPolyPoint(int i) {
 		if (i >= polyPoints.length) {
 			i = 0;

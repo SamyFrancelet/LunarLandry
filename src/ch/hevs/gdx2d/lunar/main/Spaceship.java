@@ -53,7 +53,7 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 
 		reactor = new ArrayList<Particles>();
 		explosion = new ArrayList<Particles>();
-		
+
 		spaceship = new Texture("data/images/ssLandry.png");
 		ded = new Texture("data/images/Rip.png");
 	}
@@ -107,7 +107,7 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 				}
 			}
 		}
-		
+
 		drawHUD(arg0);
 	}
 
@@ -132,8 +132,8 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 			bfSpeed.setColor(Color.GREEN);
 		}
 		arg0.drawString(POSITION_SPEED.x, POSITION_SPEED.y, "Speed :" + (int) speed.len() + " m/s", bfSpeed);
-		
-		arg0.drawString(POSITION_NB_GAME.x, POSITION_NB_GAME.y, "Apollo " + gameNb );
+
+		arg0.drawString(POSITION_NB_GAME.x, POSITION_NB_GAME.y, "Apollo " + gameNb);
 
 	}
 

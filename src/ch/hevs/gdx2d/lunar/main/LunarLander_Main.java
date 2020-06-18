@@ -1,22 +1,18 @@
 package ch.hevs.gdx2d.lunar.main;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Random;
 
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.physics.box2d.Body;
-import com.badlogic.gdx.utils.Array;
 
 import ch.hevs.gdx2d.lib.GdxGraphics;
 import ch.hevs.gdx2d.lunar.physics.Constants;
 import ch.hevs.gdx2d.lunar.physics.Ground;
 import ch.hevs.gdx2d.lunar.physics.Particles;
 import ch.hevs.gdx2d.lunar.physics.PhysicsSimulator;
-import ch.hevs.gdx2d.lunar.physics.Simulatable;
 import ch.hevs.gdx2d.components.audio.MusicPlayer;
 import ch.hevs.gdx2d.components.audio.SoundSample;
 import ch.hevs.gdx2d.desktop.PortableApplication;
@@ -44,7 +40,7 @@ public class LunarLander_Main extends PortableApplication {
 	// Shooting related
 	private ArrayList<Particles> laserExplo;
 	boolean mouseActive = false;
-	int waitLaser =0;
+	int waitLaser = 0;
 	Vector2 positionClick;
 
 	// Stars particles
@@ -99,19 +95,7 @@ public class LunarLander_Main extends PortableApplication {
 				meteors.get(i).draw(g);
 			}
 		}
-
-		if (Constants.DRAW_BOUNDINGBOXES) { // Hitboxes
-			Rectangle box = ssLandry.getBoundingBox();
-			g.drawRectangle(box.getX() + box.getWidth() / 2, box.getY() + box.getHeight() / 2, box.getWidth(),
-					box.getHeight(), 0);
-			if (meteors.size() != 0) {
-				for (int i = 0; i < meteors.size(); i++) {
-					box = meteors.get(i).getBoundingBox();
-					g.drawRectangle(box.getX() + box.getWidth() / 2, box.getY() + box.getHeight() / 2, box.getWidth(),
-							box.getHeight(), 0);
-				}
-			}
-		}
+		drawBoundingBoxes(g);
 
 		if (ssLandry.isFinished() && ssLandry.isKaputt()) {
 			g.drawStringCentered(660, "Appuiez sur 'R' pour recommencer");
@@ -128,11 +112,28 @@ public class LunarLander_Main extends PortableApplication {
 		drawLaserExplo(g, 80);
 
 	}
+
+	void drawBoundingBoxes(GdxGraphics arg0) {
+		if (Constants.DRAW_BOUNDINGBOXES) { // Hitboxes
+			Rectangle box = ssLandry.getBoundingBox();
+			arg0.drawRectangle(box.getX() + box.getWidth() / 2, box.getY() + box.getHeight() / 2, box.getWidth(),
+					box.getHeight(), 0);
+			if (meteors.size() != 0) {
+				for (int i = 0; i < meteors.size(); i++) {
+					box = meteors.get(i).getBoundingBox();
+					arg0.drawRectangle(box.getX() + box.getWidth() / 2, box.getY() + box.getHeight() / 2,
+							box.getWidth(), box.getHeight(), 0);
+				}
+			}
+		}
+	}
+
 	void drawLaser(GdxGraphics arg0) {
-		if((mouseActive || waitLaser >0)&& !ssLandry.isFinished())
-		arg0.drawLine(positionClick.x, positionClick.y, ssLandry.position.x, ssLandry.position.y, Color.RED);
+		if ((mouseActive || waitLaser > 0) && !ssLandry.isFinished())
+			arg0.drawLine(positionClick.x, positionClick.y, ssLandry.position.x, ssLandry.position.y, Color.RED);
 		waitLaser--;
 	}
+
 	void drawLaserExplo(GdxGraphics arg0, int age) {
 		// Laser logik
 		if (mouseActive && !ssLandry.isFinished()) {
@@ -169,11 +170,12 @@ public class LunarLander_Main extends PortableApplication {
 			}
 		}
 	}
+
 	void drawLandZone(GdxGraphics arg0) {
 		Color color = Color.RED;
-		if(ssLandry.isLanded()) {
+		if (ssLandry.isLanded()) {
 			color = Color.GREEN;
-		}		
+		}
 		arg0.drawFilledRectangle(lz.landBox.getX() + Constants.Z_WIDTH / 2, lz.landBox.getY() + Constants.Z_HEIGHT / 2,
 				Constants.Z_WIDTH, Constants.Z_HEIGHT, 0, color);
 	}

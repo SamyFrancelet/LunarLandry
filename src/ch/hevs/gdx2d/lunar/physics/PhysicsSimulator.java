@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 
-import ch.hevs.gdx2d.lunar.main.Gegner;
 import ch.hevs.gdx2d.lunar.main.LandZone;
 import ch.hevs.gdx2d.lunar.main.PolygonWorking;
 import ch.hevs.gdx2d.lunar.main.Spaceship;
@@ -20,7 +19,7 @@ public class PhysicsSimulator {
 	 */
 	double width;
 	double height;
-	
+
 	/**
 	 * Ground & Landing Zone for the spaceship
 	 */
@@ -77,7 +76,7 @@ public class PhysicsSimulator {
 
 			if (s instanceof PhysicalObject) {
 				PhysicalObject p = (PhysicalObject) s;
-				
+
 				/**
 				 * General Physics equations
 				 */
@@ -119,7 +118,7 @@ public class PhysicsSimulator {
 				boxPoints[1] = new Vector2(box.getX() + box.getWidth(), box.getY());
 				boxPoints[2] = new Vector2(box.getX(), box.getY() + box.getHeight());
 				boxPoints[3] = new Vector2(box.getX() + box.getWidth(), box.getY() + box.getHeight());
-				
+
 				// Ground corner into object
 				for (int j = 0; j < Constants.SCALE; j++) {
 					if (box.contains(ground.getVertex(j)) || ended) {
@@ -127,7 +126,7 @@ public class PhysicsSimulator {
 						break;
 					}
 				}
-				
+
 				// Object corner into ground
 				for (int j = 0; j < 4; j++) {
 					if (ground.contains(boxPoints[j]) || ended) {
@@ -135,11 +134,11 @@ public class PhysicsSimulator {
 						break;
 					}
 				}
-				
+
 				if (p.position.x >= width || p.position.x <= 0) {
 					ended = true;
 				}
-				
+
 				// LandingZone
 				if (box.overlaps(lz.landBox)) {
 					// Too fast ?
@@ -150,11 +149,12 @@ public class PhysicsSimulator {
 						ended = true;
 					}
 				}
-				
-				if(p instanceof Spaceship) {
+
+				if (p instanceof Spaceship) {
 					for (int j = 0; j < sim_objects.size(); j++) {
 						if (j != sim_objects.indexOf(p)) {
-							ended |= p.getBoundingBox().overlaps(((PhysicalObject) sim_objects.get(j)).getBoundingBox());
+							ended |= p.getBoundingBox()
+									.overlaps(((PhysicalObject) sim_objects.get(j)).getBoundingBox());
 						}
 					}
 				}
@@ -172,7 +172,7 @@ public class PhysicsSimulator {
 	public void removeAllObjectsfromSim() {
 		sim_objects.clear();
 	}
-	
+
 	public void changePlayground(PolygonWorking ground, LandZone lz) {
 		this.ground = ground;
 		this.lz = lz;
