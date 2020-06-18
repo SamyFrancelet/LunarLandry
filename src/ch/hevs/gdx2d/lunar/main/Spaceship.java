@@ -17,6 +17,7 @@ import ch.hevs.gdx2d.lunar.physics.PhysicalObject;
 public class Spaceship extends PhysicalObject implements DrawableObject {
 
 	private int fuel;
+	private int gameNb;
 
 	public boolean thrustUp;
 	public boolean thrustLeft;
@@ -36,10 +37,11 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	private Texture spaceship;
 	private Texture ded;
 
-	public Spaceship(Vector2 p) {
+	public Spaceship(Vector2 p, int gameNb) {
 		super(p, new Vector2(0, 0), Constants.BASE_MASS, 50, 50);
 
 		fuel = (int) Constants.MAX_FUEL;
+		this.gameNb = gameNb;
 
 		thrustUp = false;
 		thrustLeft = false;
@@ -59,7 +61,6 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 	@Override
 	public void draw(GdxGraphics arg0) {
 		// arg0.drawFilledRectangle(position.x, position.y+8, 10, 16, 0, Color.BLUE);
-
 		if (kaputt) {
 			Vector2 vec;
 			if (firstExplo) {
@@ -115,7 +116,8 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 		arg0.drawFilledRectangle(400, 50, 800, 100, 0, Color.DARK_GRAY);
 		// Print fuel
 		Vector2 POSITION_BAR_FUEL = new Vector2(650, 50);
-		Vector2 POTITION_SPEED = new Vector2(100, 50);
+		Vector2 POSITION_SPEED = new Vector2(100, 50);
+		Vector2 POSITION_NB_GAME = new Vector2(350, 50);
 
 		arg0.drawRectangle(POSITION_BAR_FUEL.x, POSITION_BAR_FUEL.y, 200, 50, 0);
 		arg0.drawFilledRectangle(POSITION_BAR_FUEL.x - (float) (fuel / Constants.MAX_FUEL) * 100 + 100,
@@ -129,7 +131,9 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 		if (speed.len() < Constants.crashSpeed) {
 			bfSpeed.setColor(Color.GREEN);
 		}
-		arg0.drawString(POTITION_SPEED.x, POTITION_SPEED.y, "Speed :" + (int) speed.len() + " m/s", bfSpeed);
+		arg0.drawString(POSITION_SPEED.x, POSITION_SPEED.y, "Speed :" + (int) speed.len() + " m/s", bfSpeed);
+		
+		arg0.drawString(POSITION_NB_GAME.x, POSITION_NB_GAME.y, "Apollo " + gameNb );
 
 	}
 

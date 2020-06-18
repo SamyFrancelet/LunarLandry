@@ -29,7 +29,7 @@ public class LunarLander_Main extends PortableApplication {
 	Ground sol;
 	LandZone lz;
 	ArrayList<Gegner> meteors;
-	int gameNb;
+	private int gameNb;
 
 	// music
 	MusicPlayer music;
@@ -44,6 +44,7 @@ public class LunarLander_Main extends PortableApplication {
 	// Shooting related
 	private ArrayList<Particles> laserExplo;
 	boolean mouseActive = false;
+	int waitLaser =0;
 	Vector2 positionClick;
 
 	// Stars particles
@@ -58,7 +59,10 @@ public class LunarLander_Main extends PortableApplication {
 	@Override
 	public void onInit() {
 		setTitle("LunarLandry (Team PLS)");
-		ssLandry = new Spaceship(new Vector2(100, 700));
+		gameNb = 1;
+		waitStar = 0;
+		playMusic();
+		ssLandry = new Spaceship(new Vector2(100, 700), gameNb);
 		sol = new Ground();
 		lz = new LandZone(sol.getPolyPoint(Constants.FLAT_ZONE));
 		physics = new PhysicsSimulator(Constants.WIN_WIDTH, Constants.WIN_HEIGHT);
@@ -67,11 +71,8 @@ public class LunarLander_Main extends PortableApplication {
 		stars = new ArrayList<Particles>();
 		laserExplo = new ArrayList<Particles>();
 		meteors = new ArrayList<Gegner>();
-		meteors.add(new Gegner(new Vector2(400,700)));
+		meteors.add(new Gegner(new Vector2(400, 700)));
 		physics.addSimulatableObject(meteors.get(0));
-		gameNb = 1;
-		waitStar = 0;
-		//playMusic();
 	}
 
 	@Override
@@ -83,22 +84,22 @@ public class LunarLander_Main extends PortableApplication {
 		physics.simulate_step();
 
 		// Draw basic layout
-		g.drawFPS();
-		g.drawSchoolLogo();
+		// g.drawFPS();
+		// g.drawSchoolLogo();
 
 		// Draw the stars on the background
 		drawStars(g, 200);
 
 		// Spaceship
 		ssLandry.draw(g);
-		
+
 		// Meteors
 		if (meteors.size() != 0) {
 			for (int i = 0; i < meteors.size(); i++) {
 				meteors.get(i).draw(g);
 			}
 		}
-		
+
 		if (Constants.DRAW_BOUNDINGBOXES) { // Hitboxes
 			Rectangle box = ssLandry.getBoundingBox();
 			g.drawRectangle(box.getX() + box.getWidth() / 2, box.getY() + box.getHeight() / 2, box.getWidth(),
@@ -106,30 +107,40 @@ public class LunarLander_Main extends PortableApplication {
 			if (meteors.size() != 0) {
 				for (int i = 0; i < meteors.size(); i++) {
 					box = meteors.get(i).getBoundingBox();
-					g.drawRectangle(box.getX() + box.getWidth() / 2, box.getY() + box.getHeight() / 2, 
-							box.getWidth(), box.getHeight(), 0);	
+					g.drawRectangle(box.getX() + box.getWidth() / 2, box.getY() + box.getHeight() / 2, box.getWidth(),
+							box.getHeight(), 0);
 				}
 			}
 		}
-		
-		if (ssLandry.isFinished()) {
-			g.drawStringCentered(70, "Appuie sur 'R' pour recommencer");
+
+		if (ssLandry.isFinished() && ssLandry.isKaputt()) {
+			g.drawStringCentered(660, "Appuiez sur 'R' pour recommencer");
+		}
+		if (ssLandry.isFinished() && ssLandry.isLanded()) {
+			g.drawStringCentered(660, "Appuiez sur 'R' pour continuer");
 		}
 		playSound();
 		g.drawFilledPolygon(sol.getPolygon(), Color.LIGHT_GRAY);
-		g.drawFilledRectangle(lz.landBox.getX() + Constants.Z_WIDTH / 2, lz.landBox.getY() + Constants.Z_HEIGHT / 2,
-				Constants.Z_WIDTH, Constants.Z_HEIGHT, 0, Color.RED);
+		drawLandZone(g);
 		// g.drawLine(0, Constants.GROUND_ALTITUDE, Constants.WIN_WIDTH,
 		// Constants.GROUND_ALTITUDE, Color.WHITE);
+		drawLaser(g);
 		drawLaserExplo(g, 80);
 
 	}
-
+	void drawLaser(GdxGraphics arg0) {
+		if((mouseActive || waitLaser >0)&& !ssLandry.isFinished())
+		arg0.drawLine(positionClick.x, positionClick.y, ssLandry.position.x, ssLandry.position.y, Color.RED);
+		waitLaser--;
+	}
 	void drawLaserExplo(GdxGraphics arg0, int age) {
 		// Laser logik
 		if (mouseActive && !ssLandry.isFinished()) {
-			pew = new SoundSample("data/sons/BruitLaser.mp3");
+			pew = new SoundSample("data/sons/BruitLaser_low.mp3");
 			pew.play();
+			pew.setVolume(0.1f);
+			mouseActive = false;
+			waitLaser = 4;
 			if (meteors.size() != 0) {
 				for (int i = 0; i < meteors.size(); i++) {
 					if (meteors.get(i).getBoundingBox().contains(positionClick)) {
@@ -138,8 +149,6 @@ public class LunarLander_Main extends PortableApplication {
 				}
 			}
 
-			arg0.drawLine(positionClick.x, positionClick.y, ssLandry.position.x, ssLandry.position.y, Color.RED);
-			mouseActive = false;
 			Vector2 vec;
 			for (int i = 0; i < 100; i++) {
 				vec = new Vector2(1, 1).setToRandomDirection();
@@ -159,6 +168,14 @@ public class LunarLander_Main extends PortableApplication {
 				}
 			}
 		}
+	}
+	void drawLandZone(GdxGraphics arg0) {
+		Color color = Color.RED;
+		if(ssLandry.isLanded()) {
+			color = Color.GREEN;
+		}		
+		arg0.drawFilledRectangle(lz.landBox.getX() + Constants.Z_WIDTH / 2, lz.landBox.getY() + Constants.Z_HEIGHT / 2,
+				Constants.Z_WIDTH, Constants.Z_HEIGHT, 0, color);
 	}
 
 	void drawStars(GdxGraphics arg0, int age) {
@@ -206,32 +223,65 @@ public class LunarLander_Main extends PortableApplication {
 		}
 	}
 
+	public int getNbGame() {
+		return gameNb;
+	}
+
 	void playMusic() {
-		music = new MusicPlayer("data/sons/sound1.mp3");
+		music = new MusicPlayer("data/sons/sound1_low.mp3");
 		music.loop();
-		music.setVolume(0.1f);
 	}
 
 	void playSound() {
 		if (ssLandry.isDry() && doSoundFuel) {
-			noFuel = new SoundSample("data/sons/NoFuel.mp3");
+			final String dry1 = "data/sons/NoFuel.mp3";
+			final String dry2 = "data/sons/Ecolo.mp3";
+			final String dry3 = "data/sons/Sub.mp3";
+			String dry;
+			int value = (int) (Math.random() * 4);
+			switch (value) {
+			case 2:
+				dry = dry2;
+				break;
+			case 3:
+				dry = dry3;
+				break;
+			default:
+				dry = dry1;
+				break;
+			}
+			noFuel = new SoundSample(dry);
 			noFuel.play();
 			doSoundFuel = false;
 		}
 		if (ssLandry.isKaputt() && doExplosion) {
 			gameNb = 1;
-			bruitExplosion = new SoundSample("data/sons/bruitExplo.mp3");
+			final String kaputt1 = "data/sons/bruitExplo.mp3";
+			final String kaputt2 = "data/sons/doucement.mp3";
+			String kaputt;
+			int value = (int) (Math.random() * 3);
+			switch (value) {
+			case 2:
+				kaputt = kaputt2;
+				break;
+			default:
+				kaputt = kaputt1;
+				break;
+			}
+			bruitExplosion = new SoundSample(kaputt);
 			bruitExplosion.play();
 			doExplosion = false;
 		}
 		if (ssLandry.isLanded() && doWinSound) {
-			if (gameNb >= 11) {
-				winSound = new SoundSample("data/sons/OneSmallStep.mp3");	
-			}
-			else {
-				winSound = new SoundSample("data/sons/bof.mp3");
+			if (gameNb == 11) {
+				winSound = new SoundSample("data/sons/OneSmallStep.mp3");
+			} else if (gameNb < 11) {
+				winSound = new SoundSample(rand.nextBoolean() ? "data/sons/Sympa.mp3" : "data/sons/bof_low.mp3");
+			} else {
+				winSound = new SoundSample("data/sons/VSS.mp3");
 			}
 			winSound.play();
+			winSound.mofidyPlayingVolument(0.1f, 1);
 			doWinSound = false;
 			gameNb++;
 		}
@@ -270,6 +320,15 @@ public class LunarLander_Main extends PortableApplication {
 		case Input.Keys.RIGHT:
 			ssLandry.thrustRight = false;
 			break;
+		case Input.Keys.W:
+			ssLandry.thrustUp = false;
+			break;
+		case Input.Keys.A:
+			ssLandry.thrustLeft = false;
+			break;
+		case Input.Keys.D:
+			ssLandry.thrustRight = false;
+			break;
 		default:
 			break;
 		}
@@ -287,6 +346,15 @@ public class LunarLander_Main extends PortableApplication {
 		case Input.Keys.RIGHT:
 			ssLandry.thrustRight = true;
 			break;
+		case Input.Keys.W:
+			ssLandry.thrustUp = true;
+			break;
+		case Input.Keys.A:
+			ssLandry.thrustLeft = true;
+			break;
+		case Input.Keys.D:
+			ssLandry.thrustRight = true;
+			break;
 		case Input.Keys.R:
 			if (ssLandry.isFinished()) {
 				replay();
@@ -298,22 +366,22 @@ public class LunarLander_Main extends PortableApplication {
 
 	public void replay() {
 		if (ssLandry.isLanded()) {
-			winSound.stop();	
+			winSound.stop();
 		}
-		
+
 		physics.removeAllObjectsfromSim();
-		ssLandry = new Spaceship(new Vector2(100, 700));
+		ssLandry = new Spaceship(new Vector2(100, 700), gameNb);
 		sol = new Ground();
 		lz = new LandZone(sol.getPolyPoint(Constants.FLAT_ZONE));
 		physics.changePlayground(sol.getPolygon(), lz);
 		physics.addSimulatableObject(ssLandry);
-		
+
 		meteors.clear();
 		for (int i = 0; i < gameNb; i++) {
 			meteors.add(new Gegner(new Vector2(rand.nextInt(300) + 400, 700)));
 			physics.addSimulatableObject(meteors.get(i));
 		}
-		
+
 		doSoundFuel = true;
 		doExplosion = true;
 		doWinSound = true;
