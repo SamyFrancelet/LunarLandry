@@ -14,6 +14,17 @@ Ce document a pour but d’accompagner les personnes qui vont faire fonctionner,
 L’objectif est donc de rendre notre code compréhensible et accessible à n’importe qui, pour autant qu’il ait les compétences nécessaires en Java.
 
 
-\section{Spécifications}
+\section{Spécifications - Problématique}
+Le but de ce jeu est de faire atterrir un vaisseau spatial sur une plateforme situé sur la lune. Il faut donc comme en réalité éviter les obstacles et atterrir en douceur. Dans le cas contraire le vaisseau ne supportera pas l’impact et sera détruit.
+La problématique est donc la suivante : Coder un Lunar Lander avec ces différentes fonctionnalités.
+\begin{itemize}
+Voici le cahier des charges qui nous a été transmis :
+\item	Au lancement du jeu, le vaisseau doit se trouver dans le ciel.
+\item	Pour déplacer le vaisseau, il y a trois commandes/moteur à disposition : gauche, droite, vertical vers le haut.
+\item	Chaque moteur doit donner une impulsion au vaisseau qui accélère dans la direction voulue, tout en respectant les lois physiques de la gravité et de la densité de l’atmosphère qui ne sont évidemment pas les même que sur terre.
+\item	La quantité de carburant disponible dans le vaisseau est limitée. Le carburant est consommé de manière proportionnelle avec le nombre de moteurs activés. C’est-à-dire que chaque moteur a sa propre consommation de carburant et que si l’on active deux moteurs en même temps ils vont chacun consommer du carburant. Une fois que la réserve de carburant est vide, plus aucune action ne va pouvoir être effectuée sur le vaisseau et celui-ci va poursuivre sa trajectoire.
+\item	Le vaisseau spatial peut se poser seulement à un endroit précis, prévu à cet effet et il doit se poser en douceur pour éviter l’explosion. S’il touche le relief à un endroit où il n’y est pas autorisé, il va aussi exploser.
+Dans le cahier des charges de bases, il n’y a pas de menu de jeu afin de ne pas perdre de temps sur un élément qui n’est pas très intéressant au niveau de la programmation.
+\end{itemize}
 
-\section{Problématique}
+\section{Méthodologie}

@@ -1,15 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.12)  19 JUN 2020 11:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.18)  19 JUN 2020 12:00
 entering extended mode
 **./Report_LunarLandry_PLS.tex
 (Report_LunarLandry_PLS.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-06-03>
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\repo
-rt.cls"
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\report.cls"
 Document Class: report 2019/12/20 v1.4l Standard LaTeX document class
-
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size
-11.clo"
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\size11.clo"
 File: size11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
 \c@part=\count167
@@ -25,21 +22,17 @@ File: size11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
 ) (Preamble.sty
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\
-geometry.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.sty"
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\
-keyval.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\i
-fvtex.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/iftex\ifvtex.sty"
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\i
-ftex.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/iftex\iftex.sty"
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
 \Gm@cnth=\count176
@@ -55,31 +48,25 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 \Gm@layoutvoffset=\dimen142
 \Gm@dimlist=\toks16
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\
-geometry.cfg"))
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inpu
-tenc.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.cfg"))
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\inputenc.sty"
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\font
-enc.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\fontenc.sty"
 Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\b
-abel.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/babel\babel.sty"
 Package: babel 2020/06/10 3.45 The Babel package
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\b
-abel.def"
+("C:\Program Files\MiKTeX 2.9\tex/generic/babel\babel.def"
 File: babel.def 2020/06/10 3.45 Babel common definitions
 \babel@savecnt=\count179
 \U@D=\dimen143
 \l@babelnohyphens=\language79
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\t
-xtbabel.def")
+("C:\Program Files\MiKTeX 2.9\tex/generic/babel\txtbabel.def")
 \bbl@readstream=\read2
 )
 \bbl@dirlevel=\count180
@@ -87,14 +74,11 @@ xtbabel.def")
 *************************************
 * Local config file bblopts.cfg used
 *
-
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/arabi\bbl
-opts.cfg"
+("C:\Program Files\MiKTeX 2.9\tex/latex/arabi\bblopts.cfg"
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel-f
-rench\french.ldf"
+("C:\Program Files\MiKTeX 2.9\tex/generic/babel-french\french.ldf"
 Language: french 2020/01/30 v3.5g French support from the babel system
 Package babel Info: \l@acadian = using hyphenrules for french
 (babel)             (\language22) on input line 91.
@@ -122,30 +106,24 @@ Package babel Info: Making ? an active character on input line 422.
 \parindentFFN=\dimen150
 \FBfnindent=\dimen151
 ))
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/carlisle\
-scalefnt.sty")
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ti
-mes.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/carlisle\scalefnt.sty")
+("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\times.sty"
 Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/natbib\na
-tbib.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/natbib\natbib.sty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip49
 \bibsep=\skip50
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count189
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pdfpages\
-pdfpages.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/pdfpages\pdfpages.sty"
 Package: pdfpages 2020/01/28 v0.5q Insert pages of external PDF documents (AM)
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifth
-en.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\cal
-c.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/tools\calc.sty"
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count190
 \calc@Bcount=\count191
@@ -158,34 +136,27 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count192
 \calc@Cskip=\skip53
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/eso-pic\e
-so-pic.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/eso-pic\eso-pic.sty"
 Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/atbegsh
-i\atbegshi.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/atbegshi\atbegshi.sty"
 Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/infware
-rr\infwarerr.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/infwarerr\infwarerr.sty"
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ltxcmds
-\ltxcmds.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/ltxcmds\ltxcmds.sty"
 Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
 ))
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xc
-olor.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-
-cfg\color.cfg"
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-
-def\pdftex.def"
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 )
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
@@ -198,20 +169,16 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 ))
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\
-graphicx.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphicx.sty"
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\
-graphics.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphics.sty"
 Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\
-trig.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-
-cfg\graphics.cfg"
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
@@ -222,8 +189,7 @@ Package graphics Info: Driver file: pdftex.def on input line 105.
 \AM@pagewidth=\dimen156
 \AM@pageheight=\dimen157
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pdfpages\
-pppdftex.def"
+("C:\Program Files\MiKTeX 2.9\tex/latex/pdfpages\pppdftex.def"
 File: pppdftex.def 2020/01/28 v0.5q Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box45
@@ -233,70 +199,56 @@ File: pppdftex.def 2020/01/28 v0.5q Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count194
 \AM@templatesizebox=\box46
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\text
-comp.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\textcomp.sty"
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/was\gensy
-mb.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/was\gensymb.sty"
 Package: gensymb 2003/07/02 v1.0 (WaS)
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\
-hyperref.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hyperref.sty"
 Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pdftexcmd
-s\pdftexcmds.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/pdftexcmds\pdftexcmds.sty"
 Package: pdftexcmds 2020-06-04 v0.32 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/kvsetke
-ys\kvsetkeys.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/kvsetkeys\kvsetkeys.sty"
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/kvdefin
-ekeys\kvdefinekeys.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/kvdefinekeys\kvdefinekeys.sty"
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pdfesca
-pe\pdfescape.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pdfescape\pdfescape.sty"
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hycolor\h
-ycolor.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/hycolor\hycolor.sty"
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/letltxmac
-ro\letltxmacro.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/letltxmacro\letltxmacro.sty"
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/auxhook\a
-uxhook.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/auxhook\auxhook.sty"
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/kvoptions
-\kvoptions.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/kvoptions\kvoptions.sty"
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
 \@linkdim=\dimen158
 \Hy@linkcounter=\count195
 \Hy@pagecounter=\count196
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\
-pd1enc.def"
+("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def"
 File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/intcalc
-\intcalc.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/intcalc\intcalc.sty"
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/etexcmd
-s\etexcmds.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/etexcmds\etexcmds.sty"
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count197
@@ -309,20 +261,17 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4717.
 \c@Hy@tempcnt=\count198
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.s
-ty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/url\url.sty"
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5076.
 \XeTeXLinkMargin=\dimen159
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/bitset\
-bitset.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/bitset\bitset.sty"
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/bigintc
-alc\bigintcalc.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/bigintcalc\bigintcalc.sty"
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
@@ -344,24 +293,20 @@ LaTeX Info: Redefining \pageref on input line 6421.
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\
-hpdftex.def"
+("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hpdftex.def"
 File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/atveryend
-\atveryend.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/atveryend\atveryend.sty"
 Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
 )
 \Fld@listcount=\count269
 \c@bookmark@seq@number=\count270
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/rerunfile
-check\rerunfilecheck.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/rerunfilecheck\rerunfilecheck.sty"
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/uniquec
-ounter\uniquecounter.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/uniquecounter\uniquecounter.sty"
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
@@ -369,705 +314,660 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip54
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lipsum\li
-psum.sty"
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3kernel\
-expl3.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/blindtext\blindtext.sty"
+Package: blindtext 2012/01/06 V2.0 blindtext-Package
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/tools\xspace.sty"
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+\c@blindtext=\count271
+\c@Blindtext=\count272
+\c@blind@countparstart=\count273
+\blind@countxx=\count274
+\blindtext@numBlindtext=\count275
+\blind@countyy=\count276
+\c@blindlist=\count277
+\c@blindlistlevel=\count278
+\c@blindlist@level=\count279
+\blind@listitem=\count280
+\c@blind@listcount=\count281
+\c@blind@levelcount=\count282
+\blind@mathformula=\count283
+\blind@Mathformula=\count284
+\c@blind@randomcount=\count285
+\c@blind@randommax=\count286
+\c@blind@pangramcount=\count287
+\c@blind@pangrammax=\count288
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/enumitem\enumitem.sty"
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip55
+\enit@outerparindent=\dimen162
+\enit@toks=\toks22
+\enit@inbox=\box47
+\enit@count@id=\count289
+\enitdp@description=\count290
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/lipsum\lipsum.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/l3kernel\expl3.sty"
 Package: expl3 2020-06-03 L3 programming layer (loader) 
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend
-\l3backend-pdfmode.def"
+("C:\Program Files\MiKTeX 2.9\tex/latex/l3backend\l3backend-pdfmode.def"
 File: l3backend-pdfmode.def 2020-06-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count271
-\l__pdf_internal_box=\box47
+\l__kernel_color_stack_int=\count291
+\l__pdf_internal_box=\box48
 ))
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3package
-s/xparse\xparse.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/l3packages/xparse\xparse.sty"
 Package: xparse 2020-05-15 L3 Experimental document command parser
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3package
-s/xparse\xparse-generic.tex"
-\l__xparse_current_arg_int=\count272
-\g__xparse_grabber_int=\count273
-\l__xparse_m_args_int=\count274
-\l__xparse_v_nesting_int=\count275
+("C:\Program Files\MiKTeX 2.9\tex/latex/l3packages/xparse\xparse-generic.tex"
+\l__xparse_current_arg_int=\count292
+\g__xparse_grabber_int=\count293
+\l__xparse_m_args_int=\count294
+\l__xparse_v_nesting_int=\count295
 ))
 Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
-
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lipsum\li
-psum.ltd.tex"
+("C:\Program Files\MiKTeX 2.9\tex/latex/lipsum\lipsum.ltd.tex"
 File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
 ))
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\c
-aption.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/caption\caption.sty"
 Package: caption 2020/05/30 v3.4k Customizing captions (AR)
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\c
-aption3.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/caption\caption3.sty"
 Package: caption3 2020/05/30 v1.12 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 61.
-\captionmargin=\dimen162
-\captionmargin@=\dimen163
-\captionwidth=\dimen164
-\caption@tempdima=\dimen165
-\caption@indent=\dimen166
-\caption@parindent=\dimen167
-\caption@hangindent=\dimen168
+\captionmargin=\dimen163
+\captionmargin@=\dimen164
+\captionwidth=\dimen165
+\caption@tempdima=\dimen166
+\caption@indent=\dimen167
+\caption@parindent=\dimen168
+\caption@hangindent=\dimen169
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count276
-\c@continuedfloat=\count277
+\c@caption@flags=\count296
+\c@continuedfloat=\count297
 Package caption Info: hyperref package is loaded.
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\flo
-at.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count278
-\float@exts=\toks22
-\float@box=\box48
-\@float@everytoks=\toks23
-\@floatcapt=\box49
+\c@float@type=\count298
+\float@exts=\toks23
+\float@box=\box49
+\@float@everytoks=\toks24
+\@floatcapt=\box50
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\a
-msmath.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty"
 Package: amsmath 2020/01/20 v2.17e AMS math features
-\@mathmargin=\skip55
+\@mathmargin=\skip56
 
 For additional information on amsmath, use the `?' option.
-
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\a
-mstext.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\a
-msgen.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks24
-\ex@=\dimen169
+\@emptytoks=\toks25
+\ex@=\dimen170
 ))
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\a
-msbsy.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen170
+\pmbraise@=\dimen171
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\a
-msopn.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count279
+\inf@bad=\count299
 LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count280
-\leftroot@=\count281
+\uproot@=\count300
+\leftroot@=\count301
 LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count282
-\DOTSCASE@=\count283
+\classnum@=\count302
+\DOTSCASE@=\count303
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box50
-\strutbox@=\box51
-\big@size=\dimen171
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+\big@size=\dimen172
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count284
-\c@MaxMatrixCols=\count285
+\macc@depth=\count304
+\c@MaxMatrixCols=\count305
 \dotsspace@=\muskip17
-\c@parentequation=\count286
-\dspbrk@lvl=\count287
-\tag@help=\toks25
-\row@=\count288
-\column@=\count289
-\maxfields@=\count290
-\andhelp@=\toks26
-\eqnshift@=\dimen172
-\alignsep@=\dimen173
-\tagshift@=\dimen174
-\tagwidth@=\dimen175
-\totwidth@=\dimen176
-\lineht@=\dimen177
-\@envbody=\toks27
-\multlinegap=\skip56
-\multlinetaggap=\skip57
-\mathdisplay@stack=\toks28
+\c@parentequation=\count306
+\dspbrk@lvl=\count307
+\tag@help=\toks26
+\row@=\count308
+\column@=\count309
+\maxfields@=\count310
+\andhelp@=\toks27
+\eqnshift@=\dimen173
+\alignsep@=\dimen174
+\tagshift@=\dimen175
+\tagwidth@=\dimen176
+\totwidth@=\dimen177
+\lineht@=\dimen178
+\@envbody=\toks28
+\multlinegap=\skip57
+\multlinetaggap=\skip58
+\mathdisplay@stack=\toks29
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtools
-\mathtools.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/mathtools\mathtools.sty"
 Package: mathtools 2020/03/24 v1.24 mathematical typesetting tools
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtools
-\mhsetup.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/mathtools\mhsetup.sty"
 Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
 )
 LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
-\g_MT_multlinerow_int=\count291
-\l_MT_multwidth_dim=\dimen178
-\origjot=\skip58
-\l_MT_shortvdotswithinadjustabove_dim=\dimen179
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen180
-\l_MT_above_intertext_sep=\dimen181
-\l_MT_below_intertext_sep=\dimen182
-\l_MT_above_shortintertext_sep=\dimen183
-\l_MT_below_shortintertext_sep=\dimen184
-\xmathstrut@box=\box52
-\xmathstrut@dim=\dimen185
+\g_MT_multlinerow_int=\count311
+\l_MT_multwidth_dim=\dimen179
+\origjot=\skip59
+\l_MT_shortvdotswithinadjustabove_dim=\dimen180
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen181
+\l_MT_above_intertext_sep=\dimen182
+\l_MT_below_intertext_sep=\dimen183
+\l_MT_above_shortintertext_sep=\dimen184
+\l_MT_below_shortintertext_sep=\dimen185
+\xmathstrut@box=\box53
+\xmathstrut@dim=\dimen186
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/colortbl\
-colortbl.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/colortbl\colortbl.sty"
 Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\arr
-ay.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/tools\array.sty"
 Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
-\col@sep=\dimen186
-\ar@mcellbox=\box53
-\extrarowheight=\dimen187
-\NC@list=\toks29
-\extratabsurround=\skip59
-\backup@length=\skip60
-\ar@cellbox=\box54
+\col@sep=\dimen187
+\ar@mcellbox=\box54
+\extrarowheight=\dimen188
+\NC@list=\toks30
+\extratabsurround=\skip60
+\backup@length=\skip61
+\ar@cellbox=\box55
 )
-\everycr=\toks30
-\minrowclearance=\skip61
+\everycr=\toks31
+\minrowclearance=\skip62
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\
-rotating.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\rotating.sty"
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
-\c@r@tfl@t=\count292
-\rotFPtop=\skip62
-\rotFPbot=\skip63
-\rot@float@box=\box55
-\rot@mess@toks=\toks31
+\c@r@tfl@t=\count312
+\rotFPtop=\skip63
+\rotFPbot=\skip64
+\rot@float@box=\box56
+\rot@mess@toks=\toks32
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/multirow\
-multirow.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/multirow\multirow.sty"
 Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
-\multirow@colwidth=\skip64
-\multirow@cntb=\count293
-\multirow@dima=\skip65
-\bigstrutjot=\dimen188
+\multirow@colwidth=\skip65
+\multirow@cntb=\count313
+\multirow@dima=\skip66
+\bigstrutjot=\dimen189
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/booktabs\
-booktabs.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/booktabs\booktabs.sty"
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen189
-\lightrulewidth=\dimen190
-\cmidrulewidth=\dimen191
-\belowrulesep=\dimen192
-\belowbottomsep=\dimen193
-\aboverulesep=\dimen194
-\abovetopsep=\dimen195
-\cmidrulesep=\dimen196
-\cmidrulekern=\dimen197
-\defaultaddspace=\dimen198
-\@cmidla=\count294
-\@cmidlb=\count295
-\@aboverulesep=\dimen199
-\@belowrulesep=\dimen256
-\@thisruleclass=\count296
-\@lastruleclass=\count297
-\@thisrulewidth=\dimen257
+\heavyrulewidth=\dimen190
+\lightrulewidth=\dimen191
+\cmidrulewidth=\dimen192
+\belowrulesep=\dimen193
+\belowbottomsep=\dimen194
+\aboverulesep=\dimen195
+\abovetopsep=\dimen196
+\cmidrulesep=\dimen197
+\cmidrulekern=\dimen198
+\defaultaddspace=\dimen199
+\@cmidla=\count314
+\@cmidlb=\count315
+\@aboverulesep=\dimen256
+\@belowrulesep=\dimen257
+\@thisruleclass=\count316
+\@lastruleclass=\count317
+\@thisrulewidth=\dimen258
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyhdr\
-fancyhdr.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/fancyhdr\fancyhdr.sty"
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
 s
-\f@nch@headwidth=\skip66
-\f@nch@O@elh=\skip67
-\f@nch@O@erh=\skip68
-\f@nch@O@olh=\skip69
-\f@nch@O@orh=\skip70
-\f@nch@O@elf=\skip71
-\f@nch@O@erf=\skip72
-\f@nch@O@olf=\skip73
-\f@nch@O@orf=\skip74
+\f@nch@headwidth=\skip67
+\f@nch@O@elh=\skip68
+\f@nch@O@erh=\skip69
+\f@nch@O@olh=\skip70
+\f@nch@O@orh=\skip71
+\f@nch@O@elf=\skip72
+\f@nch@O@erf=\skip73
+\f@nch@O@olf=\skip74
+\f@nch@O@orf=\skip75
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lastpage\
-lastpage.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/lastpage\lastpage.sty"
 Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/front
-endlayer\tikz.sty"
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/basic
-layer\pgf.sty"
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utili
-ties\pgfrcs.sty"
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/uti
-lities\pgfutil-common.tex"
-\pgfutil@everybye=\toks32
-\pgfutil@tempdima=\dimen258
-\pgfutil@tempdimb=\dimen259
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/frontendlayer\tikz.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgf.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/utilities\pgfrcs.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-common.tex"
+\pgfutil@everybye=\toks33
+\pgfutil@tempdima=\dimen259
+\pgfutil@tempdimb=\dimen260
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/uti
-lities\pgfutil-common-lists.tex"))
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/uti
-lities\pgfutil-latex.def"
-\pgfutil@abb=\box56
-
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ms\everys
-hi.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-common-lists.te
+x")) ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-latex.def"
+\pgfutil@abb=\box57
+("C:\Program Files\MiKTeX 2.9\tex/latex/ms\everyshi.sty"
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/uti
-lities\pgfrcs.code.tex"
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf\pgf
-.revision.tex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfrcs.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf\pgf.revision.tex")
 Package: pgfrcs 2020/01/08 v3.1.5b (3.1.5b)
 ))
 Package: pgf 2020/01/08 v3.1.5b (3.1.5b)
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/basic
-layer\pgfcore.sty"
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/syste
-mlayer\pgfsys.sty"
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/sys
-temlayer\pgfsys.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgfcore.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/systemlayer\pgfsys.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsys.code.tex"
 Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/uti
-lities\pgfkeys.code.tex"
-\pgfkeys@pathtoks=\toks33
-\pgfkeys@temptoks=\toks34
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeys.code.tex"
+\pgfkeys@pathtoks=\toks34
+\pgfkeys@temptoks=\toks35
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/uti
-lities\pgfkeysfiltered.code.tex"
-\pgfkeys@tmptoks=\toks35
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeysfiltered.code.te
+x"
+\pgfkeys@tmptoks=\toks36
 ))
-\pgf@x=\dimen260
-\pgf@y=\dimen261
-\pgf@xa=\dimen262
-\pgf@ya=\dimen263
-\pgf@xb=\dimen264
-\pgf@yb=\dimen265
-\pgf@xc=\dimen266
-\pgf@yc=\dimen267
-\pgf@xd=\dimen268
-\pgf@yd=\dimen269
+\pgf@x=\dimen261
+\pgf@y=\dimen262
+\pgf@xa=\dimen263
+\pgf@ya=\dimen264
+\pgf@xb=\dimen265
+\pgf@yb=\dimen266
+\pgf@xc=\dimen267
+\pgf@yc=\dimen268
+\pgf@xd=\dimen269
+\pgf@yd=\dimen270
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
-\c@pgf@counta=\count298
-\c@pgf@countb=\count299
-\c@pgf@countc=\count300
-\c@pgf@countd=\count301
-\t@pgf@toka=\toks36
-\t@pgf@tokb=\toks37
-\t@pgf@tokc=\toks38
-\pgf@sys@id@count=\count302
-
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/sys
-temlayer\pgf.cfg"
+\c@pgf@counta=\count318
+\c@pgf@countb=\count319
+\c@pgf@countc=\count320
+\c@pgf@countd=\count321
+\t@pgf@toka=\toks37
+\t@pgf@tokb=\toks38
+\t@pgf@tokc=\toks39
+\pgf@sys@id@count=\count322
+ ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgf.cfg"
 File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
 )
 Driver file for pgf: pgfsys-pdftex.def
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/sys
-temlayer\pgfsys-pdftex.def"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsys-pdftex.def"
 File: pgfsys-pdftex.def 2020/01/08 v3.1.5b (3.1.5b)
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/sys
-temlayer\pgfsys-common-pdf.def"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
+"
 File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
 )))
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/sys
-temlayer\pgfsyssoftpath.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.t
+ex"
 File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfsyssoftpath@smallbuffer@items=\count303
-\pgfsyssoftpath@bigbuffer@items=\count304
+\pgfsyssoftpath@smallbuffer@items=\count323
+\pgfsyssoftpath@bigbuffer@items=\count324
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/sys
-temlayer\pgfsysprotocol.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsysprotocol.code.t
+ex"
 File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-))
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
-iclayer\pgfcore.code.tex"
+)) ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcore.code.tex"
 Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
-
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
-h\pgfmath.code.tex"
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
-h\pgfmathcalc.code.tex"
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
-h\pgfmathutil.code.tex")
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
-h\pgfmathparser.code.tex"
-\pgfmath@dimen=\dimen270
-\pgfmath@count=\count305
-\pgfmath@box=\box57
-\pgfmath@toks=\toks39
-\pgfmath@stack@operand=\toks40
-\pgfmath@stack@operation=\toks41
+ ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathcalc.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathutil.code.tex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathparser.code.tex"
+\pgfmath@dimen=\dimen271
+\pgfmath@count=\count325
+\pgfmath@box=\box58
+\pgfmath@toks=\toks40
+\pgfmath@stack@operand=\toks41
+\pgfmath@stack@operation=\toks42
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
-h\pgfmathfunctions.code.tex"
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
-h\pgfmathfunctions.basic.code.tex")
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
-h\pgfmathfunctions.trigonometric.code.tex")
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
-h\pgfmathfunctions.random.code.tex")
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
-h\pgfmathfunctions.comparison.code.tex")
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
-h\pgfmathfunctions.base.code.tex")
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
-h\pgfmathfunctions.round.code.tex")
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
-h\pgfmathfunctions.misc.code.tex")
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
-h\pgfmathfunctions.integerarithmetics.code.tex")))
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
-h\pgfmathfloat.code.tex"
-\c@pgfmathroundto@lastzeros=\count306
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.basic.code.
+tex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.trigonometr
+ic.code.tex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.random.code
+.tex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.comparison.
+code.tex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.base.code.t
+ex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.round.code.
+tex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.misc.code.t
+ex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.integerarit
+hmetics.code.tex")))
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfloat.code.tex"
+\c@pgfmathroundto@lastzeros=\count326
 ))
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
-h\pgfint.code.tex")
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
-iclayer\pgfcorepoints.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfint.code.tex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
+"
 File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@picminx=\dimen271
-\pgf@picmaxx=\dimen272
-\pgf@picminy=\dimen273
-\pgf@picmaxy=\dimen274
-\pgf@pathminx=\dimen275
-\pgf@pathmaxx=\dimen276
-\pgf@pathminy=\dimen277
-\pgf@pathmaxy=\dimen278
-\pgf@xx=\dimen279
-\pgf@xy=\dimen280
-\pgf@yx=\dimen281
-\pgf@yy=\dimen282
-\pgf@zx=\dimen283
-\pgf@zy=\dimen284
+\pgf@picminx=\dimen272
+\pgf@picmaxx=\dimen273
+\pgf@picminy=\dimen274
+\pgf@picmaxy=\dimen275
+\pgf@pathminx=\dimen276
+\pgf@pathmaxx=\dimen277
+\pgf@pathminy=\dimen278
+\pgf@pathmaxy=\dimen279
+\pgf@xx=\dimen280
+\pgf@xy=\dimen281
+\pgf@yx=\dimen282
+\pgf@yy=\dimen283
+\pgf@zx=\dimen284
+\pgf@zy=\dimen285
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
-iclayer\pgfcorepathconstruct.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathconstruct.c
+ode.tex"
 File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@path@lastx=\dimen285
-\pgf@path@lasty=\dimen286
+\pgf@path@lastx=\dimen286
+\pgf@path@lasty=\dimen287
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
-iclayer\pgfcorepathusage.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathusage.code.
+tex"
 File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@shorten@end@additional=\dimen287
-\pgf@shorten@start@additional=\dimen288
+\pgf@shorten@end@additional=\dimen288
+\pgf@shorten@start@additional=\dimen289
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
-iclayer\pgfcorescopes.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
+"
 File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfpic=\box58
-\pgf@hbox=\box59
-\pgf@layerbox@main=\box60
-\pgf@picture@serial@count=\count307
+\pgfpic=\box59
+\pgf@hbox=\box60
+\pgf@layerbox@main=\box61
+\pgf@picture@serial@count=\count327
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
-iclayer\pgfcoregraphicstate.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoregraphicstate.co
+de.tex"
 File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgflinewidth=\dimen289
+\pgflinewidth=\dimen290
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
-iclayer\pgfcoretransformations.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoretransformations
+.code.tex"
 File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@pt@x=\dimen290
-\pgf@pt@y=\dimen291
-\pgf@pt@temp=\dimen292
+\pgf@pt@x=\dimen291
+\pgf@pt@y=\dimen292
+\pgf@pt@temp=\dimen293
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
-iclayer\pgfcorequick.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorequick.code.tex"
 File: pgfcorequick.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
-iclayer\pgfcoreobjects.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreobjects.code.te
+x"
 File: pgfcoreobjects.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
-iclayer\pgfcorepathprocessing.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathprocessing.
+code.tex"
 File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
-iclayer\pgfcorearrows.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
+"
 File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfarrowsep=\dimen293
+\pgfarrowsep=\dimen294
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
-iclayer\pgfcoreshade.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@max=\dimen294
-\pgf@sys@shading@range@num=\count308
-\pgf@shadingcount=\count309
-)
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
-iclayer\pgfcoreimage.code.tex"
+\pgf@max=\dimen295
+\pgf@sys@shading@range@num=\count328
+\pgf@shadingcount=\count329
+) ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreimage.code.te
+x"
 File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
-iclayer\pgfcoreexternal.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreexternal.code.t
+ex"
 File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfexternal@startupbox=\box61
+\pgfexternal@startupbox=\box62
 ))
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
-iclayer\pgfcorelayers.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
+"
 File: pgfcorelayers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
-iclayer\pgfcoretransparency.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoretransparency.co
+de.tex"
 File: pgfcoretransparency.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
-iclayer\pgfcorepatterns.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepatterns.code.t
+ex"
 File: pgfcorepatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/bas
-iclayer\pgfcorerdf.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex"
 File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-)))
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mod
-ules\pgfmoduleshapes.code.tex"
+))) ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/modules\pgfmoduleshapes.code.
+tex"
 File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfnodeparttextbox=\box62
-)
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mod
-ules\pgfmoduleplot.code.tex"
+\pgfnodeparttextbox=\box63
+) ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/modules\pgfmoduleplot.code.tex"
 File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compa
-tibility\pgfcomp-version-0-65.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/compatibility\pgfcomp-version-0-65.
+sty"
 Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@nodesepstart=\dimen295
-\pgf@nodesepend=\dimen296
+\pgf@nodesepstart=\dimen296
+\pgf@nodesepend=\dimen297
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compa
-tibility\pgfcomp-version-1-18.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/compatibility\pgfcomp-version-1-18.
+sty"
 Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
-))
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utili
-ties\pgffor.sty"
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utili
-ties\pgfkeys.sty"
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/uti
-lities\pgfkeys.code.tex"))
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/math\
-pgfmath.sty"
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
-h\pgfmath.code.tex"))
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/uti
-lities\pgffor.code.tex"
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/utilities\pgffor.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/utilities\pgfkeys.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeys.code.tex"))
+("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/math\pgfmath.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex"))
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgffor.code.tex"
 Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mat
-h\pgfmath.code.tex")
-\pgffor@iter=\dimen297
-\pgffor@skip=\dimen298
-\pgffor@stack=\toks42
-\pgffor@toks=\toks43
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex")
+\pgffor@iter=\dimen298
+\pgffor@skip=\dimen299
+\pgffor@stack=\toks43
+\pgffor@toks=\toks44
 ))
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/fro
-ntendlayer/tikz\tikz.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex"
 Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/lib
-raries\pgflibraryplothandlers.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries\pgflibraryplothandlers.
+code.tex"
 File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@plot@mark@count=\count310
-\pgfplotmarksize=\dimen299
+\pgf@plot@mark@count=\count330
+\pgfplotmarksize=\dimen300
 )
-\tikz@lastx=\dimen300
-\tikz@lasty=\dimen301
-\tikz@lastxsaved=\dimen302
-\tikz@lastysaved=\dimen303
-\tikz@lastmovetox=\dimen304
-\tikz@lastmovetoy=\dimen305
-\tikzleveldistance=\dimen306
-\tikzsiblingdistance=\dimen307
-\tikz@figbox=\box63
-\tikz@figbox@bg=\box64
-\tikz@tempbox=\box65
-\tikz@tempbox@bg=\box66
-\tikztreelevel=\count311
-\tikznumberofchildren=\count312
-\tikznumberofcurrentchild=\count313
-\tikz@fig@count=\count314
+\tikz@lastx=\dimen301
+\tikz@lasty=\dimen302
+\tikz@lastxsaved=\dimen303
+\tikz@lastysaved=\dimen304
+\tikz@lastmovetox=\dimen305
+\tikz@lastmovetoy=\dimen306
+\tikzleveldistance=\dimen307
+\tikzsiblingdistance=\dimen308
+\tikz@figbox=\box64
+\tikz@figbox@bg=\box65
+\tikz@tempbox=\box66
+\tikz@tempbox@bg=\box67
+\tikztreelevel=\count331
+\tikznumberofchildren=\count332
+\tikznumberofcurrentchild=\count333
+\tikz@fig@count=\count334
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/mod
-ules\pgfmodulematrix.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/modules\pgfmodulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfmatrixcurrentrow=\count315
-\pgfmatrixcurrentcolumn=\count316
-\pgf@matrix@numberofcolumns=\count317
+\pgfmatrixcurrentrow=\count335
+\pgfmatrixcurrentcolumn=\count336
+\pgf@matrix@numberofcolumns=\count337
 )
-\tikz@expandcount=\count318
+\tikz@expandcount=\count338
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/fro
-ntendlayer/tikz/libraries\tikzlibrarytopaths.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
+librarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )))
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/titlesec\
-titlesec.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/titlesec\titlesec.sty"
 Package: titlesec 2019/10/16 v2.13 Sectioning titles
-\ttl@box=\box67
-\beforetitleunit=\skip75
-\aftertitleunit=\skip76
-\ttl@plus=\dimen308
-\ttl@minus=\dimen309
-\ttl@toksa=\toks44
-\titlewidth=\dimen310
-\titlewidthlast=\dimen311
-\titlewidthfirst=\dimen312
+\ttl@box=\box68
+\beforetitleunit=\skip76
+\aftertitleunit=\skip77
+\ttl@plus=\dimen309
+\ttl@minus=\dimen310
+\ttl@toksa=\toks45
+\titlewidth=\dimen311
+\titlewidthlast=\dimen312
+\titlewidthfirst=\dimen313
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\
-listings.sty"
-\lst@mode=\count319
-\lst@gtempboxa=\box68
-\lst@token=\toks45
-\lst@length=\count320
-\lst@currlwidth=\dimen313
-\lst@column=\count321
-\lst@pos=\count322
-\lst@lostspace=\dimen314
-\lst@width=\dimen315
-\lst@newlines=\count323
-\lst@lineno=\count324
-\lst@maxwidth=\dimen316
+("C:\Program Files\MiKTeX 2.9\tex/latex/listings\listings.sty"
+\lst@mode=\count339
+\lst@gtempboxa=\box69
+\lst@token=\toks46
+\lst@length=\count340
+\lst@currlwidth=\dimen314
+\lst@column=\count341
+\lst@pos=\count342
+\lst@lostspace=\dimen315
+\lst@width=\dimen316
+\lst@newlines=\count343
+\lst@lineno=\count344
+\lst@maxwidth=\dimen317
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\
-lstmisc.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstmisc.sty"
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count325
-\lst@skipnumbers=\count326
-\lst@framebox=\box69
+\c@lstnumber=\count345
+\lst@skipnumbers=\count346
+\lst@framebox=\box70
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\
-listings.cfg"
+("C:\Program Files\MiKTeX 2.9\tex/latex/listings\listings.cfg"
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\
-lstlang1.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-\boiteBlanche=\box70
+\boiteBlanche=\box71
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mdframed\
-mdframed.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/mdframed\mdframed.sty"
 Package: mdframed 2013/07/01 1.9b: mdframed
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\
-etoolbox.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.sty"
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count327
+\etb@tempcnta=\count347
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/zref\zref
--abspage.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/zref\zref-abspage.sty"
 Package: zref-abspage 2020-05-28 v2.31 Module abspage for zref (HO)
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/zref\zref
--base.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/zref\zref-base.sty"
 Package: zref-base 2020-05-28 v2.31 Module base for zref (HO)
 Package zref Info: New property list: main on input line 763.
 Package zref Info: New property: default on input line 764.
 Package zref Info: New property: page on input line 765.
 )
-\c@abspage=\count328
+\c@abspage=\count348
 Package zref Info: New property: abspage on input line 66.
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/needspace
-\needspace.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/needspace\needspace.sty"
 Package: needspace 2010/09/12 v1.3d reserve vertical space
 )
-\mdf@templength=\skip77
-\c@mdf@globalstyle@cnt=\count329
-\mdf@skipabove@length=\skip78
-\mdf@skipbelow@length=\skip79
-\mdf@leftmargin@length=\skip80
-\mdf@rightmargin@length=\skip81
-\mdf@innerleftmargin@length=\skip82
-\mdf@innerrightmargin@length=\skip83
-\mdf@innertopmargin@length=\skip84
-\mdf@innerbottommargin@length=\skip85
-\mdf@splittopskip@length=\skip86
-\mdf@splitbottomskip@length=\skip87
-\mdf@outermargin@length=\skip88
-\mdf@innermargin@length=\skip89
-\mdf@linewidth@length=\skip90
-\mdf@innerlinewidth@length=\skip91
-\mdf@middlelinewidth@length=\skip92
-\mdf@outerlinewidth@length=\skip93
-\mdf@roundcorner@length=\skip94
-\mdf@footenotedistance@length=\skip95
-\mdf@userdefinedwidth@length=\skip96
-\mdf@needspace@length=\skip97
-\mdf@frametitleaboveskip@length=\skip98
-\mdf@frametitlebelowskip@length=\skip99
-\mdf@frametitlerulewidth@length=\skip100
-\mdf@frametitleleftmargin@length=\skip101
-\mdf@frametitlerightmargin@length=\skip102
-\mdf@shadowsize@length=\skip103
-\mdf@extratopheight@length=\skip104
-\mdf@subtitleabovelinewidth@length=\skip105
-\mdf@subtitlebelowlinewidth@length=\skip106
-\mdf@subtitleaboveskip@length=\skip107
-\mdf@subtitlebelowskip@length=\skip108
-\mdf@subtitleinneraboveskip@length=\skip109
-\mdf@subtitleinnerbelowskip@length=\skip110
-\mdf@subsubtitleabovelinewidth@length=\skip111
-\mdf@subsubtitlebelowlinewidth@length=\skip112
-\mdf@subsubtitleaboveskip@length=\skip113
-\mdf@subsubtitlebelowskip@length=\skip114
-\mdf@subsubtitleinneraboveskip@length=\skip115
-\mdf@subsubtitleinnerbelowskip@length=\skip116
+\mdf@templength=\skip78
+\c@mdf@globalstyle@cnt=\count349
+\mdf@skipabove@length=\skip79
+\mdf@skipbelow@length=\skip80
+\mdf@leftmargin@length=\skip81
+\mdf@rightmargin@length=\skip82
+\mdf@innerleftmargin@length=\skip83
+\mdf@innerrightmargin@length=\skip84
+\mdf@innertopmargin@length=\skip85
+\mdf@innerbottommargin@length=\skip86
+\mdf@splittopskip@length=\skip87
+\mdf@splitbottomskip@length=\skip88
+\mdf@outermargin@length=\skip89
+\mdf@innermargin@length=\skip90
+\mdf@linewidth@length=\skip91
+\mdf@innerlinewidth@length=\skip92
+\mdf@middlelinewidth@length=\skip93
+\mdf@outerlinewidth@length=\skip94
+\mdf@roundcorner@length=\skip95
+\mdf@footenotedistance@length=\skip96
+\mdf@userdefinedwidth@length=\skip97
+\mdf@needspace@length=\skip98
+\mdf@frametitleaboveskip@length=\skip99
+\mdf@frametitlebelowskip@length=\skip100
+\mdf@frametitlerulewidth@length=\skip101
+\mdf@frametitleleftmargin@length=\skip102
+\mdf@frametitlerightmargin@length=\skip103
+\mdf@shadowsize@length=\skip104
+\mdf@extratopheight@length=\skip105
+\mdf@subtitleabovelinewidth@length=\skip106
+\mdf@subtitlebelowlinewidth@length=\skip107
+\mdf@subtitleaboveskip@length=\skip108
+\mdf@subtitlebelowskip@length=\skip109
+\mdf@subtitleinneraboveskip@length=\skip110
+\mdf@subtitleinnerbelowskip@length=\skip111
+\mdf@subsubtitleabovelinewidth@length=\skip112
+\mdf@subsubtitlebelowlinewidth@length=\skip113
+\mdf@subsubtitleaboveskip@length=\skip114
+\mdf@subsubtitlebelowskip@length=\skip115
+\mdf@subsubtitleinneraboveskip@length=\skip116
+\mdf@subsubtitleinnerbelowskip@length=\skip117
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mdframed\
-md-frame-0.mdf"
+("C:\Program Files\MiKTeX 2.9\tex/latex/mdframed\md-frame-0.mdf"
 File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 )
-\mdf@frametitlebox=\box71
-\mdf@footnotebox=\box72
-\mdf@splitbox@one=\box73
-\mdf@splitbox@two=\box74
-\mdf@splitbox@save=\box75
-\mdfsplitboxwidth=\skip117
-\mdfsplitboxtotalwidth=\skip118
-\mdfsplitboxheight=\skip119
-\mdfsplitboxdepth=\skip120
-\mdfsplitboxtotalheight=\skip121
-\mdfframetitleboxwidth=\skip122
-\mdfframetitleboxtotalwidth=\skip123
-\mdfframetitleboxheight=\skip124
-\mdfframetitleboxdepth=\skip125
-\mdfframetitleboxtotalheight=\skip126
-\mdffootnoteboxwidth=\skip127
-\mdffootnoteboxtotalwidth=\skip128
-\mdffootnoteboxheight=\skip129
-\mdffootnoteboxdepth=\skip130
-\mdffootnoteboxtotalheight=\skip131
-\mdftotallinewidth=\skip132
-\mdfboundingboxwidth=\skip133
-\mdfboundingboxtotalwidth=\skip134
-\mdfboundingboxheight=\skip135
-\mdfboundingboxdepth=\skip136
-\mdfboundingboxtotalheight=\skip137
-\mdf@freevspace@length=\skip138
-\mdf@horizontalwidthofbox@length=\skip139
-\mdf@verticalmarginwhole@length=\skip140
-\mdf@horizontalspaceofbox=\skip141
-\mdfsubtitleheight=\skip142
-\mdfsubsubtitleheight=\skip143
-\c@mdfcountframes=\count330
+\mdf@frametitlebox=\box72
+\mdf@footnotebox=\box73
+\mdf@splitbox@one=\box74
+\mdf@splitbox@two=\box75
+\mdf@splitbox@save=\box76
+\mdfsplitboxwidth=\skip118
+\mdfsplitboxtotalwidth=\skip119
+\mdfsplitboxheight=\skip120
+\mdfsplitboxdepth=\skip121
+\mdfsplitboxtotalheight=\skip122
+\mdfframetitleboxwidth=\skip123
+\mdfframetitleboxtotalwidth=\skip124
+\mdfframetitleboxheight=\skip125
+\mdfframetitleboxdepth=\skip126
+\mdfframetitleboxtotalheight=\skip127
+\mdffootnoteboxwidth=\skip128
+\mdffootnoteboxtotalwidth=\skip129
+\mdffootnoteboxheight=\skip130
+\mdffootnoteboxdepth=\skip131
+\mdffootnoteboxtotalheight=\skip132
+\mdftotallinewidth=\skip133
+\mdfboundingboxwidth=\skip134
+\mdfboundingboxtotalwidth=\skip135
+\mdfboundingboxheight=\skip136
+\mdfboundingboxdepth=\skip137
+\mdfboundingboxtotalheight=\skip138
+\mdf@freevspace@length=\skip139
+\mdf@horizontalwidthofbox@length=\skip140
+\mdf@verticalmarginwhole@length=\skip141
+\mdf@horizontalspaceofbox=\skip142
+\mdfsubtitleheight=\skip143
+\mdfsubsubtitleheight=\skip144
+\c@mdfcountframes=\count350
 
 ****** mdframed patching \endmdf@trivlist
 
 ****** -- success******
 
-\mdf@envdepth=\count331
-\c@mdf@env@i=\count332
-\c@mdf@env@ii=\count333
-\c@mdf@zref@counter=\count334
+\mdf@envdepth=\count351
+\c@mdf@env@i=\count352
+\c@mdf@env@ii=\count353
+\c@mdf@zref@counter=\count354
 Package zref Info: New property: mdf@pagevalue on input line 895.
-)) (Report_LunarLandry_PLS.aux)
+))
+(Report_LunarLandry_PLS.aux)
 \openout1 = `Report_LunarLandry_PLS.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
@@ -1089,8 +989,7 @@ LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 8.
 
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\t1
-ptm.fd"
+("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\t1ptm.fd"
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 *geometry* driver: auto-detecting
@@ -1133,36 +1032,36 @@ LaTeX Info: Redefining \dots on input line 8.
 Package french.ldf Warning: Please load the "natbib" package
 (french.ldf)                BEFORE babel/french; reported on input line 8.
 
+Package french.ldf Info: Setting StandardItemizeEnv=true for
+(french.ldf)             compatibility with enumitem package,
+(french.ldf)             reported on input line 8.
+Package french.ldf Info: Setting StandardEnumerateEnv=true for
+(french.ldf)             compatibility with enumitem package,
+(french.ldf)             reported on input line 8.
 LaTeX Info: Redefining \up on input line 8.
-\AtBeginShipoutBox=\box76
-
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mk
-ii\supp-pdf.mkii"
+\AtBeginShipoutBox=\box77
+("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count335
-\scratchdimen=\dimen317
-\scratchbox=\box77
-\nofMPsegments=\count336
-\nofMParguments=\count337
-\everyMPshowfont=\toks46
-\MPscratchCnt=\count338
-\MPscratchDim=\dimen318
-\MPnumerator=\count339
-\makeMPintoPDFobject=\count340
-\everyMPtoPDFconversion=\toks47
-)
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-
-pkg\epstopdf-base.sty"
+\scratchcounter=\count355
+\scratchdimen=\dimen318
+\scratchbox=\box78
+\nofMPsegments=\count356
+\nofMParguments=\count357
+\everyMPshowfont=\toks47
+\MPscratchCnt=\count358
+\MPscratchDim=\dimen319
+\MPnumerator=\count359
+\makeMPintoPDFobject=\count360
+\everyMPtoPDFconversion=\toks48
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pdflscape
-\pdflscape.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/pdflscape\pdflscape.sty"
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\
-lscape.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\lscape.sty"
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
@@ -1180,25 +1079,22 @@ Package gensymb Info: Using \textohm for \ohm on input line 8.
 Package gensymb Info: Using \textmu for \micro on input line 8.
 Package hyperref Info: Link coloring OFF on input line 8.
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\
-nameref.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/refcount\
-refcount.sty"
+("C:\Program Files\MiKTeX 2.9\tex/latex/refcount\refcount.sty"
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/generic/gettitl
-estring\gettitlestring.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/gettitlestring\gettitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count341
+\c@section@level=\count361
 )
 LaTeX Info: Redefining \ref on input line 8.
 LaTeX Info: Redefining \pageref on input line 8.
 LaTeX Info: Redefining \nameref on input line 8.
- (Report_LunarLandry_PLS.out)
-(Report_LunarLandry_PLS.out)
+
+(Report_LunarLandry_PLS.out) (Report_LunarLandry_PLS.out)
 \@outlinefile=\write4
 \openout4 = `Report_LunarLandry_PLS.out'.
 
@@ -1210,8 +1106,9 @@ Package caption Info: End \AtBeginDocument code.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 8.
- ABD: EveryShipout initializing macros
-\c@lstlisting=\count342
+
+ABD: EveryShipout initializing macros
+\c@lstlisting=\count362
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -1244,7 +1141,7 @@ Package lastpage Info: Please have a look at the pageslts package at
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<Images/hes/hei.png, id=74, 501.7947pt x 144.54pt>
+<Images/hes/hei.png, id=126, 501.7947pt x 144.54pt>
 File: Images/hes/hei.png Graphic file (type png)
 <use Images/hes/hei.png>
 Package pdftex.def Info: Images/hes/hei.png  used on input line 13.
@@ -1252,15 +1149,57 @@ Package pdftex.def Info: Images/hes/hei.png  used on input line 13.
  [1
 
 
-{C:/Users/Samy Francelet/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./
-Images/hes/hei.png>]
+{C:/Users/landr/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Images/he
+s/hei.png>]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
 7.
 
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ts
-1ptm.fd"
+("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\ts1ptm.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) (Report_LunarLandry_PLS.toc)
+)
+(Report_LunarLandry_PLS.toc
+Report_LunarLandry_PLS.toc:24: Missing $ inserted.
+<inserted text> 
+                $
+l.24 ...3.5}LunarLander_Main}{7}{subsection.3.3.5}
+                                                  %
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Report_LunarLandry_PLS.toc:24: Extra }, or forgotten $.
+<argument> ...\numberline {3.3.5}LunarLander_Main}
+                                                  \hyper@linkend 
+l.24 ...3.5}LunarLander_Main}{7}{subsection.3.3.5}
+                                                  %
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+Report_LunarLandry_PLS.toc:24: Missing $ inserted.
+<inserted text> 
+                $
+l.24 ...3.5}LunarLander_Main}{7}{subsection.3.3.5}
+                                                  %
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Report_LunarLandry_PLS.toc:24: Missing } inserted.
+<inserted text> 
+                }
+l.24 ...3.5}LunarLander_Main}{7}{subsection.3.3.5}
+                                                  %
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+)
 \tf@toc=\write5
 \openout5 = `Report_LunarLandry_PLS.toc'.
 
@@ -1274,84 +1213,355 @@ l.29 \chapter
 
 ]
 Chapitre 1.
-(1-Introduction.tex) [2
+(1-Introduction.tex
 
-]
+1-Introduction.tex:22: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \item	A
+            u lancement du jeu, le vaisseau doit se trouver dans le ciel.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+1-Introduction.tex:22: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \item	A
+            u lancement du jeu, le vaisseau doit se trouver dans le ciel.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+1-Introduction.tex:22: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \item	A
+            u lancement du jeu, le vaisseau doit se trouver dans le ciel.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+1-Introduction.tex:23: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 \item	P
+            our déplacer le vaisseau, il y a trois commandes/moteur à disp...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+1-Introduction.tex:23: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 \item	P
+            our déplacer le vaisseau, il y a trois commandes/moteur à disp...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+1-Introduction.tex:23: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 \item	P
+            our déplacer le vaisseau, il y a trois commandes/moteur à disp...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+1-Introduction.tex:24: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 \item	C
+            haque moteur doit donner une impulsion au vaisseau qui accélèr...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+1-Introduction.tex:24: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 \item	C
+            haque moteur doit donner une impulsion au vaisseau qui accélèr...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+1-Introduction.tex:24: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 \item	C
+            haque moteur doit donner une impulsion au vaisseau qui accélèr...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+1-Introduction.tex:25: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 \item	L
+            a quantité de carburant disponible dans le vaisseau est limité...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+1-Introduction.tex:25: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 \item	L
+            a quantité de carburant disponible dans le vaisseau est limité...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+1-Introduction.tex:25: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 \item	L
+            a quantité de carburant disponible dans le vaisseau est limité...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+1-Introduction.tex:26: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 \item	L
+            e vaisseau spatial peut se poser seulement à un endroit précis...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+1-Introduction.tex:26: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 \item	L
+            e vaisseau spatial peut se poser seulement à un endroit précis...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+1-Introduction.tex:26: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 \item	L
+            e vaisseau spatial peut se poser seulement à un endroit précis...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+1-Introduction.tex:28: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 \end{itemize}
+                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[2
+
+]) [3]
 Chapitre 2.
-(2-Methodes.tex)
+(2-Methodes.tex
+
+Package natbib Warning: Citation `SonNasa' on page 4 undefined on input line 4.
+
+
+)
 Underfull \hbox (badness 10000) in paragraph at lines 17--34
 
  []
 
-[3
+[4
 
 ]
 Chapitre 3.
 (3-Resultats.tex
-<Images/Figures/BoundingBoxes.png, id=119, 554.07pt x 210.7875pt>
+<Images/Figures/BoundingBoxes.png, id=186, 554.07pt x 210.7875pt>
 File: Images/Figures/BoundingBoxes.png Graphic file (type png)
 <use Images/Figures/BoundingBoxes.png>
-Package pdftex.def Info: Images/Figures/BoundingBoxes.png  used on input line 7
-.
+Package pdftex.def Info: Images/Figures/BoundingBoxes.png  used on input line 2
+1.
 (pdftex.def)             Requested size: 341.43307pt x 129.89246pt.
-<Images/Figures/Ground.png, id=120, 516.42938pt x 230.96288pt>
-File: Images/Figures/Ground.png Graphic file (type png)
-<use Images/Figures/Ground.png>
-Package pdftex.def Info: Images/Figures/Ground.png  used on input line 15.
-(pdftex.def)             Requested size: 341.43307pt x 152.7038pt.
-) [4
 
- <./Images/Figures/BoundingBoxes.png>] [5 <./Images/Figures/Ground.png>]
-Chapitre 4.
-(4-Bilan.tex) (Report_LunarLandry_PLS.bbl [6
 
-]) (5-Annexe.tex [7
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5
 
 ]
+<Images/Figures/Ground.png, id=193, 516.42938pt x 230.96288pt>
+File: Images/Figures/Ground.png Graphic file (type png)
+<use Images/Figures/Ground.png>
+Package pdftex.def Info: Images/Figures/Ground.png  used on input line 38.
+(pdftex.def)             Requested size: 341.43307pt x 152.7038pt.
+ [6 <./Images/Figures/BoundingBoxes.png> <./Images/Figures/Ground.png>]
+3-Resultats.tex:62: Missing $ inserted.
+<inserted text> 
+                $
+l.62 \subsection{LunarLander_Main}
+                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <20> not available
+(Font)              size <20.74> substituted on input line 62.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <20> not available
+(Font)              size <20.74> substituted on input line 62.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <20> not available
+(Font)              size <20.74> substituted on input line 62.
+
+
+LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <20> not available
+(Font)              size <20.74> substituted on input line 62.
+
+3-Resultats.tex:62: Missing $ inserted.
+<inserted text> 
+                $
+l.62 \subsection{LunarLander_Main}
+                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 62.
+
+) [7]
+Chapitre 4.
+(4-Bilan.tex [8
+
+]) (5-Annexe.tex [9]
 Annexe A.
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 3.
 
-
-("C:\Users\Samy Francelet\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\t1
-pcr.fd"
+("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [8
+) [10
 
-]) 
+])
+
+Package natbib Warning: There were undefined citations.
+
+
 AED: lastpage setting LastPage
-[9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 46.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 46.
+[11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 43.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 43.
  (Report_LunarLandry_PLS.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 46.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 46.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 43.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 43.
 Package rerunfilecheck Info: File `Report_LunarLandry_PLS.out' has not changed.
 
-(rerunfilecheck)             Checksum: A785A45353FCA4F779A888F9C90BA02D;1069.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 46.
+(rerunfilecheck)             Checksum: 4AE7A59A1E10267B2C79858ABF75BD3D;1915.
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.74pt have occurred.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 43.
  ) 
 Here is how much of TeX's memory you used:
- 25328 strings out of 480797
- 466480 string characters out of 2891352
- 1132866 words of memory out of 3000000
- 40706 multiletter control sequences out of 15000+200000
- 603238 words of font info for 92 fonts, out of 3000000 for 9000
+ 25859 strings out of 480797
+ 463818 string characters out of 2905361
+ 1152275 words of memory out of 3000000
+ 41212 multiletter control sequences out of 15000+200000
+ 605317 words of font info for 99 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,15n,77p,973b,1969s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Samy Francelet/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/ba
-se/8r.enc}<C:/Users/Samy Francelet/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Samy Francelet/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Samy Francelet/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/U
-sers/Samy Francelet/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb><C:/Users/Samy Francelet/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/urw/courier/ucrb8a.pfb><C:/Users/Samy Francelet/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Samy Francelet/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Samy Fran
-celet/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on Report_LunarLandry_PLS.pdf (10 pages, 442229 bytes).
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrb8a.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/urw/times/utmr8a.pfb>
+Output written on Report_LunarLandry_PLS.pdf (12 pages, 474669 bytes).
 PDF statistics:
- 257 PDF objects out of 1000 (max. 8388607)
- 88 named destinations out of 1000 (max. 500000)
- 164 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 338 PDF objects out of 1000 (max. 8388607)
+ 105 named destinations out of 1000 (max. 500000)
+ 268 words of extra memory for PDF output out of 10000 (max. 10000000)
 

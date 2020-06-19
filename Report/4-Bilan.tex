@@ -1,7 +1,49 @@
 \section{Problèmes rencontrés et solutions apportées}
+Nous avons évidemment rencontré des problèmes auxquelles nous avons dû trouver des solutions efficaces. Voici une liste des problèmes principaux rencontrer lors du codage de notre Lunar Lander :
+\begin{enumerate}
+ \item Générateur de particules : Nous avons tout d’abord utilisé le système de particules de la libraire GDX2D qui a d’abord très bien fonctionné, mais nous avons rencontré un problème lorsqu’il s’agissait de recommencer la partie après une explosion ou une partie gagnée. La libraire GDX2D n’arrivait pas à recréer les objets ce qui résultait à un crash du programme. Pour contrer ce problème nous avons créé un générateur de particule plus simple avec des particules qui apparaissent à une certaine position avec une vitesse prédéfinie. Cette fonction a été implémenté dans la classe Particules.
+ \item	La musique et les sons : Notre musique ou certains sons sont beaucoup trop fort par rapport à d’autre. Nous n’avons pas réussi à faire fonctionner les méthodes concernant le volume, par exemple setVolume ou mofidyPlayingVolument de la librairie, et la documentation n’est pas très claire pour ces méthodes-ci. (…) Pour modifier le volume de notre piste audio, nous avons finalement utilisé un convertisseur online(https://www.mp3louder.com/fr/) pour baisser le son de quelques décibels.
+\end{enumerate}
 
 \section{Description des fonctionnalités}
+Notre code remplis tout le cahier des charges, c’est-à-dire que le vaisseau apparait dans le ciel et il est dirigeable par trois commandes : gauche, droit, et vertical vers le haut. Le vaisseau subit les forces de la gravité et les forces de freinages de la densité de l’atmosphère. Et il est obligatoire d’atterrir en douceur sur la plateforme indiquée en utilisant l’essence à disposition. Dans le cas contraire le vaisseau va exploser.
+
+En plus des fonctionnalités de bases, nous avons ajouté des options qui rendent le jeu plus amusant et ludique pour le joueur :
+
+\begin{itemize}
+ \item Des sons pour les différentes actions dans le jeu.
+\item Des météorites sur lesquelles on peut tirer avec un clic de la souris. Il peut y avoir une collision entre les météorites et le vaisseau donc il est possible qu’il soit même nécessaire de leur tirer dessus pour les détruire.
+\item Des particules sous le vaisseau lorsqu’un réacteur est activé.
+\item Des étoiles dynamiques en arrière-plan
+\item 	Des niveaux de difficulté où il a de plus en plus de météorites. Le 11ème niveau est notre dernier niveau mais le jeu continue tout de même plus loin
+
+\end{itemize}
 
 \section{Améliorations possbibles}
+Nous aurions bien aimé ajouter les éléments suivants :
+\begin{itemize}
+\item La rotation du vaisseau en prenant en comptes les moments de forces.
+\item La gestion du volume sonore directement depuis le code et pouvoir même depuis l’interface désactiver la musique ou les sons.
+ \item L’atterrissage automatique du vaisseau sur la plateforme.
+\item Un relief plus évolué avec des tunnels par exemple selon les niveaux.
+ \item Des bonus que l’on pourrait attraper dans le ciel avec le vaisseau pour avoir des vies ou du carburant par exemple
+\item Par rapport au code en lui mêm, ...
+
+\end{itemize}
 
 \section{Conclusion}
+Pour nous, ce projet d’informatique de fin de première année a été un succès. Nous avons répondu à tous les éléments du cahier des charges et avons eu un peu de temps pour ajouter encore quelques options pour le plaisir du joueur. La plus grande difficulté pour notre groupe a été de comprendre le concept de base au début du projet. Une fois lancé, le codage s’est fait assez instinctivement avec de plus en plus de plaisir au lancement du programme pour voir ce que l’on a coder prendre forme et évoluer au fil du temps est très motivant.
+Le système GitHub nous a été très utile durant tout le projet même si celui-ci n’est pas très facile à comprendre. Une fois qu’il est compris, c’est un énorme avantage.
+Concernant notre groupe, il n’y a pas eu de tensions, même si, sur ce genre de projet, il n’est pas facile de faire en sorte que tout le monde effectue la même quantité de travail. Il est possible que certains membres du groupe aient eu un plus grand impact sur le code que d’autres, mais nous avons tout de même évoluer sur le projet tous ensemble.
+Pour conclure, nous avons eu du plaisir à faire ce projet car il nous a permis de nous rendre compte de ce que nous étions capable de faire au bout de 10 mois (seulement). C’était intéressant de travailler dans un petit groupe d’amis et d’appliquer nos connaissances communes. En plus de tous les éléments.
+
+\section{Signatures et date}
+
+Sion, le \today \\
+ {\raggedright
+  Pablo Stoeri \\
+
+	Landry Reynard \\
+
+	Samy Francelet \\
+}
