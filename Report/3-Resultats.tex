@@ -13,8 +13,6 @@ Cette classe représente pour nous la classe la plus difficile à implémenter e
 \item Les collisions entre les différents corps.
 \end{enumerate}
 
-Concernant la physique nous avons choisis de représenter toutes les forces en Vector2, c’est-à-dire un vecteur où l’on donne les points en X et en Y comme paramètre. L’avantage de travailler avec les vecteurs est que toutes les informations concernant la force sont directement accessibles.
-
 Les collisions ont été implémentées de la manière suivante : par exemple pour les collisions entre le paysage et le vaisseau spatial, nous avons créé une BoundingBox autour du vaisseau, c’est-à-dire un rectangle qui évite de devoir faire collisionner la forme compliquée du vaisseau. On a donc maintenant une collision entre un rectangle (vaisseau) et un polygone (paysage). Nous avons donc d’abord demandé si un des coins du rectangle se trouvait à l’intérieur du polygone (avec la méthode countains de PolygonWorking) et nous avons à ce moment là remarqué que si le vaisseau se posait sur un coin du polygone, les points du rectangle ne se trouvaient pas dans le polygone alors que le vaisseau aurait dû exploser. Nous avons donc ajouté une contrainte qui regarde si un point du polygone se trouve dans le rectangle. Les collisions se font correctement de cette manière.
 
 \begin{figure}[h]
@@ -65,7 +63,7 @@ Cette classe qui hérite de la classe PhysicalObject et qui implémente la class
 
 \begin{figure}[h]
  \centering
- \includegraphics[width=0.75\linewidth]{Figures/Ground.png}
+ \includegraphics[width=0.75\linewidth]{Figures/Gegner.png}
  \caption{Image avec une météorite, le vaisseau et la plateforme d'atterrissage}
  \label{figure:Ground}
 \end{figure}
@@ -77,7 +75,7 @@ Cette classe créer simplement un rectangle qui symbolise la zone d’atterrissa
 C’est dans cette classe que nous créons le vaisseau. C’est aussi ici que nous faisons l’affichage de différents éléments dans la fenêtre comme la vitesse et le carburant restant. Nous initialisons aussi le fond noir de la fenêtre dans cette classe.
 
 \subsection{LunarLander\_Main}
-LunarLander_Main est la classe où se trouve l’exécution de toute les tâches du jeu. Les éléments importants à comprendre dans cette classe sont :
+LunarLander\_Main est la classe où se trouve l’exécution de toute les tâches du jeu. Les éléments importants à comprendre dans cette classe sont :
 
 \begin{enumerate}
 \item	La méthode OnInit : On appelle cette méthode pour lancer la toute première image du jeu.

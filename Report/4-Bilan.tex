@@ -2,7 +2,7 @@
 Nous avons évidemment rencontré des problèmes auxquelles nous avons dû trouver des solutions efficaces. Voici une liste des problèmes principaux rencontrer lors du codage de notre Lunar Lander :
 \begin{enumerate}
  \item Générateur de particules : Nous avons tout d’abord utilisé le système de particules de la libraire GDX2D qui a d’abord très bien fonctionné, mais nous avons rencontré un problème lorsqu’il s’agissait de recommencer la partie après une explosion ou une partie gagnée. La libraire GDX2D n’arrivait pas à recréer les objets ce qui résultait à un crash du programme. Pour contrer ce problème nous avons créé un générateur de particule plus simple avec des particules qui apparaissent à une certaine position avec une vitesse prédéfinie. Cette fonction a été implémenté dans la classe Particules.
- \item	La musique et les sons : Notre musique ou certains sons sont beaucoup trop fort par rapport à d’autre. Nous n’avons pas réussi à faire fonctionner les méthodes concernant le volume, par exemple setVolume ou mofidyPlayingVolument de la librairie, et la documentation n’est pas très claire pour ces méthodes-ci. (…) Pour modifier le volume de notre piste audio, nous avons finalement utilisé un convertisseur online(https://www.mp3louder.com/fr/) pour baisser le son de quelques décibels.
+ \item	La musique et les sons : Notre musique ou certains sons sont beaucoup trop fort par rapport à d’autre. Nous n’avons pas réussi à faire fonctionner les méthodes concernant le volume, par exemple setVolume ou mofidyPlayingVolument de la librairie, et la documentation n’est pas très claire pour ces méthodes-ci. Pour modifier le volume de notre piste audio, nous avons finalement utilisé un convertisseur online(https://www.mp3louder.com/fr/) pour baisser le son de quelques décibels.
 \end{enumerate}
 
 \section{Description des fonctionnalités}
@@ -11,7 +11,7 @@ Notre code remplis tout le cahier des charges, c’est-à-dire que le vaisseau a
 En plus des fonctionnalités de bases, nous avons ajouté des options qui rendent le jeu plus amusant et ludique pour le joueur :
 
 \begin{itemize}
- \item	Des sons pour les différentes actions dans le jeu.
+ \item	Des sons pour les différentes actions dans le jeu. Les sons ont été enregister via les enregistreurs de nos ordinateurs respectif. Un son à également été téléchargé depuis le site de la Nasa\cite{SonNasa}.
  \item	Des météorites sur lesquelles on peut tirer avec un clic de la souris. Il peut y avoir une collision entre les météorites et le vaisseau donc il est possible qu’il soit même nécessaire de leur tirer dessus pour les détruire.
  \item	Des particules sous le vaisseau lorsqu’un réacteur est activé.
  \item	Des étoiles dynamiques en arrière-plan.

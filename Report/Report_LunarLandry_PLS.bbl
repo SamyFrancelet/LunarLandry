@@ -1,0 +1,11 @@
+\begin{thebibliography}{1}
+
+\bibitem{SonNasa}
+Nasa~Neil Armstrong.
+\newblock One small step for a man, one giant leap for mankind.
+
+\bibitem{GDX2D}
+Pierre-André Mudry.
+\newblock A gaming library for the inf1 course.
+
+\end{thebibliography}
