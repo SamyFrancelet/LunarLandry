@@ -28,5 +28,5 @@
 \contentsline {section}{\numberline {4.3}Améliorations possbibles}{10}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Conclusion}{10}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Signatures et date}{10}{section.4.5}%
-\contentsline {chapter}{\numberline {A}Package Principal}{13}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Package Physique}{26}{appendix.B}%
+\contentsline {chapter}{\numberline {A}Package Principal}{12}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Package Physique}{25}{appendix.B}%
