@@ -8,10 +8,12 @@
 \contentsline {section}{\numberline {2.1}Méthodes}{3}%
 \contentsline {chapter}{\numberline {3}Résultats}{4}%
 \contentsline {section}{\numberline {3.1}Choix d'implémentation et variations effectuées}{4}%
-\contentsline {chapter}{\numberline {4}Bilan}{5}%
-\contentsline {section}{\numberline {4.1}Problèmes rencontrés et solutions apportées}{5}%
-\contentsline {section}{\numberline {4.2}Description des fonctionnalités}{5}%
-\contentsline {section}{\numberline {4.3}Améliorations possbibles}{5}%
-\contentsline {section}{\numberline {4.4}Conclusion}{5}%
-\contentsline {chapter}{\numberline {5}Annexe}{6}%
-\contentsline {section}{\numberline {5.1}Test Prog}{6}%
+\contentsline {subsection}{\numberline {3.1.1}PhysicsSimulator}{4}%
+\contentsline {subsection}{\numberline {3.1.2}Ground}{4}%
+\contentsline {chapter}{\numberline {4}Bilan}{6}%
+\contentsline {section}{\numberline {4.1}Problèmes rencontrés et solutions apportées}{6}%
+\contentsline {section}{\numberline {4.2}Description des fonctionnalités}{6}%
+\contentsline {section}{\numberline {4.3}Améliorations possbibles}{6}%
+\contentsline {section}{\numberline {4.4}Conclusion}{6}%
+\contentsline {chapter}{\numberline {5}Annexe}{7}%
+\contentsline {section}{\numberline {5.1}Test Prog}{7}%

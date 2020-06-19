@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.18)  19 JUN 2020 10:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.18)  19 JUN 2020 10:59
 entering extended mode
 **./Report_LunarLandry_PLS.tex
 (Report_LunarLandry_PLS.tex
@@ -1056,11 +1056,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--34
 
 ]
 Chapitre 3.
-(3-Resultats.tex) [4
+(3-Resultats.tex
+<Images/Figures/BoundingBoxes.png, id=26, 554.07pt x 210.7875pt>
+File: Images/Figures/BoundingBoxes.png Graphic file (type png)
+<use Images/Figures/BoundingBoxes.png>
+Package pdftex.def Info: Images/Figures/BoundingBoxes.png  used on input line 7
+.
+(pdftex.def)             Requested size: 341.43307pt x 129.89246pt.
+<Images/Figures/Ground.png, id=27, 516.42938pt x 230.96288pt>
+File: Images/Figures/Ground.png Graphic file (type png)
+<use Images/Figures/Ground.png>
+Package pdftex.def Info: Images/Figures/Ground.png  used on input line 15.
+(pdftex.def)             Requested size: 341.43307pt x 152.7038pt.
+) [4
 
-]
+ <./Images/Figures/BoundingBoxes.png>] [5 <./Images/Figures/Ground.png>]
 Chapitre 4.
-(4-Bilan.tex) [5
+(4-Bilan.tex) [6
 
 ]
 Chapitre 5.
@@ -1070,17 +1082,17 @@ LaTeX Font Info:    Trying to load font information for T1+pcr on input line 2.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-[6
+[7
 
 ]) 
 AED: lastpage setting LastPage
-[7] (Report_LunarLandry_PLS.aux) ) 
+[8] (Report_LunarLandry_PLS.aux) ) 
 Here is how much of TeX's memory you used:
- 21018 strings out of 480797
- 388447 string characters out of 2905361
+ 21046 strings out of 480797
+ 389025 string characters out of 2905361
  1029642 words of memory out of 3000000
- 36581 multiletter control sequences out of 15000+200000
- 595829 words of font info for 82 fonts, out of 3000000 for 9000
+ 36603 multiletter control sequences out of 15000+200000
+ 601354 words of font info for 86 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,15n,75p,857b,1699s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/
@@ -1091,9 +1103,9 @@ les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/urw/courier/ucrb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/u
 tmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on Report_LunarLandry_PLS.pdf (8 pages, 152483 bytes).
+Output written on Report_LunarLandry_PLS.pdf (9 pages, 422349 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
+ 75 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

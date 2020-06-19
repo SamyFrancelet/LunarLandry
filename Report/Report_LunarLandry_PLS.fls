@@ -320,6 +320,22 @@ INPUT 2-Methodes.tex
 INPUT 2-Methodes.tex
 INPUT 3-Resultats.tex
 INPUT 3-Resultats.tex
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\adobe\times\ptmr8t.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\adobe\times\ptmb8t.tfm
+INPUT Images\Figures\BoundingBoxes.png
+INPUT .\Images\Figures\BoundingBoxes.png
+INPUT .\Images\Figures\BoundingBoxes.png
+INPUT .\Images\Figures\BoundingBoxes.png
+INPUT .\Images\Figures\BoundingBoxes.png
+INPUT Images\Figures\Ground.png
+INPUT .\Images\Figures\Ground.png
+INPUT .\Images\Figures\Ground.png
+INPUT .\Images\Figures\Ground.png
+INPUT .\Images\Figures\Ground.png
+INPUT C:\Program Files\MiKTeX 2.9\fonts\vf\adobe\times\ptmb8t.vf
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\adobe\times\ptmb8r.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\vf\adobe\times\ptmrc8t.vf
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT 4-Bilan.tex
 INPUT 4-Bilan.tex
 INPUT 5-Annexe.tex
