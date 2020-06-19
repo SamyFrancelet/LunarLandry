@@ -167,8 +167,6 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 
 	@Override
 	public boolean notifyCollision(int energy) {
-		System.out.println("Hit with energy : " + energy);
-		System.out.println("Max hit energy : " + Constants.DESTRUCTION_ENERGY);
 		landed = energy < Constants.DESTRUCTION_ENERGY;
 		return (!landed);
 	}
