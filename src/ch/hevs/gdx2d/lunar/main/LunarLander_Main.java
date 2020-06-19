@@ -232,7 +232,11 @@ public class LunarLander_Main extends PortableApplication {
 	}
 
 	void playMusic() {
-		music = new MusicPlayer("data/sons/sound1_low.mp3");
+		if (rand.nextInt(100) <= 10) {
+			music = new MusicPlayer("data/sons/zambla.mp3");
+		} else {
+			music = new MusicPlayer("data/sons/sound1_low.mp3");
+		}
 		music.loop();
 	}
 
