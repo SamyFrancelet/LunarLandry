@@ -55,7 +55,7 @@ public class PhysicsSimulator {
 	/**
 	 * Remove an object from simulation
 	 */
-	public void removeObjectFromSim(Collisionnable o) {
+	public void removeObjectFromSim(PhysicalObject o) {
 		o.removedFromSim();
 		sim_objects.remove(o);
 	}

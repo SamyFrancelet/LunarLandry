@@ -23,37 +23,25 @@ public final class Constants {
 	/**
 	 * Maximal impact speed triggering a crash
 	 */
-	public static double crashSpeed = 10;
+	public static final double CRASH_SPEED = 10;
 	
 	/**
 	 * Spaceship related
 	 */
-	public static final float MAX_THRUST = 1500f;
-	public static final float lateralPower = 0.05f;
-	public static final float verticalPower = 0.2f;
-	
+	public static final float MAX_THRUST = 1500f;	
 	public static final double MAX_FUEL = 300;
 	public static final int BASE_MASS = 300;
 	
 	public static final int GEGNER_MASS = 100;
 	
 	/**
-	 * Calcul destruction energy
-	 */
-	static int destroEnergy = (int) (BASE_MASS*crashSpeed*crashSpeed/2);
-	/**
 	 * Game related constants
 	 */	
 	// Maximal impact energy triggering a object destruction
-	public static final int DESTRUCTION_ENERGY = destroEnergy;	
+	public static final int DESTRUCTION_ENERGY = (int) (BASE_MASS*CRASH_SPEED*CRASH_SPEED/2);	
 	public static final int CLOUD_DENSITY = 5;
 	public static final int GROUND_ALTITUDE = 100;
 	public static final boolean DRAW_BOUNDINGBOXES = false;
-
-	/**
-	 * fuel reserve
-	 */
-	public static final float maxFuel = 10.0f;
 	
 	/** 
 	 * Ground parameters

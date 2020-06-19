@@ -128,7 +128,7 @@ public class Spaceship extends PhysicalObject implements DrawableObject {
 		// Print speed
 		BitmapFont bfSpeed = new BitmapFont();
 		bfSpeed.setColor(Color.RED);
-		if (speed.len() < Constants.crashSpeed) {
+		if (speed.len() < Constants.CRASH_SPEED) {
 			bfSpeed.setColor(Color.GREEN);
 		}
 		arg0.drawString(POSITION_SPEED.x, POSITION_SPEED.y, "Speed :" + (int) speed.len() + " m/s", bfSpeed);

@@ -40,8 +40,8 @@ public class LunarLander_Main extends PortableApplication {
 	// Shooting related
 	private ArrayList<Particles> laserExplo;
 	boolean mouseActive = false;
-	int waitLaser = 0;
 	Vector2 positionClick;
+	static int waitLaser;
 
 	// Stars particles
 	private ArrayList<Particles> stars;
@@ -57,6 +57,7 @@ public class LunarLander_Main extends PortableApplication {
 		setTitle("LunarLandry (Team PLS)");
 		gameNb = 1;
 		waitStar = 0;
+		waitLaser = 0;
 		playMusic();
 		ssLandry = new Spaceship(new Vector2(100, 700), gameNb);
 		sol = new Ground();
@@ -129,19 +130,20 @@ public class LunarLander_Main extends PortableApplication {
 	}
 
 	void drawLaser(GdxGraphics arg0) {
-		if ((mouseActive || waitLaser > 0) && !ssLandry.isFinished())
+		if ((mouseActive || waitLaser > 0) && !ssLandry.isFinished()) {
 			arg0.drawLine(positionClick.x, positionClick.y, ssLandry.position.x, ssLandry.position.y, Color.RED);
-		waitLaser--;
+			waitLaser--;
+		}
 	}
 
 	void drawLaserExplo(GdxGraphics arg0, int age) {
 		// Laser logik
-		if (mouseActive && !ssLandry.isFinished()) {
+		if (mouseActive && !ssLandry.isFinished() && waitLaser < 0) {
 			pew = new SoundSample("data/sons/BruitLaser_low.mp3");
 			pew.play();
 			pew.setVolume(0.1f);
 			mouseActive = false;
-			waitLaser = 4;
+			waitLaser = 30;
 			if (meteors.size() != 0) {
 				for (int i = 0; i < meteors.size(); i++) {
 					if (meteors.get(i).getBoundingBox().contains(positionClick)) {
@@ -240,7 +242,7 @@ public class LunarLander_Main extends PortableApplication {
 			final String dry2 = "data/sons/Ecolo.mp3";
 			final String dry3 = "data/sons/Sub.mp3";
 			String dry;
-			int value = (int) (Math.random() * 4);
+			int value = rand.nextInt(4);
 			switch (value) {
 			case 2:
 				dry = dry2;
@@ -261,7 +263,7 @@ public class LunarLander_Main extends PortableApplication {
 			final String kaputt1 = "data/sons/bruitExplo.mp3";
 			final String kaputt2 = "data/sons/doucement.mp3";
 			String kaputt;
-			int value = (int) (Math.random() * 3);
+			int value = rand.nextInt(3);
 			switch (value) {
 			case 2:
 				kaputt = kaputt2;
@@ -293,22 +295,20 @@ public class LunarLander_Main extends PortableApplication {
 	public void onClick(int x, int y, int button) {
 		super.onClick(x, y, button);
 		mouseActive = true;
-		positionClick = new Vector2(x, y);
+		if (waitLaser <= 0) {
+			positionClick = new Vector2(x, y);
+		}
 	}
 
 	@Override
 	public void onRelease(int x, int y, int button) {
 		super.onRelease(x, y, button);
-		positionClick.x = x;
-		positionClick.y = y;
+		if (waitLaser <= 0) {
+			positionClick.x = x;
+			positionClick.y = y;
+		}
 		mouseActive = false;
 	}
-
-//	public void onDrag(int x, int y) {
-//		super.onDrag(x, y);
-//		positionClick.x = x;
-//		positionClick.y = y;
-//	}
 
 	@Override
 	public void onKeyUp(int keycode) {
@@ -380,7 +380,7 @@ public class LunarLander_Main extends PortableApplication {
 
 		meteors.clear();
 		for (int i = 0; i < gameNb; i++) {
-			meteors.add(new Gegner(new Vector2(rand.nextInt(300) + 400, 700)));
+			meteors.add(new Gegner(new Vector2(rand.nextInt(300) + 400, rand.nextInt(300) + 500)));
 			physics.addSimulatableObject(meteors.get(i));
 		}
 
